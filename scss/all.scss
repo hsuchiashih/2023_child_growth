@@ -1,17 +1,20 @@
+//bootstrap css
 @import "../node_modules/bootstrap/scss/functions";
 @import "../scss/helper/variables"; // 自己的變數
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/bootstrap";
- 
 
+//reset css
 @import "../css/reset.css";
+// owl套件 css
 @import "../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
 @import "../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css";
+
+//頁面 css
 @import "../scss/headerFooter";
 
 // 字體
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700&family=Tilt+Neon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700&family=Tilt+Neon&display=swap");
 body {
-  font-family: "Tilt Neon", "Noto Sans TC" , sans-serif;
+  font-family: "Tilt Neon", "Noto Sans TC", sans-serif;
 }
-
