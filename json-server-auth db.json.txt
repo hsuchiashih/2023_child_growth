@@ -1,1 +1,0 @@
-json-server-auth --watch db.json
