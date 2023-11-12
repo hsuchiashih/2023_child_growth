@@ -138,7 +138,7 @@ function getDailyRecords(date = getMonthDate(), kidNum = 0) {
     .get(
       `${url}/600/sleep_records?kidId=${userInfo.kids[
         kidNum
-      ].id.toString()}&record_date=${date}&_embed=breakfast_records&_embed=lunch_records&_embed=dinner_records`,
+      ].id.toString()}&record_date=${date}&_embed=breakfast_records&_embed=lunch_records&_embed=dinner_records&_sort=modified_time&_order=desc&_limit=1`,
       {
         headers: {
           authorization: `Bearer ${token}`,

@@ -1,5 +1,5 @@
-const url = "https://cgwweb.onrender.com";
-// const url = 'http://localhost:5500';
+// const url = "https://cgwweb.onrender.com";
+const url = 'http://localhost:3000';
 
 let token = "";
 // let signupInfo =     {
@@ -32,6 +32,8 @@ let userInfo;
 // let signupData;
 // let addKidData;
 let _response;
+
+setFormListener();
 
 function getDatetime() {
   const now = new Date();
@@ -314,4 +316,51 @@ function countSleepHours(startTime, endTime) {
     // console.log(totalDuration / 3600000); // 将结果转换为小时
     return totalDuration / 3600000;
   }
+}
+
+function processForm() {
+  //全部的input都要取ID
+  var inputValue ={};
+  // 獲取表單數據
+  document.querySelectorAll('input').forEach(element=>{
+    let key = element.id;
+    let value = element.value;
+    inputValue[key] = value;
+    
+    if(element.type=='checkbox' && !element.checked){
+      inputValue[key] = 'N';
+    }
+  });
+    document.querySelectorAll('textarea').forEach(element=>{
+    let key = element.id;
+    let value = element.value;
+    inputValue[key] = value;
+    if(element.type=='checkbox' && !element.checked){
+      inputValue[key] = 'N';
+    }
+  });
+  console.log(inputValue);
+  //自行處理數據
+  //做成POST json-server 要的格式
+  postData = handleFormData(inputValue);
+  
+  
+  
+  return 
+}
+
+
+function setFormListener(){
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('form').addEventListener('submit',function(event){
+      event.preventDefault();
+      processForm();
+    });
+  });
+}
+
+function initialRender(func){
+  login();
+  setTimeout(func, 500);
+  setTimeout(renderValue, 1000);
 }
