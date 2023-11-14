@@ -1,0 +1,645 @@
+// 輪播牆
+.section-banner {
+	padding-top: 80px;
+}
+.owl-carousel {
+	.item {
+		border-radius: 48px;
+		overflow: hidden;
+		position: relative;
+		img {
+			width: 100%;
+			vertical-align: middle;
+		}
+	}
+}
+
+.carousel-item-txt {
+	top: 11.9689vw;
+	right: 5.69948vw;
+	box-sizing: border-box;
+	padding: 20px;
+	background: radial-gradient(
+		circle,
+		rgba(255, 255, 255, 1) 0%,
+		rgba(255, 255, 255, 0.742734593837535) 28%,
+		rgba(255, 255, 255, 0.006039915966386533) 79%
+	);
+	h3 {
+		// font-size: 28px;
+		font-size: 1.45077vw;
+		font-weight: 800;
+		letter-spacing: 2px;
+		margin-bottom: 14px;
+		color: #d49460;
+	}
+	p {
+		// font-size: 32px;
+		font-size: 1.65803vw;
+		letter-spacing: 2px;
+		font-weight: 500;
+		color: #424242;
+		letter-spacing: 2px;
+		margin-bottom: 0.5em;
+	}
+	.carousel-button {
+		background-color: #d49460;
+		border: none;
+		width: fit-content;
+		border-radius: 50px;
+		a {
+			//   font-size: 24px;
+			font-size: 1.243523vw;
+			padding: 16px 40px;
+			text-decoration: none;
+			color: #fff;
+			font-weight: 600;
+			display: block;
+			letter-spacing: 1.2px;
+		}
+	}
+}
+.owl-nav {
+	button {
+		display: block;
+		// width: 96px;
+		// height: 96px;
+		width: 4.97409vw;
+		img {
+			width: 100%;
+			vertical-align: middle;
+		}
+	}
+}
+.owl-banner {
+	.owl-dots {
+		opacity: 0;
+	}
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+	background-color: transparent;
+}
+.owl-prev {
+	position: absolute;
+	//   top: 300px;
+	top: 15.544vw;
+	left: 17.5vw;
+}
+.owl-next {
+	position: absolute;
+	//   top: 300px;
+	top: 15.544vw;
+	right: 17.5vw;
+}
+.section-about {
+	padding: 160px 0;
+}
+.section-about-main {
+	width: 67.5%;
+	margin: auto;
+	.section-about-title-item {
+		width: 20%;
+	}
+	.section-about-title-item-mid {
+		flex-grow: 1;
+		p {
+			font-size: 1.67vw;
+			font-family: "Tilt Neon", sans-serif;
+			color: #d49460;
+			display: flex;
+			margin-bottom: 40px;
+		}
+	}
+	.section-about-title-item-mid p::after {
+		content: "/";
+		font-size: 35px;
+		color: #d49460;
+	}
+	.section-about-title-item-mid p::before {
+		content: "/";
+		font-size: 35px;
+		transform: rotate(330deg);
+	}
+}
+.section-about-content {
+	p {
+		text-align: center;
+		font-size: 24px;
+		font-weight: 400;
+		letter-spacing: 1.2px;
+		line-height: 1.6;
+		margin-top: 1em;
+	}
+}
+// 健康管理
+.health-info-box {
+	padding-top: 80px;
+	justify-content: space-evenly;
+}
+.health-info-item {
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
+	justify-content: center;
+	padding-bottom: 42px;
+	width: 17.21%;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+	background-color: #f5e1d3;
+	border: 1px solid #d49460;
+	.health-info-item-pic {
+		width: 6.63212vw;
+		top: -30%;
+		left: 50%;
+		transform: translateX(-50%);
+
+		img {
+			width: 100%;
+			vertical-align: middle;
+		}
+	}
+	> p {
+		font-size: 2.487046vw;
+		font-weight: 400;
+		text-align: center;
+		font-family: "Tilt Neon", sans-serif;
+		color: #525252;
+		line-height: 1.2;
+		margin-bottom: 10px;
+	}
+	> span {
+		font-size: 32px;
+		font-weight: 400;
+		color: #d49460;
+		text-align: center;
+		display: block;
+	}
+}
+.health-info-item:nth-child(even) {
+	background-color: #fff2c7;
+	border-color: #ffc500;
+	> span {
+		color: #ffc500;
+	}
+}
+.health-info-item + .health-info-item::before {
+	content: "";
+	background-image: url(../src/index/x.svg);
+	background-size: 100% 100%;
+	width: 24px;
+	height: 24px;
+	display: block;
+	transform: translate(-220%, 100%);
+}
+// 方案介紹
+.section-program-details {
+	background-image: url(../src/home/bg-program.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding-top: 160px;
+	padding-bottom: 40px;
+	border-radius: 100px 100px 0 0;
+}
+.program-details-main {
+	width: 67.5%;
+	margin: auto;
+}
+.program-details-title {
+	margin-bottom: 132px;
+	h3 {
+		font-size: 48px;
+		font-weight: 400;
+		letter-spacing: 2px;
+		margin-bottom: 0.5em;
+	}
+	span {
+		font-size: 32px;
+		font-weight: 400;
+		color: #d49460;
+	}
+}
+.program-details-item {
+	width: 32.098765%;
+	background-color: #fff;
+	text-align: center;
+	padding-bottom: 64px;
+	border-radius: 48px;
+	border: 2px solid;
+	height: fit-content;
+	&:nth-child(1) {
+		border-color: #e28666;
+	}
+	&:nth-child(2) {
+		border-color: #d49460;
+	}
+	&:nth-child(3) {
+		border-color: #ffc500;
+	}
+	h3 {
+		font-size: 32px;
+		font-weight: 800;
+		letter-spacing: 1.2px;
+		margin-bottom: 1.5em;
+		color: #525252;
+	}
+	> ul {
+		li {
+			& + li {
+				margin-top: 36px;
+			}
+			p {
+				font-size: 24px;
+				font-weight: 400;
+				letter-spacing: 1px;
+				color: #525252;
+			}
+			a {
+				text-decoration: none;
+				font-size: 24px;
+				color: #d49460;
+				font-weight: 400;
+				margin-top: 2em;
+			}
+		}
+	}
+}
+.program-details-pic {
+	width: 120px;
+	margin: auto;
+	margin-top: -60px;
+	img {
+		width: 100%;
+		vertical-align: middle;
+	}
+}
+// user-reviews
+.user-reviews {
+	padding-bottom: 160px;
+}
+.user-review-title-box {
+	width: 52.48704%;
+}
+.user-review-title-pic {
+	width: 12.020725vw;
+	img {
+		vertical-align: middle;
+	}
+}
+.user-review-title-txt {
+	flex-grow: 1;
+	h3 {
+		font-size: 48px;
+		color: #525252;
+		font-weight: 400;
+		letter-spacing: 2px;
+		margin: auto;
+		text-align: center;
+		span {
+			font-size: 48px;
+			color: #d49460;
+			letter-spacing: 1px;
+			font-family: "Tilt Neon", sans-serif;
+		}
+	}
+}
+.user-reviews-line {
+	width: 67.15025%;
+	height: 16px;
+	img {
+		width: 100%;
+		vertical-align: middle;
+	}
+}
+
+.owl-reviews {
+	padding-top: 90px;
+	padding-bottom: 90px;
+	.owl-stage {
+		padding-top: 50px;
+	}
+	.owl-dots {
+		transform: translateY(40px);
+	}
+	.item {
+		max-width: 526px;
+		padding: 48px;
+		background-color: #f5e1d3;
+		border: 48px;
+		overflow: unset;
+		.reviews-icon {
+			width: 120px;
+			top: -30px;
+			right: 0;
+			img {
+				width: 100%;
+			}
+		}
+		.reviews-pic {
+			min-width: 160px;
+			img {
+				width: 100%;
+			}
+		}
+		.reviews-txt {
+			margin-left: 36px;
+			h4 {
+				font-size: 32px;
+				letter-spacing: 2px;
+				font-weight: 800;
+				margin-bottom: 1em;
+				color: #525252;
+			}
+			p {
+				font-size: 16px;
+				letter-spacing: 1px;
+				color: #525252;
+				line-height: 1.6;
+			}
+		}
+	}
+}
+.owl-reviews.owl-theme .owl-dots .owl-dot span {
+	width: 24px;
+	height: 24px;
+	margin: 5px 12px;
+	background: #f5e1d3;
+}
+.owl-reviews.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+	background: #d49460;
+}
+@media (width < 1200px) {
+	.section-about-main .section-about-title-item-mid p {
+		font-size: 24px;
+	}
+}
+@media (width < 992px) {
+	.section-banner {
+		padding-top: 15px;
+	}
+	.owl-carousel .item {
+		border-radius: 30px;
+	}
+	.carousel-item-txt {
+		top: 50%;
+		right: 50%;
+		box-sizing: border-box;
+		padding: 20px;
+		background: radial-gradient(
+			circle,
+			rgba(255, 255, 255, 1) 0%,
+			rgba(255, 255, 255, 0.742734593837535) 46%,
+			rgba(255, 255, 255, 0.006039915966386533) 72%
+		);
+		transform: translate(50%, -50%);
+	}
+	.carousel-item-txt p {
+		font-size: 14px;
+		text-align: center;
+	}
+	.carousel-item-txt h3 {
+		font-size: 14px;
+	}
+	.carousel-item-txt .carousel-button a {
+		font-size: 14px;
+	}
+	.section-banner {
+		width: 93.6%;
+		margin: auto;
+	}
+	.owl-nav {
+		button {
+			width: 48px;
+		}
+	}
+	.owl-prev {
+		top: 50%;
+		left: 0;
+		transform: translateY(-100%);
+	}
+	.owl-next {
+		top: 50%;
+		right: 0;
+		transform: translateY(-100%);
+	}
+	//about
+
+	.section-about-phone-title {
+		.section-title-logo {
+			width: 80%;
+			margin: auto;
+		}
+		.section-title-pic {
+			width: 100%;
+			&:nth-child(2) {
+				width: 80%;
+				margin: auto;
+			}
+			img {
+				width: 100%;
+				vertical-align: middle;
+			}
+		}
+		h3 {
+			font-size: 24px;
+			color: #d49460;
+			line-height: 1.2;
+			font-weight: 400;
+			text-align: center;
+		}
+	}
+	.section-about-content p {
+		margin-top: 0em;
+	}
+	//作息
+	.section-about-main {
+		width: 90%;
+		margin: auto;
+	}
+	.health-info-item {
+		width: 45%;
+		margin-bottom: 48px;
+		padding-bottom: 38px;
+		.health-info-item-pic {
+			width: 120px;
+		}
+		> p {
+			font-size: 35px;
+		}
+		> span {
+			font-size: 24px;
+		}
+	}
+	.health-info-item + .health-info-item::before {
+		width: 24px;
+		height: 24px;
+		transform: translate(-130%, 120%);
+	}
+	.health-info-item:nth-child(3)::before {
+		display: none;
+	}
+	.section-about {
+		padding: 40px 0;
+	}
+	.health-info-box {
+		justify-content: space-between;
+	}
+
+	// program-details
+	.section-program-details {
+		background-image: url(../src/index/phone-program.png);
+		border-radius: 48px 48px 0 0;
+		padding-top: 80px;
+	}
+	.program-details-title {
+		margin-bottom: 98px;
+	}
+	.program-details-item {
+		width: 100%;
+		margin-bottom: 74px;
+		h3 {
+			font-size: 32px;
+		}
+		> ul {
+			li {
+				& + li {
+					margin-top: 32px;
+				}
+			}
+		}
+	}
+	.user-review-title-box {
+		width: 93%;
+		margin: auto;
+	}
+	.program-details-main {
+		width: 90%;
+	}
+	.user-review-title-txt {
+		order: 1;
+		h3 {
+			font-size: 48px;
+			color: #525252;
+			font-weight: 400;
+			letter-spacing: 2px;
+			margin: auto;
+			text-align: left;
+			span {
+				font-size: 35px;
+				color: #d49460;
+				letter-spacing: 1px;
+			}
+		}
+	}
+	.user-review-title-pic {
+		width: 100px;
+	}
+	.owl-reviews {
+		padding-top: 90px;
+		padding-bottom: 90px;
+		.owl-stage {
+			padding-top: 50px;
+		}
+		.owl-dots {
+			transform: translateY(40px);
+		}
+		.item {
+			padding: 24px;
+			margin: auto;
+			flex-direction: column;
+			.reviews-icon {
+				z-index: 2;
+				width: 120px;
+				top: -30px;
+				right: 0;
+				img {
+					width: 100%;
+				}
+			}
+			.reviews-pic {
+				width: 80px;
+				position: relative;
+				img {
+					width: 100%;
+				}
+			}
+			.reviews-txt {
+				margin-left: 36px;
+				h4 {
+					font-size: 32px;
+					position: absolute;
+					top: 50px;
+					right: 25%;
+				}
+				p {
+					font-size: 14px;
+					line-height: 24px;
+					margin-top: 0.9em;
+				}
+			}
+		}
+	}
+	.owl-reviews {
+		padding-top: 0px;
+		padding-bottom: 50px;
+		.owl-stage {
+			padding-top: 50px;
+		}
+		.owl-dots {
+			transform: translateY(40px);
+		}
+		.item {
+			padding: 24px;
+			background-color: #f5e1d3;
+			border: 48px;
+			overflow: unset;
+			.reviews-icon {
+				width: 120px;
+				top: -30px;
+				right: 0;
+				img {
+					width: 100%;
+				}
+			}
+			.reviews-pic {
+				min-width: 160px;
+				img {
+					width: 100%;
+				}
+			}
+			.reviews-txt {
+				margin-left: 0px;
+				h4 {
+					font-size: 32px;
+					letter-spacing: 2px;
+					font-weight: 800;
+					margin-bottom: 1em;
+					color: #525252;
+				}
+				p {
+					font-size: 16px;
+					letter-spacing: 1px;
+					color: #525252;
+					line-height: 1.6;
+				}
+			}
+		}
+	}
+	.user-reviews-line {
+		width: 100%;
+	}
+	.owl-reviews.owl-theme .owl-dots .owl-dot span {
+		width: 12px;
+		height: 12px;
+	}
+	.user-reviews {
+		padding-bottom: 80px;
+	}
+}
+@media (width < 500px) {
+	.health-info-item {
+		.health-info-item-pic {
+			width: 80px;
+		}
+	}
+}

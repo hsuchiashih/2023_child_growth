@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="zh-tw">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="keywords" content="兒童成長網站" />
+		<meta name="description" content="兒童成長網站" />
+		<title>兒童成長網站</title>
+		<link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/all.css" />
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="./css/owl.theme.default.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 手機板選單 -->
+			<h1 class="logo-box d-flex d-md-none">
+				<a class="navbar-brand logopic d-block" href="./index.html">
+					<img src="./src/home/top-logo.png" alt="logo" />
+				</a>
+				<span>兒童成長網站</span>
+			</h1>
+			<div class="hb-btn-container">
+				<input id="menu-toggle" type="checkbox" />
+				<label class="menu-button-container" for="menu-toggle">
+					<div class="menu-button"></div>
+				</label>
+			</div>
+			<div class="phone-container position-fixed">
+				<ul class="phone-list-nav p-0">
+					<li><a href="#">服務介紹</a></li>
+					<li><a href="#">會員專區</a></li>
+					<li><a href="#">兒童清單</a></li>
+					<li><a href="#">數據分析</a></li>
+					<li><a href="#">聯絡我們</a></li>
+					<!-- user-login -->
+					<div class="login-items d-flex">
+						<!-- 已登入 -->
+						<a
+							href="#"
+							class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+						>
+							<div class="login-item-pic">
+								<img src="./src/home/login-pic.svg" alt="user-pic" />
+							</div>
+							<p>使用者A</p>
+						</a>
+						<a
+							class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+							href="#"
+							><div class="login-item-pic">
+								<img src="./src/home/logout.svg" alt="login-out-pic" />
+							</div>
+							<p>登出</p>
+						</a>
+						<!-- 未登入 -->
+						<a
+							class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+							href="#"
+							><div class="login-item-pic">
+								<img src="./src/home/person.png" alt="login-out-pic" />
+							</div>
+							<p>點擊登入</p>
+						</a>
+					</div>
+				</ul>
+			</div>
+			<!-- 桌機板選單 -->
+			<header class="main-header d-none d-md-block">
+				<nav class="navbar navbar-expand-lg navbar-main">
+					<div class="container-fluid p-0">
+						<h1 class="logo-box d-flex">
+							<a class="navbar-brand logopic d-block" href="./index.html">
+								<img src="./src/home/top-logo.png" alt="logo" />
+							</a>
+							<span>兒童成長網站</span>
+						</h1>
+						<div
+							class="collapse navbar-collapse top-navbar-body"
+							id="navbarSupportedContent"
+						>
+							<ul
+								class="navbar-nav top-navbar-menu mb-2 mb-lg-0 flex-wrap mx-auto"
+							>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="#"
+										>服務介紹<br />
+										<span>Service</span>
+									</a>
+								</li>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="#"
+										>會員專區<br />
+										<span>Member</span>
+									</a>
+								</li>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="#"
+										>兒童清單<br />
+										<span>Kids</span>
+									</a>
+								</li>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="#"
+										>數據分析<br />
+										<span>Charts</span>
+									</a>
+								</li>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="./contact.html"
+										>聯絡我們<br />
+										<span>Contact</span>
+									</a>
+								</li>
+							</ul>
+							<!-- user-login -->
+							<div class="login-items d-flex">
+								<!-- 已登入 -->
+								<a
+									href="#"
+									class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+								>
+									<div class="login-item-pic">
+										<img src="./src/home/login-pic.svg" alt="user-pic" />
+									</div>
+									<p>使用者A</p>
+								</a>
+								<a
+									class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+									href="#"
+									><div class="login-item-pic">
+										<img src="./src/home/logout.svg" alt="login-out-pic" />
+									</div>
+									<p>登出</p>
+								</a>
+								<!-- 未登入 -->
+								<a
+									class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+									href="#"
+									><div class="login-item-pic">
+										<img src="./src/home/person.png" alt="login-out-pic" />
+									</div>
+									<p>點擊登入</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+
+			<div class="section-everyday container-fluid">
+				<div class="row">
+					<div class="col-5">
+						<div class="section-changeKids">
+							<!-- 切換小孩 -->
+							<div class="section-changeKids-title text-center">
+								<h3>每日記錄</h3>
+							</div>
+							<div class="owl-change-kid owl-carousel owl-theme">
+								<div class="item">
+									<div class="owl-change-kid-pic">
+										<img
+											class="img-fluid"
+											src="./src/home/Rectangle 54 (1).png"
+											alt=""
+										/>
+									</div>
+									<p>周星星</p>
+								</div>
+								<div class="item">
+									<div class="owl-change-kid-pic">
+										<img
+											class="img-fluid"
+											src="./src/home/Rectangle 54 (2).png"
+											alt=""
+										/>
+									</div>
+									<p>曹星星</p>
+								</div>
+								<div class="item">
+									<div class="owl-change-kid-pic">
+										<img
+											class="img-fluid"
+											src="./src/home/Rectangle 54 (1).png"
+											alt=""
+										/>
+									</div>
+									<p>葉大雄</p>
+								</div>
+							</div>
+							<div
+								class="section-changeKids-btn d-flex flex-column align-items-center"
+							>
+								<button type="submit" class="kidid-control-btn mb-3">
+									<p>每月紀錄</p>
+								</button>
+								<button
+									type="submit"
+									class="kidid-control-btn bg-dark text-white"
+								>
+									<p>返回清單</p>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-7">
+						<form id="section-child-form">
+							<!-- <form id="myForm" onsubmit="return processForm()"> -->
+							<input
+								class="kid-date mb-5 rounded-3 border-0"
+								type="date"
+								id="datepicker"
+								name="datepicker"
+							/>
+							<div class="wakeup mb-5">
+								<label for="wakeup">起床時間</label
+								><input type="time" id="wakeup" value="08:00" step="300" />
+								<label>
+									<input
+										type="radio"
+										name="wakeup"
+										value="07:00"
+										class="radio rounded-3 border-0"
+									/>
+									07:00
+								</label>
+
+								<label>
+									<input
+										type="radio"
+										name="wakeup"
+										value="08:00"
+										class="radio rounded-3 border-0"
+										checked
+									/>
+									08:00
+								</label>
+
+								<label>
+									<input
+										type="radio"
+										name="wakeup"
+										value="09:00"
+										class="radio"
+									/>
+									09:00
+								</label>
+							</div>
+							<div class="sleep mb-5">
+								<label for="sleep">睡覺時間</label
+								><input type="time " id="sleep" value="22:00" />
+								<label>
+									<input
+										type="radio"
+										name="sleep"
+										value="21:00"
+										class="radio"
+									/>
+									21:00
+								</label>
+
+								<label>
+									<input
+										class="kid-form-item"
+										type="radio"
+										name="sleep"
+										value="22:00"
+										class="radio"
+										checked
+									/>
+									22:00
+								</label>
+
+								<label>
+									<input
+										class="kid-form-item"
+										type="radio"
+										name="sleep"
+										value="23:00"
+										class="radio"
+									/>
+									23:00
+								</label>
+							</div>
+							<div class="breakfast mb-5">
+								<label for="breakfast">早餐</label
+								><textarea id="breakfast" cols="20" rows="5"></textarea
+								><input
+									type="checkbox"
+									value="Y"
+									id="breakfastNM"
+								/>無麥奶<input
+									type="checkbox"
+									value="Y"
+									id="breakfastND"
+								/>無甜食
+							</div>
+							<div class="lunch mb-5">
+								<label for="lunch">午餐</label
+								><textarea id="lunch" cols="20" rows="5"></textarea
+								><input type="checkbox" value="Y" id="lunchNM" />無麥奶<input
+									type="checkbox"
+									value="Y"
+									id="lunchND"
+								/>無甜食
+							</div>
+							<div class="dinner mb-5">
+								<label for="dinner">晚餐</label
+								><textarea id="dinner" cols="20" rows="5"></textarea
+								><input type="checkbox" value="Y" id="dinnerNM" />無麥奶<input
+									type="checkbox"
+									value="Y"
+									id="dinnerND"
+								/>無甜食
+							</div>
+							<button type="submit" class="kidid-control-btn mb-3">
+								<p>送出</p>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<footer class="section-footer container-fluid position-relative">
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<div class="section-footer-item">
+							<h3>兒童成長管理</h3>
+							<div class="section-footer-box d-flex">
+								<div class="section-footer-pic">
+									<img src="./src/home/Facebook.png" alt="fb" />
+								</div>
+								<div class="section-footer-pic">
+									<img src="./src/home/twitter.png" alt="tw" />
+								</div>
+								<div class="section-footer-pic">
+									<img src="./src/home/Instagram.png" alt="ig" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 p-0">
+						<div class="section-item-right">
+							<ul class="d-flex flex-wrap justify-content-center p-0">
+								<li><a href="#">服務介紹</a></li>
+								<li><a href="#">會員專區</a></li>
+								<li><a href="#">兒童清單</a></li>
+								<li><a href="#">數據分析</a></li>
+								<li><a href="#">聯絡我們</a></li>
+							</ul>
+							<div class="section-footer-join">
+								<button>
+									<p>Team Project —— Join Us</p>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-house position-absolute d-none d-md-block">
+					<img src="./src/home/left.house.png" alt="" />
+				</div>
+			</footer>
+			<section class="section-copyright">
+				<p>Copyright &copy; 2023 All rights reserved.</p>
+			</section>
+		</div>
+		<!-- bs -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+			crossorigin="anonymous"
+		></script>
+		<!-- jquery -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+		<!-- menu/JS -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const menuButtonContainer = document.querySelector(
+					".menu-button-container"
+				);
+				const phoneContainer = document.querySelector(".phone-container");
+
+				let isPhoneContainerVisible = false;
+
+				menuButtonContainer.addEventListener("click", function () {
+					if (isPhoneContainerVisible) {
+						phoneContainer.style.display = "none";
+					} else {
+						phoneContainer.style.display = "block";
+					}
+					isPhoneContainerVisible = !isPhoneContainerVisible;
+				});
+			});
+		</script>
+
+		<!-- owl -->
+		<script src="./js/plugins/owl.carousel.min.js"></script>
+		<script>
+			$(".owl-change-kid").owlCarousel({
+				loop: true,
+				margin: 10,
+				nav: true,
+				navText: [
+					"<img src='./src/index/prev-arrow.svg'>",
+					"<img src='./src/index/next-arrow.svg'>",
+				],
+				responsive: {
+					0: {
+						items: 1,
+					},
+					768: {
+						items: 1,
+					},
+				},
+			});
+		</script>
+	</body>
+</html>
