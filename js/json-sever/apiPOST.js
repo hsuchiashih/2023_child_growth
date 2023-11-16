@@ -25,13 +25,14 @@ function signup(
     });
 }
 
-function login(email = "Charizard@mail.com", password = "wda@123") {
+function login(email = "pikachu@mail.com", password = "wda@123") {
   axios
     .post(`${url}/login`, {
       email: email,
       password: password,
     })
     .then(function (response) {
+
       token = response.data.accessToken;
       userInfo = response.data.user;
       console.log(response);
@@ -39,8 +40,11 @@ function login(email = "Charizard@mail.com", password = "wda@123") {
       getUserInfo();
     })
     .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
+      console.log(error);
+      _response = error;
+      if(error.message=='Network Error'){
+        alert('db.json伺服器未開啟');
+      }
     });
 }
 
@@ -187,7 +191,7 @@ async function addDailyRecord(
   addLunchRecord(daily_record.lunch_record, kidNum);
   addDinnerRecord(daily_record.dinner_record, kidNum);
 }
-async function addSleepRecord(sleep_record, kidNum) {
+async function addSleepRecord(sleep_record, kidNum=0) {
   sleep_record.kidId = userInfo.kids[kidNum].id || sleep_record.kidId;
   sleep_record.userId = userInfo.id || sleep_record.userId;
   sleep_record.record_date = getMonthDate();
@@ -214,36 +218,9 @@ async function addSleepRecord(sleep_record, kidNum) {
     throw error; // 抛出错误以便处理错误情况
   }
 }
-function addSleepRecord2(sleep_record, kidNum) {
-  sleep_record.kidId = sleep_record.kidId
-    ? sleep_record.kidId
-    : userInfo.kids[kidNum].id;
-  sleep_record.userId = sleep_record.userId ? sleep_record.userId : userInfo.id;
-  sleep_record.record_date = getMonthDate();
-  sleep_record.sleep_hours = countSleepHours(
-    sleep_record.wakeup_time,
-    sleep_record.sleep_time,
-  );
-  sleep_record.modified_time = getDatetime();
-  sleep_record.created_at = getDatetime();
-  axios
-    .post(`${url}/600/sleep_records`, sleep_record, {
-      headers: {
-        authorization: `Bearer ${token}`,
-      },
-    })
-    .then(function (response) {
-      console.log(response);
-      return (_response[0] = response);
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response[0] = error.response;
-    });
-}
 function addBreakfastRecord(breakfast_record, kidNum) {
   breakfast_record.sleep_recordId =
-    _response[0].data.id.toString() || breakfast_record.sleep_recordId;
+    _response[0].data.id || breakfast_record.sleep_recordId;
   breakfast_record.kidId = userInfo.kids[kidNum].id || breakfast_record.kidId;
   breakfast_record.userId = userInfo.id || breakfast_record.userId;
   breakfast_record.record_date = getMonthDate();
@@ -266,7 +243,7 @@ function addBreakfastRecord(breakfast_record, kidNum) {
 }
 function addLunchRecord(lunch_record, kidNum) {
   lunch_record.sleep_recordId =
-    _response[0].data.id.toString() || lunch_record.sleep_recordId;
+    _response[0].data.id || lunch_record.sleep_recordId;
   lunch_record.kidId = userInfo.kids[kidNum].id || lunch_record.kidId;
   lunch_record.userId = userInfo.id || lunch_record.userId;
   lunch_record.record_date = getMonthDate();
@@ -289,7 +266,7 @@ function addLunchRecord(lunch_record, kidNum) {
 }
 function addDinnerRecord(dinner_record, kidNum) {
   dinner_record.sleep_recordId =
-    _response[0].data.id.toString() || dinner_record.sleep_recordId;
+    _response[0].data.id || dinner_record.sleep_recordId;
   dinner_record.kidId = userInfo.kids[kidNum].id || dinner_record.kidId;
   dinner_record.userId = userInfo.id || dinner_record.userId;
   dinner_record.record_date = getMonthDate();

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+</head>
+<body>
+  <div class="flex">
+    <div class="wrap"></div>
+    <div class="wrap">
+      <form id="myForm">
+        <!-- <form id="myForm" onsubmit="return processForm()"> -->
+          <input type="date" id="datepicker" name="datepicker">
+        <div class="wakeup">
+          <label for="wakeup">起床時間</label><input type="time" id="wakeup" value="08:00" step="300">
+          <label>
+            <input type="radio" name="wakeup" value="07:00" class="radio"> 07:00
+          </label>
+          
+          <label>
+            <input type="radio" name="wakeup" value="08:00" class="radio" checked> 08:00
+          </label>
+          
+          <label>
+            <input type="radio" name="wakeup" value="09:00" class="radio"> 09:00
+          </label>
+        </div>
+        <div class="sleep">
+          <label for="sleep">睡覺時間</label><input type="time" id="sleep" value="22:00">
+          <label>
+            <input type="radio" name="sleep" value="21:00" class="radio"> 21:00
+          </label>
+          
+          <label>
+            <input type="radio" name="sleep" value="22:00" class="radio" checked> 22:00
+          </label>
+          
+          <label>
+            <input type="radio" name="sleep" value="23:00" class="radio"> 23:00
+          </label>
+        </div>
+        <div class="breakfast">
+          <label for="breakfast">早餐</label><textarea id="breakfast" cols="20" rows="5"></textarea><input type="checkbox" value="Y" id="breakfastNM">無麥奶<input type="checkbox" value="Y" id="breakfastND">無甜食
+        </div>
+        <div class="lunch">
+          <label for="lunch">午餐</label><textarea id="lunch" cols="20" rows="5"></textarea><input type="checkbox" value="Y" id="lunchNM">無麥奶<input type="checkbox" value="Y" id="lunchND">無甜食
+        </div>
+        <div class="dinner">
+          <label for="dinner">晚餐</label><textarea id="dinner" cols="20" rows="5"></textarea><input type="checkbox" value="Y" id="dinnerNM">無麥奶<input type="checkbox" value="Y" id="dinnerND">無甜食
+        </div>
+        <button type="submit">送出</button>
+      </form>  
+    </div>
+  </div>
+</body>
+<script>
+  
+  
+</script>
+<script src="js/json-sever/utils.js"></script>
+<script src="js/json-sever/apiGET.js"></script>
+<script src="js/json-sever/apiPOST.js"></script>
+<script src="js/json-sever/apiPATCH.js"></script>
+<script src="js/json-sever/daily.js"></script>
+</html>
