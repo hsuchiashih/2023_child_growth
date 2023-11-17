@@ -57,6 +57,7 @@ function handleFormData(data) {
   let daily_record= {
     "sleep_record":{
       // "kidId": 99999999,
+      "record_date": data.datepicker,
       "wakeup_time": data.wakeup,
       "sleep_time": data.sleep,
     },
@@ -86,7 +87,11 @@ function handleFormData(data) {
     }
   }
   console.log(daily_record);
-  addDailyRecord(daily_record);
+  if(_response.data.length == 0 && !_response[0]){
+    addDailyRecord(daily_record);
+  }else{
+    updateDailyRecord(daily_record);
+  }
   console.log(_response);
   // window.location.href = document.referrer;
 }
