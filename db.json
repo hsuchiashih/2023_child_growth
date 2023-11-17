@@ -1944,12 +1944,12 @@
     },
     {
       "record_date": "2023-08-01",
-      "wakeup_time": "08:00",
-      "sleep_time": "22:00",
+      "wakeup_time": "09:00",
+      "sleep_time": "23:00",
       "kidId": 1,
       "userId": 1,
       "sleep_hours": 14,
-      "modified_time": "2023-11-17 17:58:00",
+      "modified_time": "2023-11-18 06:55:17",
       "created_at": "2023-11-17 17:58:00",
       "id": 176
     },
@@ -1966,12 +1966,12 @@
     },
     {
       "record_date": "2023-08-02",
-      "wakeup_time": "09:00",
-      "sleep_time": "23:00",
+      "wakeup_time": "08:00",
+      "sleep_time": "22:00",
       "kidId": 1,
       "userId": 1,
       "sleep_hours": 14,
-      "modified_time": "2023-11-17 17:59:27",
+      "modified_time": "2023-11-18 07:05:06",
       "created_at": "2023-11-17 17:59:27",
       "id": 178
     },
@@ -1996,6 +1996,17 @@
       "modified_time": "2023-11-17 18:01:54",
       "created_at": "2023-11-17 18:01:54",
       "id": 180
+    },
+    {
+      "record_date": "2023-11-18",
+      "wakeup_time": "07:00",
+      "sleep_time": "21:00",
+      "kidId": 1,
+      "userId": 1,
+      "sleep_hours": 14,
+      "modified_time": "2023-11-18 06:44:55",
+      "created_at": "2023-11-18 06:44:55",
+      "id": 181
     }
   ],
   "breakfast_records": [
@@ -3776,14 +3787,14 @@
       "id": 170
     },
     {
-      "record_date": "2023-11-17",
-      "content": "8/3",
+      "record_date": "2023-08-01",
+      "content": "update8/1",
       "noBreadMilk": "Y",
       "noDessert": "N",
       "sleep_recordId": 176,
       "kidId": 1,
       "userId": 1,
-      "modified_time": "2023-11-17 16:39:42",
+      "modified_time": "2023-11-18 06:55:17",
       "created_at": "2023-11-17 16:39:42",
       "id": 171
     },
@@ -3800,14 +3811,14 @@
       "id": 172
     },
     {
-      "record_date": "2023-11-17",
-      "content": "8/19",
+      "record_date": "2023-08-02",
+      "content": "againupdate8/2",
       "noBreadMilk": "Y",
       "noDessert": "N",
       "sleep_recordId": 178,
       "kidId": 1,
       "userId": 1,
-      "modified_time": "2023-11-17 17:00:49",
+      "modified_time": "2023-11-18 07:05:06",
       "created_at": "2023-11-17 17:00:49",
       "id": 173
     },
@@ -3918,6 +3929,18 @@
       "modified_time": "2023-11-17 18:01:54",
       "created_at": "2023-11-17 18:01:54",
       "id": 182
+    },
+    {
+      "record_date": "2023-11-18",
+      "content": "add11/18",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 181,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 06:44:55",
+      "created_at": "2023-11-18 06:44:55",
+      "id": 183
     }
   ],
   "lunch_records": [
@@ -5803,14 +5826,14 @@
       "id": 170
     },
     {
-      "record_date": "2023-11-17",
-      "content": "8/3",
+      "record_date": "2023-08-01",
+      "content": "update8/1",
       "noBreadMilk": "N",
       "noDessert": "Y",
       "sleep_recordId": 176,
       "kidId": 1,
       "userId": 1,
-      "modified_time": "2023-11-17 16:39:42",
+      "modified_time": "2023-11-18 06:55:17",
       "created_at": "2023-11-17 16:39:42",
       "id": 171
     },
@@ -5827,14 +5850,14 @@
       "id": 172
     },
     {
-      "record_date": "2023-11-17",
-      "content": "8/19",
+      "record_date": "2023-08-02",
+      "content": "againupdate8/2",
       "noBreadMilk": "N",
       "noDessert": "Y",
       "sleep_recordId": 178,
       "kidId": 1,
       "userId": 1,
-      "modified_time": "2023-11-17 17:00:49",
+      "modified_time": "2023-11-18 07:05:06",
       "created_at": "2023-11-17 17:00:49",
       "id": 173
     },
@@ -5945,6 +5968,18 @@
       "modified_time": "2023-11-17 18:01:54",
       "created_at": "2023-11-17 18:01:54",
       "id": 182
+    },
+    {
+      "record_date": "2023-11-18",
+      "content": "add11/18",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 181,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 06:44:55",
+      "created_at": "2023-11-18 06:44:55",
+      "id": 183
     }
   ],
   "dinner_records": [
@@ -7806,14 +7841,14 @@
       "id": 168
     },
     {
-      "record_date": "2023-11-17",
-      "content": "8/3",
+      "record_date": "2023-08-01",
+      "content": "update8/1",
       "noBreadMilk": "Y",
       "noDessert": "Y",
       "sleep_recordId": 176,
       "kidId": 1,
       "userId": 1,
-      "modified_time": "2023-11-17 16:39:42",
+      "modified_time": "2023-11-18 06:55:17",
       "created_at": "2023-11-17 16:39:42",
       "id": 169
     },
@@ -7830,14 +7865,14 @@
       "id": 170
     },
     {
-      "record_date": "2023-11-17",
-      "content": "8/19",
+      "record_date": "2023-08-02",
+      "content": "againupdate8/2",
       "noBreadMilk": "Y",
       "noDessert": "Y",
       "sleep_recordId": 178,
       "kidId": 1,
       "userId": 1,
-      "modified_time": "2023-11-17 17:00:49",
+      "modified_time": "2023-11-18 07:05:06",
       "created_at": "2023-11-17 17:00:49",
       "id": 171
     },
@@ -7948,6 +7983,18 @@
       "modified_time": "2023-11-17 18:01:54",
       "created_at": "2023-11-17 18:01:54",
       "id": 180
+    },
+    {
+      "record_date": "2023-11-18",
+      "content": "add11/18",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 181,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 06:44:55",
+      "created_at": "2023-11-18 06:44:55",
+      "id": 181
     }
   ],
   "monthly_records": [

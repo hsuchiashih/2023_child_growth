@@ -129,9 +129,10 @@ async function updateSleepRecord(sleep_record, kidNum=0) {//11/17未完成
     sleep_record.sleep_time,
   );
   sleep_record.modified_time = getDatetime();
+  sleepRecordId = _response.data[0].id || _response[0].data.id;
   try {
     const response = await axios.patch(
-      `${url}/600/sleep_records/${_response.data[0].id || _response[0].data.id}`,
+      `${url}/600/sleep_records/${sleepRecordId}`,
       sleep_record,
       {
         headers: {
@@ -148,8 +149,9 @@ async function updateSleepRecord(sleep_record, kidNum=0) {//11/17未完成
 }
 function updateBreakfastRecord(breakfast_record, kidNum) {
   breakfast_record.modified_time = getDatetime();
+  breakfastRecordId = _response.data[0].breakfast_records[0].id || _response[1].data.id;
   axios
-    .patch(`${url}/600/breakfast_records/${_response.data[0].breakfast_records[0].id}`, breakfast_record, {
+    .patch(`${url}/600/breakfast_records/${breakfastRecordId}`, breakfast_record, {
       headers: {
         authorization: `Bearer ${token}`,
       },
@@ -165,8 +167,9 @@ function updateBreakfastRecord(breakfast_record, kidNum) {
 }
 function updateLunchRecord(lunch_record, kidNum) {
   lunch_record.modified_time = getDatetime();
+  lunchRecordId = _response.data[0].lunch_records[0].id || _response[2].data.id;
   axios
-    .patch(`${url}/600/lunch_records/${_response.data[0].lunch_records[0].id}`, lunch_record, {
+    .patch(`${url}/600/lunch_records/${lunchRecordId}`, lunch_record, {
       headers: {
         authorization: `Bearer ${token}`,
       },
@@ -182,8 +185,9 @@ function updateLunchRecord(lunch_record, kidNum) {
 }
 function updateDinnerRecord(dinner_record, kidNum) {
   dinner_record.modified_time = getDatetime();
+  dinnerRecordId = _response.data[0].dinner_records[0].id || _response[3].data.id;
   axios
-    .patch(`${url}/600/dinner_records/${_response.data[0].dinner_records[0].id}`, dinner_record, {
+    .patch(`${url}/600/dinner_records/${dinnerRecordId}`, dinner_record, {
       headers: {
         authorization: `Bearer ${token}`,
       },

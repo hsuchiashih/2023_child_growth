@@ -99,18 +99,33 @@ function renderValue(){
 
   $('#wakeup')[0].value = _response.data[0].wakeup_time;
   $('#sleep')[0].value = _response.data[0].sleep_time;
-  $('#breakfast')[0].innerHTML = _response.data[0].breakfast_records[0].content;
+  $('#breakfast')[0].value = _response.data[0].breakfast_records[0].content;
   document.querySelector('#breakfastNM').checked = _response.data[0].breakfast_records[0].noBreadMilk == 'Y'? true:false;
   document.querySelector('#breakfastND').checked = _response.data[0].breakfast_records[0].noDessert == 'Y'? true:false;
-  $('#lunch')[0].innerHTML = _response.data[0].lunch_records[0].content;
+  $('#lunch')[0].value = _response.data[0].lunch_records[0].content;
   document.querySelector('#lunchNM').checked = _response.data[0].lunch_records[0].noBreadMilk == 'Y'? true:false;
   document.querySelector('#lunchND').checked = _response.data[0].lunch_records[0].noDessert == 'Y'? true:false;
-  $('#dinner')[0].innerHTML = _response.data[0].dinner_records[0].content;
+  $('#dinner')[0].value = _response.data[0].dinner_records[0].content;
   document.querySelector('#dinnerNM').checked = _response.data[0].dinner_records[0].noBreadMilk == 'Y'? true:false;
   document.querySelector('#dinnerND').checked = _response.data[0].dinner_records[0].noDessert == 'Y'? true:false;
 }
+function emptyValue(){
+
+  $('#wakeup')[0].value = "";
+  $('#sleep')[0].value = "";
+  $('#breakfast')[0].value = "";
+  document.querySelector('#breakfastNM').checked = false;
+  document.querySelector('#breakfastND').checked = false;
+  $('#lunch')[0].value = "";
+  document.querySelector('#lunchNM').checked = false;
+  document.querySelector('#lunchND').checked = false;
+  $('#dinner')[0].value = "";
+  document.querySelector('#dinnerNM').checked = false;
+  document.querySelector('#dinnerND').checked = false;
+}
 
 document.querySelector('#datepicker').addEventListener('change', function(event) {
+    emptyValue();
     getDailyRecords(event.target.value);
     setTimeout(renderValue,500);
 });
