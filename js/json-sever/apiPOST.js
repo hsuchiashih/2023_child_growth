@@ -287,3 +287,24 @@ function addDinnerRecord(dinner_record, kidNum) {
       _response[3] = error.response;
     });
 }
+
+function addContactUs(
+  contactInfo = {
+    email: "123@mail.com",
+    name: "史努比",
+    phone: "0912345678",
+    gender: "female",
+    content: "小孩要怎麼長大?",
+  },
+) {
+  contactInfo.created_at = getDatetime();
+  axios
+    .post(`${url}/contact_us`, contactInfo)
+    .then(function (response) {
+      _response = response;
+    })
+    .catch(function (error) {
+      console.log(error.response);
+      _response = error.response;
+    });
+}
