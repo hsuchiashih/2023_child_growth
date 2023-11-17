@@ -1,6 +1,5 @@
   //待處理非同步login()->getData()->render()
   //待處理PATCH代替POST
-  //datepicker.addEventListener
 
 
 initialRender(getDailyRecords);
@@ -28,7 +27,7 @@ function setDateToday(){
       document.getElementById('datepicker').value = today;
     });
 }
-function setRadioValueToInput(){//1121114未完成
+function setRadioValueToInput(){
     // 獲取所有的 radio 元素
   // var radios = document.querySelectorAll('.radio');
 
@@ -105,3 +104,8 @@ function renderValue(){
   document.querySelector('#dinnerNM').checked = _response.data[0].dinner_records[0].noBreadMilk == 'Y'? true:false;
   document.querySelector('#dinnerND').checked = _response.data[0].dinner_records[0].noDessert == 'Y'? true:false;
 }
+
+document.querySelector('#datepicker').addEventListener('change', function(event) {
+    getDailyRecords(event.target.value);
+    setTimeout(renderValue,500);
+});
