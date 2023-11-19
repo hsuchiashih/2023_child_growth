@@ -1,9 +1,8 @@
   //待處理非同步login()->getData()->render()
   //待處理PATCH代替POST
 
-
-initialRender(getDailyRecords);
 setDateToday();
+enteringRender();
 setRadioValueToInput();
 function setDateToday(){
       document.addEventListener('DOMContentLoaded', function() {
@@ -129,3 +128,26 @@ document.querySelector('#datepicker').addEventListener('change', function(event)
     getDailyRecords(event.target.value);
     setTimeout(renderValue,500);
 });
+
+function enteringRender(){
+  // 獲取網址中的 search 部分，例如 "?record_date=2023-11-09"
+  var queryString = window.location.search;
+
+  // 使用 URLSearchParams 解析 search 部分
+  var urlParams = new URLSearchParams(queryString);
+
+  // 獲取 record_date 參數的值
+  var recordDate = urlParams.get('record_date');
+  var kidNum = urlParams.get('kidNum');
+  console.log(recordDate);
+  console.log(kidNum);
+  if(recordDate != null){
+    login();
+    setTimeout(()=>{getDailyRecords(recordDate,kidNum=0)
+    document.querySelector('#datepicker').value = recordDate;
+    }, 500);
+    setTimeout(renderValue, 1000);
+  }else{
+    initialRender(getDailyRecords);
+  }
+}
