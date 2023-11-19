@@ -1,5 +1,3 @@
-
-
 //bootstrap css
 @import "../node_modules/bootstrap/scss/functions";
 @import "../scss/helper/variables"; // 自己的變數
@@ -16,6 +14,7 @@
 //頁面 css
 @import "../scss/headerFooter";
 @import "../scss/newChild";
+@import "../scss/childList";
 
 // 字體
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700&family=Tilt+Neon&display=swap");
