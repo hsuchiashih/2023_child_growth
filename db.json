@@ -1,21 +1,4 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "users": [
     {
       "email": "pikachu@mail.com",
@@ -1936,6 +1919,105 @@
       "modified_time": "2023-11-16 06:28:11",
       "created_at": "2023-11-16 06:28:11",
       "id": 173
+    },
+    {
+      "record_date": "2023-11-17",
+      "wakeup_time": "07:00",
+      "sleep_time": "21:00",
+      "kidId": 1,
+      "userId": 1,
+      "sleep_hours": 14,
+      "modified_time": "2023-11-17 17:46:45",
+      "created_at": "2023-11-17 17:46:45",
+      "id": 174
+    },
+    {
+      "record_date": "2023-11-17",
+      "wakeup_time": "09:00",
+      "sleep_time": "23:00",
+      "kidId": 1,
+      "userId": 1,
+      "sleep_hours": 14,
+      "modified_time": "2023-11-17 17:49:14",
+      "created_at": "2023-11-17 17:49:14",
+      "id": 175
+    },
+    {
+      "record_date": "2023-08-01",
+      "wakeup_time": "09:00",
+      "sleep_time": "23:00",
+      "kidId": 1,
+      "userId": 1,
+      "sleep_hours": 14,
+      "modified_time": "2023-11-18 06:55:17",
+      "created_at": "2023-11-17 17:58:00",
+      "id": 176
+    },
+    {
+      "record_date": "2023-08-02",
+      "wakeup_time": "08:00",
+      "sleep_time": "22:00",
+      "kidId": 1,
+      "userId": 1,
+      "sleep_hours": 14,
+      "modified_time": "2023-11-17 17:58:48",
+      "created_at": "2023-11-17 17:58:48",
+      "id": 177
+    },
+    {
+      "record_date": "2023-08-02",
+      "wakeup_time": "08:00",
+      "sleep_time": "22:00",
+      "kidId": 1,
+      "userId": 1,
+      "sleep_hours": 14,
+      "modified_time": "2023-11-18 07:05:06",
+      "created_at": "2023-11-17 17:59:27",
+      "id": 178
+    },
+    {
+      "record_date": "2023-08-03",
+      "wakeup_time": "07:00",
+      "sleep_time": "21:00",
+      "kidId": 1,
+      "userId": 1,
+      "sleep_hours": 14,
+      "modified_time": "2023-11-17 18:00:49",
+      "created_at": "2023-11-17 18:00:49",
+      "id": 179
+    },
+    {
+      "record_date": "2023-08-04",
+      "wakeup_time": "07:00",
+      "sleep_time": "21:00",
+      "kidId": 1,
+      "userId": 1,
+      "sleep_hours": 14,
+      "modified_time": "2023-11-17 18:01:54",
+      "created_at": "2023-11-17 18:01:54",
+      "id": 180
+    },
+    {
+      "record_date": "2023-11-18",
+      "wakeup_time": "07:00",
+      "sleep_time": "21:00",
+      "kidId": 1,
+      "userId": 1,
+      "sleep_hours": 14,
+      "modified_time": "2023-11-18 06:44:55",
+      "created_at": "2023-11-18 06:44:55",
+      "id": 181
+    },
+    {
+      "record_date": "2023-11-19",
+      "wakeup_time": "07:00",
+      "sleep_time": "21:00",
+      "kidId": 1,
+      "userId": 1,
+      "sleep_hours": 14,
+      "modified_time": "2023-11-19 09:41:41",
+      "created_at": "2023-11-19 09:41:41",
+      "id": 182
     }
   ],
   "breakfast_records": [
@@ -3690,6 +3772,198 @@
       "modified_time": "2023-11-16 06:28:11",
       "created_at": "2023-11-16 06:28:11",
       "id": 168
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "11/17",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 174,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 16:35:53",
+      "created_at": "2023-11-17 16:35:53",
+      "id": 169
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "11/18",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 175,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 16:37:10",
+      "created_at": "2023-11-17 16:37:10",
+      "id": 170
+    },
+    {
+      "record_date": "2023-08-01",
+      "content": "update8/1",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 176,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 06:55:17",
+      "created_at": "2023-11-17 16:39:42",
+      "id": 171
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "8/19",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 177,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:00:01",
+      "created_at": "2023-11-17 17:00:01",
+      "id": 172
+    },
+    {
+      "record_date": "2023-08-02",
+      "content": "againupdate8/2",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 178,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 07:05:06",
+      "created_at": "2023-11-17 17:00:49",
+      "id": 173
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "8/19",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 179,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:09:38",
+      "created_at": "2023-11-17 17:09:38",
+      "id": 174
+    },
+    {
+      "record_date": "2023-08-19",
+      "content": "8/19",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 180,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:14:29",
+      "created_at": "2023-11-17 17:14:29",
+      "id": 175
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "11/17",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 174,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:46:45",
+      "created_at": "2023-11-17 17:46:45",
+      "id": 176
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "update11/17",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 175,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:49:14",
+      "created_at": "2023-11-17 17:49:14",
+      "id": 177
+    },
+    {
+      "record_date": "2023-08-01",
+      "content": "add8/1",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 176,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:58:00",
+      "created_at": "2023-11-17 17:58:00",
+      "id": 178
+    },
+    {
+      "record_date": "2023-08-02",
+      "content": "add8/2",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 177,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:58:48",
+      "created_at": "2023-11-17 17:58:48",
+      "id": 179
+    },
+    {
+      "record_date": "2023-08-02",
+      "content": "update8/2",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 178,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:59:27",
+      "created_at": "2023-11-17 17:59:27",
+      "id": 180
+    },
+    {
+      "record_date": "2023-08-03",
+      "content": "add8/3",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 179,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 18:00:49",
+      "created_at": "2023-11-17 18:00:49",
+      "id": 181
+    },
+    {
+      "record_date": "2023-08-04",
+      "content": "add8/4",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 180,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 18:01:54",
+      "created_at": "2023-11-17 18:01:54",
+      "id": 182
+    },
+    {
+      "record_date": "2023-11-18",
+      "content": "add11/18",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 181,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 06:44:55",
+      "created_at": "2023-11-18 06:44:55",
+      "id": 183
+    },
+    {
+      "record_date": "2023-11-19",
+      "content": "add11/19",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 182,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-19 09:41:41",
+      "created_at": "2023-11-19 09:41:41",
+      "id": 184
     }
   ],
   "lunch_records": [
@@ -5549,6 +5823,198 @@
       "modified_time": "2023-11-16 06:28:11",
       "created_at": "2023-11-16 06:28:11",
       "id": 168
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "11/17",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 174,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 16:35:53",
+      "created_at": "2023-11-17 16:35:53",
+      "id": 169
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "11/18",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 175,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 16:37:10",
+      "created_at": "2023-11-17 16:37:10",
+      "id": 170
+    },
+    {
+      "record_date": "2023-08-01",
+      "content": "update8/1",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 176,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 06:55:17",
+      "created_at": "2023-11-17 16:39:42",
+      "id": 171
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "8/19",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 177,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:00:01",
+      "created_at": "2023-11-17 17:00:01",
+      "id": 172
+    },
+    {
+      "record_date": "2023-08-02",
+      "content": "againupdate8/2",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 178,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 07:05:06",
+      "created_at": "2023-11-17 17:00:49",
+      "id": 173
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "8/19",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 179,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:09:38",
+      "created_at": "2023-11-17 17:09:38",
+      "id": 174
+    },
+    {
+      "record_date": "2023-08-19",
+      "content": "8/19",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 180,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:14:29",
+      "created_at": "2023-11-17 17:14:29",
+      "id": 175
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "11/17",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 174,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:46:45",
+      "created_at": "2023-11-17 17:46:45",
+      "id": 176
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "update11/17",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 175,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:49:14",
+      "created_at": "2023-11-17 17:49:14",
+      "id": 177
+    },
+    {
+      "record_date": "2023-08-01",
+      "content": "add8/1",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 176,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:58:00",
+      "created_at": "2023-11-17 17:58:00",
+      "id": 178
+    },
+    {
+      "record_date": "2023-08-02",
+      "content": "add8/2",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 177,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:58:48",
+      "created_at": "2023-11-17 17:58:48",
+      "id": 179
+    },
+    {
+      "record_date": "2023-08-02",
+      "content": "update8/2",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 178,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:59:27",
+      "created_at": "2023-11-17 17:59:27",
+      "id": 180
+    },
+    {
+      "record_date": "2023-08-03",
+      "content": "add8/3",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 179,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 18:00:49",
+      "created_at": "2023-11-17 18:00:49",
+      "id": 181
+    },
+    {
+      "record_date": "2023-08-04",
+      "content": "add8/4",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 180,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 18:01:54",
+      "created_at": "2023-11-17 18:01:54",
+      "id": 182
+    },
+    {
+      "record_date": "2023-11-18",
+      "content": "add11/18",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 181,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 06:44:55",
+      "created_at": "2023-11-18 06:44:55",
+      "id": 183
+    },
+    {
+      "record_date": "2023-11-19",
+      "content": "add11/19",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 182,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-19 09:41:41",
+      "created_at": "2023-11-19 09:41:41",
+      "id": 184
     }
   ],
   "dinner_records": [
@@ -7384,6 +7850,198 @@
       "modified_time": "2023-11-16 06:28:11",
       "created_at": "2023-11-16 06:28:11",
       "id": 166
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "11/17",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 174,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 16:35:53",
+      "created_at": "2023-11-17 16:35:53",
+      "id": 167
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "11/18",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 175,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 16:37:10",
+      "created_at": "2023-11-17 16:37:10",
+      "id": 168
+    },
+    {
+      "record_date": "2023-08-01",
+      "content": "update8/1",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 176,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 06:55:17",
+      "created_at": "2023-11-17 16:39:42",
+      "id": 169
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "8/19",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 177,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:00:01",
+      "created_at": "2023-11-17 17:00:01",
+      "id": 170
+    },
+    {
+      "record_date": "2023-08-02",
+      "content": "againupdate8/2",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 178,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 07:05:06",
+      "created_at": "2023-11-17 17:00:49",
+      "id": 171
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "8/19",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 179,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:09:38",
+      "created_at": "2023-11-17 17:09:38",
+      "id": 172
+    },
+    {
+      "record_date": "2023-08-19",
+      "content": "8/19",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 180,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:14:29",
+      "created_at": "2023-11-17 17:14:29",
+      "id": 173
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "11/17",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 174,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:46:45",
+      "created_at": "2023-11-17 17:46:45",
+      "id": 174
+    },
+    {
+      "record_date": "2023-11-17",
+      "content": "update11/17",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 175,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:49:14",
+      "created_at": "2023-11-17 17:49:14",
+      "id": 175
+    },
+    {
+      "record_date": "2023-08-01",
+      "content": "add8/1",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 176,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:58:00",
+      "created_at": "2023-11-17 17:58:00",
+      "id": 176
+    },
+    {
+      "record_date": "2023-08-02",
+      "content": "add8/2",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 177,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:58:48",
+      "created_at": "2023-11-17 17:58:48",
+      "id": 177
+    },
+    {
+      "record_date": "2023-08-02",
+      "content": "update8/2",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 178,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 17:59:27",
+      "created_at": "2023-11-17 17:59:27",
+      "id": 178
+    },
+    {
+      "record_date": "2023-08-03",
+      "content": "add8/3",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 179,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 18:00:49",
+      "created_at": "2023-11-17 18:00:49",
+      "id": 179
+    },
+    {
+      "record_date": "2023-08-04",
+      "content": "add8/4",
+      "noBreadMilk": "Y",
+      "noDessert": "Y",
+      "sleep_recordId": 180,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-17 18:01:54",
+      "created_at": "2023-11-17 18:01:54",
+      "id": 180
+    },
+    {
+      "record_date": "2023-11-18",
+      "content": "add11/18",
+      "noBreadMilk": "N",
+      "noDessert": "Y",
+      "sleep_recordId": 181,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-18 06:44:55",
+      "created_at": "2023-11-18 06:44:55",
+      "id": 181
+    },
+    {
+      "record_date": "2023-11-19",
+      "content": "add11/19",
+      "noBreadMilk": "Y",
+      "noDessert": "N",
+      "sleep_recordId": 182,
+      "kidId": 1,
+      "userId": 1,
+      "modified_time": "2023-11-19 09:41:41",
+      "created_at": "2023-11-19 09:41:41",
+      "id": 182
     }
   ],
   "monthly_records": [
@@ -7542,6 +8200,77 @@
       "content": "長不高怎麼辦?",
       "created_at": "2023-03-22 10:48:39",
       "id": 2
+    },
+    {
+      "email": "123",
+      "name": "123",
+      "phone": "123",
+      "gender": "123",
+      "content": "123",
+      "created_at": "2023-11-17 12:19:57",
+      "id": 3
+    },
+    {
+      "email": "",
+      "name": "",
+      "phone": "",
+      "gender": "",
+      "content": "",
+      "created_at": "2023-11-17 12:22:00",
+      "id": 4
+    },
+    {
+      "email": "",
+      "name": "",
+      "phone": "",
+      "gender": "",
+      "content": "",
+      "created_at": "2023-11-17 12:23:30",
+      "id": 5
+    },
+    {
+      "email": "",
+      "name": "",
+      "phone": "",
+      "gender": "",
+      "content": "",
+      "created_at": "2023-11-17 12:24:03",
+      "id": 6
+    },
+    {
+      "email": "",
+      "name": "",
+      "phone": "",
+      "gender": "",
+      "content": "",
+      "created_at": "2023-11-17 12:25:00",
+      "id": 7
+    },
+    {
+      "email": "",
+      "name": "",
+      "phone": "",
+      "content": "",
+      "created_at": "2023-11-17 12:34:55",
+      "id": 8
+    },
+    {
+      "email": "",
+      "name": "",
+      "phone": "",
+      "gender": "不提供",
+      "content": "",
+      "created_at": "2023-11-17 12:35:27",
+      "id": 9
+    },
+    {
+      "email": "",
+      "name": "",
+      "phone": "",
+      "gender": "男",
+      "content": "",
+      "created_at": "2023-11-17 12:37:36",
+      "id": 10
     }
   ]
 }

@@ -1,10 +1,8 @@
   //待處理非同步login()->getData()->render()
   //待處理PATCH代替POST
-  //datepicker.addEventListener
 
-
-initialRender(getDailyRecords);
 setDateToday();
+enteringRender();
 setRadioValueToInput();
 function setDateToday(){
       document.addEventListener('DOMContentLoaded', function() {
@@ -28,7 +26,7 @@ function setDateToday(){
       document.getElementById('datepicker').value = today;
     });
 }
-function setRadioValueToInput(){//1121114未完成
+function setRadioValueToInput(){
     // 獲取所有的 radio 元素
   // var radios = document.querySelectorAll('.radio');
 
@@ -58,6 +56,7 @@ function handleFormData(data) {
   let daily_record= {
     "sleep_record":{
       // "kidId": 99999999,
+      "record_date": data.datepicker,
       "wakeup_time": data.wakeup,
       "sleep_time": data.sleep,
     },
@@ -87,7 +86,11 @@ function handleFormData(data) {
     }
   }
   console.log(daily_record);
-  addDailyRecord(daily_record);
+  if(_response.data.length == 0 && !_response[0]){
+    addDailyRecord(daily_record);
+  }else{
+    updateDailyRecord(daily_record);
+  }
   console.log(_response);
   // window.location.href = document.referrer;
 }
@@ -95,13 +98,56 @@ function renderValue(){
 
   $('#wakeup')[0].value = _response.data[0].wakeup_time;
   $('#sleep')[0].value = _response.data[0].sleep_time;
-  $('#breakfast')[0].innerHTML = _response.data[0].breakfast_records[0].content;
+  $('#breakfast')[0].value = _response.data[0].breakfast_records[0].content;
   document.querySelector('#breakfastNM').checked = _response.data[0].breakfast_records[0].noBreadMilk == 'Y'? true:false;
   document.querySelector('#breakfastND').checked = _response.data[0].breakfast_records[0].noDessert == 'Y'? true:false;
-  $('#lunch')[0].innerHTML = _response.data[0].lunch_records[0].content;
+  $('#lunch')[0].value = _response.data[0].lunch_records[0].content;
   document.querySelector('#lunchNM').checked = _response.data[0].lunch_records[0].noBreadMilk == 'Y'? true:false;
   document.querySelector('#lunchND').checked = _response.data[0].lunch_records[0].noDessert == 'Y'? true:false;
-  $('#dinner')[0].innerHTML = _response.data[0].dinner_records[0].content;
+  $('#dinner')[0].value = _response.data[0].dinner_records[0].content;
   document.querySelector('#dinnerNM').checked = _response.data[0].dinner_records[0].noBreadMilk == 'Y'? true:false;
   document.querySelector('#dinnerND').checked = _response.data[0].dinner_records[0].noDessert == 'Y'? true:false;
+}
+function emptyValue(){
+
+  $('#wakeup')[0].value = "";
+  $('#sleep')[0].value = "";
+  $('#breakfast')[0].value = "";
+  document.querySelector('#breakfastNM').checked = false;
+  document.querySelector('#breakfastND').checked = false;
+  $('#lunch')[0].value = "";
+  document.querySelector('#lunchNM').checked = false;
+  document.querySelector('#lunchND').checked = false;
+  $('#dinner')[0].value = "";
+  document.querySelector('#dinnerNM').checked = false;
+  document.querySelector('#dinnerND').checked = false;
+}
+
+document.querySelector('#datepicker').addEventListener('change', function(event) {
+    emptyValue();
+    getDailyRecords(event.target.value);
+    setTimeout(renderValue,500);
+});
+
+function enteringRender(){
+  // 獲取網址中的 search 部分，例如 "?record_date=2023-11-09"
+  var queryString = window.location.search;
+
+  // 使用 URLSearchParams 解析 search 部分
+  var urlParams = new URLSearchParams(queryString);
+
+  // 獲取 record_date 參數的值
+  var recordDate = urlParams.get('record_date');
+  var kidNum = urlParams.get('kidNum');
+  console.log(recordDate);
+  console.log(kidNum);
+  if(recordDate != null){
+    login();
+    setTimeout(()=>{getDailyRecords(recordDate,kidNum=0)
+    document.querySelector('#datepicker').value = recordDate;
+    }, 500);
+    setTimeout(renderValue, 1000);
+  }else{
+    initialRender(getDailyRecords);
+  }
 }

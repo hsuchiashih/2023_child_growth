@@ -88,12 +88,11 @@ function addMonthlyRecord(
   kidNum,
 ) {
   monthlyRecord.userId = monthlyRecord.userId
-    ? monthlyRecord.userId
-    : userInfo.id;
+    || userInfo.id;
   monthlyRecord.kidId = monthlyRecord.kidId
-    ? monthlyRecord.kidId
-    : userInfo.kids[kidNum].id;
+    || userInfo.kids[kidNum].id;
   monthlyRecord.created_at = getDatetime();
+
   axios
     .post(`${url}/600/monthly_records`, monthlyRecord, {
       headers: {
@@ -184,6 +183,7 @@ async function addDailyRecord(
   },
   kidNum = 0,
 ) {
+  console.log('addDailyRecord');
   await addSleepRecord(daily_record.sleep_record, kidNum);
   // console.log('addSleepRecord執行完畢');
   // console.log(_response[0].id);
@@ -192,9 +192,11 @@ async function addDailyRecord(
   addDinnerRecord(daily_record.dinner_record, kidNum);
 }
 async function addSleepRecord(sleep_record, kidNum=0) {
+  console.log(sleep_record);
+  console.log(userInfo);
   sleep_record.kidId = userInfo.kids[kidNum].id || sleep_record.kidId;
   sleep_record.userId = userInfo.id || sleep_record.userId;
-  sleep_record.record_date = getMonthDate();
+  sleep_record.record_date = sleep_record.record_date ||getMonthDate();
   sleep_record.sleep_hours = countSleepHours(
     sleep_record.wakeup_time,
     sleep_record.sleep_time,
@@ -223,7 +225,7 @@ function addBreakfastRecord(breakfast_record, kidNum) {
     _response[0].data.id || breakfast_record.sleep_recordId;
   breakfast_record.kidId = userInfo.kids[kidNum].id || breakfast_record.kidId;
   breakfast_record.userId = userInfo.id || breakfast_record.userId;
-  breakfast_record.record_date = getMonthDate();
+  breakfast_record.record_date = breakfast_record.record_date || getMonthDate();
   breakfast_record.modified_time = getDatetime();
   breakfast_record.created_at = getDatetime();
   axios
@@ -246,7 +248,7 @@ function addLunchRecord(lunch_record, kidNum) {
     _response[0].data.id || lunch_record.sleep_recordId;
   lunch_record.kidId = userInfo.kids[kidNum].id || lunch_record.kidId;
   lunch_record.userId = userInfo.id || lunch_record.userId;
-  lunch_record.record_date = getMonthDate();
+  lunch_record.record_date = lunch_record.record_date || getMonthDate();
   lunch_record.modified_time = getDatetime();
   lunch_record.created_at = getDatetime();
   axios
@@ -269,7 +271,7 @@ function addDinnerRecord(dinner_record, kidNum) {
     _response[0].data.id || dinner_record.sleep_recordId;
   dinner_record.kidId = userInfo.kids[kidNum].id || dinner_record.kidId;
   dinner_record.userId = userInfo.id || dinner_record.userId;
-  dinner_record.record_date = getMonthDate();
+  dinner_record.record_date ||= getMonthDate();
   dinner_record.modified_time = getDatetime();
   dinner_record.created_at = getDatetime();
   axios
@@ -285,5 +287,26 @@ function addDinnerRecord(dinner_record, kidNum) {
     .catch(function (error) {
       console.log(error.response);
       _response[3] = error.response;
+    });
+}
+
+function addContactUs(
+  contactInfo = {
+    email: "123@mail.com",
+    name: "史努比",
+    phone: "0912345678",
+    gender: "female",
+    content: "小孩要怎麼長大?",
+  },
+) {
+  contactInfo.created_at = getDatetime();
+  axios
+    .post(`${url}/contact_us`, contactInfo)
+    .then(function (response) {
+      _response = response;
+    })
+    .catch(function (error) {
+      console.log(error.response);
+      _response = error.response;
     });
 }

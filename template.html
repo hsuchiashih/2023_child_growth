@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="zh-tw">
   <head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="兒童成長網站" />
@@ -149,28 +150,19 @@
       </header>
       <!-- 上面是Header -->
       <form id="myForm">
-        <!-- 每個input請都要有id，submit以後便會根據value生出一個物件{
-          "input1#id":"value",
-          "input2#id":"value",
-          "input3#id":"value",
+        <input type="text" id="id1" value="value1">
+        <input type="text" id="id2" value="value2">
+        <input type="text" id="id3" value="value3">
+        <!-- 每個input請都要有id，submit以後便會根據value生出一個物件
+        inputData={
+          "id1":"value1",
+          "id2":"value2",
+          "id3":"value3",
           ...
         } -->
-        <!-- 再自己寫一個
-          function handleFormData(data) {//函式名稱勿改
-            // 在這裡處理你的數據 
-            /*最後呼交apiPOST裡的函式
-              EX:
-              addDailyRecord(處理過的data);*/
-            console.log(_response);
-            window.location.href = document.referrer;
-          }
-        -->
         <button type="submit">送出</button>
       </form> 
-
       <!-- 下面是footer -->
-
-
       <footer class="section-footer container-fluid position-relative">
         <div class="row">
           <div class="col-12 col-md-6">
@@ -214,7 +206,6 @@
         <p>Copyright &copy; 2023 All rights reserved.</p>
       </section>
     </div>
-
     <!-- Js套件 -->
     <!-- jquery -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -255,10 +246,22 @@
       });
       </script>
       <script>
+        function renderValue(){
+          //請用這個function做進入頁面的渲染
+        }
         initialRender(GET的程式名稱);
-        //渲染網頁請寫一個renderValue(){}//名稱勿改
+        function handleFormData(inputData) {//函式名稱勿改
+          // 在這裡處理你的數據 
+          /*最後呼交apiPOST裡的函式
+            EX:
+            addDailyRecord(處理過的data);*/
+          
+          //  setTimeout(function(){
+          //    console.log(_response)
+          //  },500);
+          // window.location.href = document.referrer;
+        }
       </script>    
-
     <!-- 頁面JS -->
   </body>
 </html>

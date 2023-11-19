@@ -323,12 +323,16 @@ function processForm() {
   var inputValue ={};
   // 獲取表單數據
   document.querySelectorAll('input').forEach(element=>{
-    let key = element.id;
-    let value = element.value;
-    inputValue[key] = value;
-    
     if(element.type=='checkbox' && !element.checked){
-      inputValue[key] = 'N';
+      inputValue[element.id] = 'N';
+    }else if(element.type=='radio' && element.checked){
+      inputValue[element.name] = element.value;
+    }else{
+      let key = element.id;
+      if(key != ""){
+        let value = element.value;
+        inputValue[key] = value;
+      }
     }
   });
     document.querySelectorAll('textarea').forEach(element=>{
