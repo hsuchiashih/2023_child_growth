@@ -12248,11 +12248,11 @@ textarea.form-control-lg {
 .new_child_container .custom_clear_button {
   border-radius: 500px;
   color: #fff;
-  background-color: #BDBDBD;
-  border-color: #BDBDBD;
+  background-color: #bdbdbd;
+  border-color: #bdbdbd;
 }
 .new_child_container .custom_input {
-  border-color: #E28666;
+  border-color: #e28666;
 }
 
 .child_list_container {
@@ -12267,7 +12267,7 @@ textarea.form-control-lg {
 }
 .child_list_container .card_container {
   width: 90%;
-  background-color: #F5E1D3;
+  background-color: #f5e1d3;
   margin: auto;
   border-radius: 3rem;
 }
@@ -12332,6 +12332,69 @@ textarea.form-control-lg {
 @media (max-width: 1400px) {
   .child_list_container .hint_text {
     font-size: 1rem;
+  }
+}
+
+.data_Analysis_container {
+  min-width: 375px;
+}
+.data_Analysis_container .main_title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.data_Analysis_container .title_container {
+  width: 90%;
+  margin: auto;
+}
+.data_Analysis_container .sub_title {
+  font-size: 30px;
+  font-weight: 700;
+}
+.data_Analysis_container .kid-date {
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+}
+.data_Analysis_container .kid_select {
+  height: 50px;
+  border-radius: 10px;
+}
+.data_Analysis_container .margin_test {
+  margin: 300px auto 60px auto;
+}
+.data_Analysis_container .card_container {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.5019607843);
+  margin: auto;
+  border-radius: 3rem;
+  border: 3px solid #f6bf99;
+}
+.data_Analysis_container .card_container .card_body {
+  height: 100%;
+  padding: 2rem;
+}
+.data_Analysis_container .icon_container {
+  display: inline-block;
+  overflow: hidden;
+  width: 60px;
+  height: 100%;
+}
+.data_Analysis_container .icon_container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.data_Analysis_container #chart_container {
+  width: 100%;
+  height: 500px;
+}
+.data_Analysis_container #chart_container2 {
+  width: 100%;
+  height: 500px;
+}
+@media (max-width: 1200px) {
+  .data_Analysis_container #chart_container {
+    height: 300px;
   }
 }
 
