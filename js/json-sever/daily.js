@@ -1,6 +1,7 @@
   //待處理非同步login()->getData()->render()
   //待處理PATCH代替POST
 
+
 setDateToday();
 enteringRender();
 setRadioValueToInput();
@@ -151,3 +152,8 @@ function enteringRender(){
     initialRender(getDailyRecords);
   }
 }
+
+document.querySelector('#datepicker').addEventListener('change', function(event) {
+    getDailyRecords(event.target.value);
+    setTimeout(renderValue,500);
+});
