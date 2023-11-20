@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
-    <!-- <script src="./node_modules/echarts/dist/echarts.min.js"></script> -->
   </head>
   <body>
     <style>
@@ -322,16 +321,17 @@
 
     <!-- Js套件 -->
     <!-- jquery -->
-    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./js/plugins/jquery.min.js"></script>
     <!-- owlJS -->
-    <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="./js/plugins/owl.carousel.min.js"></script>
     <!-- bs -->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/plugins/bootstrap.bundle.min.js"></script>
     <!-- axios -->
-    <script src="./node_modules/axios/dist/axios.min.js"></script>
-
-    <script src="node_modules/echarts/dist/echarts.min.js"></script>
-    <script src="node_modules/gridjs/dist/gridjs.production.min.js"></script>
+    <script src="./js/plugins/axios.min.js"></script>
+    <!-- echart -->
+    <script src="./js/plugins/echarts.min.js"></script>
+    <!-- grid.js -->
+    <script src="./js/plugins/gridjs.production.min.js"></script>
     <!-- JS套件 -->
 
     <!-- 頁面JS -->
@@ -456,7 +456,15 @@
           ["2023-10-06", "07:30", "20:30", "V", "V", "V", null, "煎餃", "雞胸肉便當", "青花菜、香菇雞湯、白飯"],
           ["2023-10-07", "07:30", "20:30", "V", "V", "V", null, "鹹蛋飯團", "綜合麵", "炸雞、薯條、披薩"],
           ["2023-10-08", "07:30", "20:30", "V", "V", null, "V", "豬肉蛋堡", "鴨肉便當", "烤肉、黑輪"],
-        ]
+        ],
+        style: {
+          td: {
+            'min-width': '100px'
+          },
+          table: {
+            'font-size': '15px'
+          }
+        }
       }).render(document.getElementById("wrapper"));
 
       new gridjs.Grid({
