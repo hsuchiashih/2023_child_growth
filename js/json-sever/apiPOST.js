@@ -16,8 +16,9 @@ function signup(
     .then(function (response) {
       token = response.data.accessToken;
       data = response.data;
-      console.log(response);
       _response = response;
+      delete _response.data.password;
+      console.log(_response);
     })
     .catch(function (error) {
       console.log(error.response);
@@ -35,9 +36,9 @@ function login(email = "pikachu@mail.com", password = "wda@123") {
 
       token = response.data.accessToken;
       userInfo = response.data.user;
-      console.log(response);
+      // console.log(response);
       _response = response;
-      getUserInfo();
+      getUserInfo(response.data.user.id);
     })
     .catch(function (error) {
       console.log(error);
@@ -217,6 +218,7 @@ async function addSleepRecord(sleep_record, kidNum=0) {
     return (_response[0] = response);
   } catch (error) {
     console.log(error.response);
+    _response[0] = error.response
     throw error; // 抛出错误以便处理错误情况
   }
 }
@@ -290,7 +292,7 @@ function addDinnerRecord(dinner_record, kidNum) {
     });
 }
 
-function addContactUs(
+async function addContactUs(
   contactInfo = {
     email: "123@mail.com",
     name: "史努比",
@@ -300,13 +302,14 @@ function addContactUs(
   },
 ) {
   contactInfo.created_at = getDatetime();
-  axios
-    .post(`${url}/contact_us`, contactInfo)
-    .then(function (response) {
-      _response = response;
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
-    });
+  try {
+    const response = await axios
+    .post(`${url}/contact_us`, contactInfo);
+    console.log(response);
+    return _response = response;
+  } catch (error) {
+    console.log(error.response);
+    _response = error.response;
+    throw error;
+  }
 }

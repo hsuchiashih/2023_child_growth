@@ -83,7 +83,7 @@ function deleteKid(kidNum = 0) {
       _response = error.response;
     });
 }
-async function updateDailyRecord( //1121117未完成
+async function updateDailyRecord(
   daily_record = {
     sleep_record: {
       kidId: 99999999,
@@ -123,7 +123,7 @@ async function updateDailyRecord( //1121117未完成
   updateLunchRecord(daily_record.lunch_record, kidNum);
   updateDinnerRecord(daily_record.dinner_record, kidNum);
 }
-async function updateSleepRecord(sleep_record, kidNum=0) {//11/17未完成
+async function updateSleepRecord(sleep_record, kidNum=0) {
   sleep_record.sleep_hours = countSleepHours(
     sleep_record.wakeup_time,
     sleep_record.sleep_time,
