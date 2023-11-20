@@ -16,6 +16,7 @@
     "bootstrap": "^5.3.2",
     "cors": "^2.8.5",
     "echarts": "^5.4.3",
+    "gridjs": "^6.0.6",
     "jquery": "^3.7.1",
     "json-server": "^0.17.4",
     "json-server-auth": "^2.1.0",
