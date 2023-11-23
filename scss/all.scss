@@ -8,14 +8,19 @@
 
 // @import "../css/reset.css";
 // owl套件 css
-// @import "../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
-// @import "../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css";
+@import "../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
+@import "../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css";
 
 //頁面 css
 @import "../scss/headerFooter";
 @import "../scss/newChild";
 @import "../scss/childList";
 @import "../scss/dataAnalysis";
+@import "../scss/index";
+@import "../scss/kidid";
+@import "../scss/plans";
+@import "../scss/everyday";
+@import "../scss/member";
 
 // 字體
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700&family=Tilt+Neon&display=swap");

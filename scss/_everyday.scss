@@ -1,0 +1,74 @@
+.section-everyday {
+  width: 100%;
+  min-width: 1920px;
+  padding-top: 250px;
+  background-image: url(../src/home/bg-program.png);
+  padding-bottom: 100px;
+}
+.section-changeKids-title {
+  > h3 {
+    font-size: 36px;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+}
+.owl-change-kid {
+  width: 80%;
+  margin-bottom: 50px;
+
+  .item {
+    width: 300px;
+    border-radius: 0;
+    margin: auto;
+    img {
+      width: 100%;
+    }
+    p {
+      font-size: 30px;
+      font-weight: 600;
+      text-align: center;
+      letter-spacing: 2px;
+      margin-top: 1em;
+    }
+  }
+  .owl-nav {
+    .owl-next {
+      right: 66px;
+      top: 100px;
+    }
+    .owl-prev {
+      left: 66px;
+      top: 100px;
+    }
+  }
+}
+.kid-date {
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+}
+.dinner,
+.lunch,
+.breakfast,
+.sleep,
+.wakeup {
+  label {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  textarea {
+    border: 1px solid #e28666;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  input {
+    height: 36px;
+    border: 1px solid #e28666;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background-color: none !important ;
+}

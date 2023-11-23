@@ -1,0 +1,117 @@
+.section-member-main {
+  width: 40%;
+  margin: auto;
+  padding-bottom: 100px;
+  .section-article-title {
+    h2 {
+      font-size: 2.072538vw;
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 2em;
+      text-align: center;
+      color: #525252;
+    }
+  }
+  .member-item {
+    .form-label {
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+      color: #525252;
+    }
+    .form-control {
+      width: auto;
+      flex-grow: 1;
+      margin-left: 20px;
+      border: 2px solid #e28666;
+      text-indent: 0.3em;
+      color: #d1d1d1;
+      height: 40px;
+      border-radius: 10px;
+    }
+  }
+}
+.login-btn-style {
+  box-shadow: #fff 0px 0px 0px 4px;
+}
+.bg-y {
+  background-color: #ffc500;
+}
+.forget-passW {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.section-article-title-pic {
+  width: 160px;
+  margin: auto;
+  margin-bottom: 10px;
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+// 跳窗相關
+.modal-dialog {
+  max-height: 200px;
+}
+.modal-content {
+  padding-top: 1.5rem;
+}
+.modal-pic {
+  width: 100px;
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+.register-btnX {
+  border: none;
+  background-color: transparent;
+  top: 10px;
+  right: 10px;
+}
+
+.modal-txt {
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #525252;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    letter-spacing: 1px;
+  }
+}
+@media (width<768px) {
+  .section-member-main {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 50px;
+    .section-article-title {
+      h2 {
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 2em;
+        text-align: center;
+        color: #525252;
+      }
+    }
+    .member-item {
+      .form-label {
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        flex-shrink: 0;
+        color: #525252;
+      }
+      .form-control {
+        margin-left: 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .modal-pic {
+    width: 70px;
+  }
+}

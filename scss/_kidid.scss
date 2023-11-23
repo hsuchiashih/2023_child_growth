@@ -1,0 +1,102 @@
+.settion-kidid-box {
+  background-image: url(../src/home/bg-program.png);
+  padding-top: 250px;
+  background-repeat: no-repeat;
+  padding-bottom: 100px;
+  margin-bottom: -50px;
+  .settion-kidid-main {
+    width: 38%;
+    min-width: 300px;
+    margin: auto;
+    .settion-kidid-data-control {
+      gap: 10px;
+      padding-bottom: 1em;
+    }
+  }
+}
+
+.settion-kidid-card {
+  width: 100%;
+  padding: 40px;
+  background-color: #fff2c7;
+  border-radius: 48px;
+  margin-bottom: 30px;
+}
+.settion-kidid-pic {
+  width: 45%;
+  border-radius: 48px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+.settion-kidid-txt {
+  padding-left: 3em;
+  color: #525252;
+  font-weight: 600;
+  h3 {
+    font-size: 3.1088vw;
+    margin-bottom: 0.3em;
+  }
+  p {
+    font-size: 1.554404vw;
+    & + p {
+      margin-top: 18px;
+    }
+  }
+}
+.kidid-control-btn {
+  border: none;
+  padding: 16px 30px;
+  background-color: #d49460;
+  border-radius: 50px;
+  > p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1.2px;
+  }
+}
+@media (width<992px) {
+  .settion-kidid-box {
+    padding-top: 100px;
+    .settion-kidid-main {
+      width: 90%;
+      .settion-kidid-data-control {
+        gap: 10px;
+        padding-bottom: 1em;
+      }
+    }
+  }
+  .settion-kidid-card {
+    padding: 20px;
+  }
+  .settion-kidid-txt {
+    padding-left: 1em;
+    color: #525252;
+    font-weight: 600;
+    h3 {
+      font-size: 32px;
+      margin-bottom: 0.3em;
+    }
+    p {
+      font-size: 20px;
+      & + p {
+        margin-top: 18px;
+      }
+    }
+    .kidid-control-btn {
+      border: none;
+      padding: 5px 15px;
+      background-color: #d49460;
+      border-radius: 50px;
+      > p {
+        font-size: 24px;
+        font-weight: 600;
+        color: #fff;
+        letter-spacing: 1.2px;
+      }
+    }
+  }
+}
