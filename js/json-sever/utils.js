@@ -325,8 +325,9 @@ function processForm() {
   document.querySelectorAll('input').forEach(element=>{
     if(element.type=='checkbox' && !element.checked){
       inputValue[element.id] = 'N';
-    }else if(element.type=='radio' && element.checked){
-      inputValue[element.name] = element.value;
+    }else if(element.type=='radio'){ 
+      if(element.checked)
+        inputValue[element.name] = element.value;
     }else{
       let key = element.id;
       if(key != ""){
@@ -348,8 +349,6 @@ function processForm() {
   //做成POST json-server 要的格式
   postData = handleFormData(inputValue);
   
-  
-  
   return 
 }
 
@@ -357,14 +356,14 @@ function processForm() {
 function setFormListener(){
   document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('form').addEventListener('submit',function(event){
-      event.preventDefault();
+      // event.preventDefault();
       processForm();
     });
   });
 }
 
 function initialRender(func){
-  login();
+  // login();
   setTimeout(func, 500);
   setTimeout(renderValue, 1000);
 }

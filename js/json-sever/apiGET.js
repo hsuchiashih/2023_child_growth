@@ -11,18 +11,20 @@ function apiGET(route = "/kids/1") {
     });
 }
 
-function getUserInfo() {
+function getUserInfo(userId ='1') {
   // login();
+  let id =userInfo.id || userId;
   axios
-    .get(`${url}/600/users/${userInfo.id.toString()}?_embed=kids`, {
+    .get(`${url}/600/users/${id.toString()}?_embed=kids`, {
       headers: {
         authorization: `Bearer ${token}`,
       },
     })
     .then(function (response) {
       userInfo = response.data;
-      console.log(response);
       _response = response;
+      delete _response.data.password;
+      console.log(_response);
     })
     .catch(function (error) {
       console.log(error.response);

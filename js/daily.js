@@ -143,7 +143,7 @@ function enteringRender(){
   console.log(recordDate);
   console.log(kidNum);
   if(recordDate != null){
-    login();
+    // login();
     setTimeout(()=>{getDailyRecords(recordDate,kidNum=0)
     document.querySelector('#datepicker').value = recordDate;
     }, 500);

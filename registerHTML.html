@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+        <section class="section-article">
+        <article class="section-member-main">
+          <div class="section-article-title">
+            <h2>註冊</h2>
+          </div>
+          <form id="myForm">
+            <div
+              class="member-item mb-3 d-flex justify-content-between align-items-center"
+            >
+              <label for="memberName" class="form-label">姓名</label>
+              <input
+                type="text"
+                class="form-control"
+                id="memberName"
+                placeholder="輸入您的姓名"
+              />
+            </div>
+            <div
+              class="member-item mb-3 d-flex justify-content-between align-items-center"
+            >
+              <label for="membebirthday" class="form-label">生日</label>
+              <input
+                type="date"
+                class="form-control"
+                id="membebirthday"
+                placeholder="請輸入您的生日"
+              />
+            </div>
+            <div
+              class="member-item mb-3 d-flex justify-content-between align-items-center"
+            >
+              <label for="memberEmail" class="form-label">信箱</label>
+              <input
+                type="email"
+                class="form-control"
+                id="memberEmail"
+                placeholder="輸入您的電子信箱"
+              />
+            </div>
+            <div
+              class="member-item mb-3 d-flex justify-content-between align-items-center"
+            >
+              <label for="memberPassword" class="form-label">密碼</label>
+              <input
+                type="text"
+                class="form-control"
+                id="memberPassword"
+                placeholder="輸入您的密碼至少6個字"
+              />
+            </div>
+            <div
+              class="member-item mb-3 d-flex justify-content-between align-items-center"
+            >
+              <label for="memberPasswordAgain" class="form-label">再次輸入密碼</label>
+              <input
+                type="password"
+                class="form-control"
+                id="memberPasswordAgain"
+                placeholder="再次輸入您的密碼"
+              />
+                <div id="passwordMatchStatus" class="password-match"></div>
+            </div>
+            <div
+              class="settion-kidid-data-control d-flex align-items-center justify-content-center flex-column mt-5"
+            >
+              <button
+                type="submit"
+                class="kidid-control-btn login-btn-style mb-4"
+              >
+                <p>註冊會員</p>
+              </button>
+            </div>
+          </form>
+        </article>
+      </section>
+</body>
+    <!-- Js套件 -->
+    <!-- jquery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- owlJS -->
+    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <!-- bs -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- axios -->
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>    
+    <!-- JS套件 -->
+    <script src="js/json-sever/utils.js"></script>
+    <script src="js/json-sever/apiGET.js"></script>
+    <script src="js/json-sever/apiPOST.js"></script>
+    <script src="js/json-sever/apiPATCH.js"></script>
+    <!-- 頁面JS -->
+    <!-- menu/JS -->
+      <script>
+        // login();
+        document.querySelector("#memberPasswordAgain").addEventListener("input",checkPasswordMatch);
+        function handleFormData(data) {
+          if(data.memberPassword != data.memberPasswordAgain){
+            return alert('密碼不相符');
+          }
+          // 在這裡處理你的數據
+          let signupInfo = {
+              email: data.memberEmail,
+              username: data.memberName,
+              password: data.memberPassword,
+              gender: data.memberName,
+              user_birth: data.membebirthday,
+              user_avatar: ""
+            }
+          console.log(signupInfo);
+          signup(signupInfo);
+          setTimeout(()=>{
+            console.log(_response);
+            if(_response.status.toString().startsWith('2')){
+              alert('註冊成功，自動登入並跳轉到每日紀錄(待改)');
+              setTimeout(() => {
+                console.log(`${data.memberEmail},${data.memberPassword}`);
+                login(data.memberEmail,data.memberPassword);
+                // window.location.href = "./daily.html";
+              }, 500);
+            }else{
+              alert(`${_response.data || _response.message}`);
+            }
+          },500);
+        }
+        function checkPasswordMatch() {
+          var password = document.getElementById('memberPassword').value;
+          var confirmPassword = document.getElementById('memberPasswordAgain').value;
+          var matchStatus = document.getElementById('passwordMatchStatus');
+
+          if (password === confirmPassword) {
+            matchStatus.textContent = '密碼相符';
+            matchStatus.className = 'password-match';
+          } else {
+            matchStatus.textContent = '密碼不相符';
+            matchStatus.className = 'password-not-match';
+          }
+        }
+      </script>
+    <!-- 頁面JS -->
+</html>
