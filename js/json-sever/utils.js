@@ -1,7 +1,7 @@
 // const url = "https://cgwweb.onrender.com";
 const url = 'http://localhost:3000';
 
-let token = "";
+let token = localStorage.getItem('jwtToken') || "";
 // let signupInfo =     {
 //       email: "pikachu@mail.com",
 //       username: "皮卡丘",
@@ -347,7 +347,7 @@ function processForm() {
   console.log(inputValue);
   //自行處理數據
   //做成POST json-server 要的格式
-  postData = handleFormData(inputValue);
+  handleFormData(inputValue);
   
   return 
 }
@@ -356,7 +356,7 @@ function processForm() {
 function setFormListener(){
   document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('form').addEventListener('submit',function(event){
-      // event.preventDefault();
+      event.preventDefault();
       processForm();
     });
   });
