@@ -14,7 +14,8 @@ function signup(
   axios
     .post(`${url}/signup`, signupInfo)
     .then(function (response) {
-      token = response.data.accessToken;
+      localStorage.setItem('jwtToken', response.data.accessToken);
+      // token = response.data.accessToken;
       data = response.data;
       _response = response;
       delete _response.data.password;
@@ -33,8 +34,8 @@ function login(email = "pikachu@mail.com", password = "wda@123") {
       password: password,
     })
     .then(function (response) {
-
-      token = response.data.accessToken;
+      localStorage.setItem('jwtToken', response.data.accessToken);
+      // token = response.data.accessToken;
       userInfo = response.data.user;
       // console.log(response);
       _response = response;
@@ -66,6 +67,7 @@ function addKid(
   kidInfo.isExist = "Y";
   axios
     .post(`${url}/600/kids`, kidInfo, {
+      
       headers: {
         authorization: `Bearer ${token}`,
       },

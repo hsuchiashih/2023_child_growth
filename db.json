@@ -74,111 +74,15 @@
     },
     {
       "email": "1@mail.com",
-      "password": "$2a$10$1KNCVKZKV0rYL1Sgqg89ieypUP5wHqEES6dyzmr//I0ugtFMhyEOu",
-      "username": "123",
-      "gender": "123",
-      "user_birth": "2023-11-22",
+      "password": "$2a$10$qToRUc50FJ9SZeQ0JFCEZOW8ec/kTx/pIK6CxuilSFXreQUud5btm",
+      "username": "1",
+      "gender": "1",
+      "user_birth": "2023-11-27",
       "user_avatar": "",
-      "created_at": "2023-11-22 13:44:03",
-      "modified_time": "2023-11-22 13:44:03",
+      "created_at": "2023-11-27 07:20:00",
+      "modified_time": "2023-11-27 07:20:00",
       "isExist": "Y",
       "id": 7
-    },
-    {
-      "email": "2@mail.com",
-      "password": "$2a$10$mt8tqYKmSc0WuBW7/mTFDOHncqCU1vVp9FxE1AAVgwZXntXXdGEHe",
-      "username": "2",
-      "gender": "2",
-      "user_birth": "2023-11-22",
-      "user_avatar": "",
-      "created_at": "2023-11-22 13:49:42",
-      "modified_time": "2023-11-22 13:49:42",
-      "isExist": "Y",
-      "id": 8
-    },
-    {
-      "email": "3@mial.com",
-      "password": "$2a$10$M5NZrEP2YwApFrVl2MhmAerddvtA0wKlXomzKAc4j2ljEbEMcTLaK",
-      "username": "3",
-      "gender": "3",
-      "user_birth": "2023-11-22",
-      "user_avatar": "",
-      "created_at": "2023-11-22 13:54:07",
-      "modified_time": "2023-11-22 13:54:07",
-      "isExist": "Y",
-      "id": 9
-    },
-    {
-      "email": "4@mail.com",
-      "password": "$2a$10$3PreUoUpKIKUgP96CSW6z.vRI9Wd.fYh8mB9IyJcWfpitGyKhe0xu",
-      "username": "4",
-      "gender": "4",
-      "user_birth": "2023-11-22",
-      "user_avatar": "",
-      "created_at": "2023-11-22 13:58:09",
-      "modified_time": "2023-11-22 13:58:09",
-      "isExist": "Y",
-      "id": 10
-    },
-    {
-      "email": "5@mail.com",
-      "password": "$2a$10$7zEfa2Z27tGkqxjTECblM.A/xR92YijlEmZoFem6vZdQMVwQ5Q0Am",
-      "username": "5",
-      "gender": "5",
-      "user_birth": "2023-11-22",
-      "user_avatar": "",
-      "created_at": "2023-11-22 14:04:14",
-      "modified_time": "2023-11-22 14:04:14",
-      "isExist": "Y",
-      "id": 11
-    },
-    {
-      "email": "6@mail.com",
-      "password": "$2a$10$eVzDRLyPn9VN5mA4LqUIuOTRiMNiAupVfPWLEsi4UF/6BcoEDrnxW",
-      "username": "6",
-      "gender": "6",
-      "user_birth": "2023-11-22",
-      "user_avatar": "",
-      "created_at": "2023-11-22 14:09:09",
-      "modified_time": "2023-11-22 14:09:09",
-      "isExist": "Y",
-      "id": 12
-    },
-    {
-      "email": "7@mail.com",
-      "password": "$2a$10$CegCvGH/QeRMnAOIwGZs2uUKwtVRjFo9fTfSlB4hjJtRg8Zio6xym",
-      "username": "7",
-      "gender": "7",
-      "user_birth": "2023-11-22",
-      "user_avatar": "",
-      "created_at": "2023-11-22 14:10:06",
-      "modified_time": "2023-11-22 14:10:06",
-      "isExist": "Y",
-      "id": 13
-    },
-    {
-      "email": "8@mail.com",
-      "password": "$2a$10$PEohjiwjDoXw2wluFYz0hO8sPDipNcvZz5kuJV96NW4WLtIt.yYbW",
-      "username": "8",
-      "gender": "8",
-      "user_birth": "2023-11-23",
-      "user_avatar": "",
-      "created_at": "2023-11-23 06:19:37",
-      "modified_time": "2023-11-23 06:19:37",
-      "isExist": "Y",
-      "id": 14
-    },
-    {
-      "email": "9@mail.com",
-      "password": "$2a$10$Ha8pN.Hgiwo2FZ8pTE0TJ.5tIB9L0joAxb/L7IBjqMLlHElDxBlDa",
-      "username": "9",
-      "gender": "9",
-      "user_birth": "2023-11-23",
-      "user_avatar": "",
-      "created_at": "2023-11-23 06:21:05",
-      "modified_time": "2023-11-23 06:21:05",
-      "isExist": "Y",
-      "id": 15
     }
   ],
   "kids": [
@@ -307,7 +211,7 @@
       "kid_avatar": "kidURL",
       "modified_time": "2023-09-24 14:15:30",
       "created_at": "2023-03-24 08:15:34"
-    }    
+    }
   ],
   "sleep_records": [
     {
