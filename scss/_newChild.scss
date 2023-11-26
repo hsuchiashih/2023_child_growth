@@ -1,6 +1,6 @@
 .new_child_container {
   min-width: 375px;
-
+  
   .main_title {
     font-size: 40px;
     font-weight: 700;
@@ -22,16 +22,18 @@
     object-fit: cover;
   }
 
-  .custom_button {
-    border-radius: 500px;
-    color: #fff;
-  }
-
-  .custom_clear_button {
-    border-radius: 500px;
-    color: #fff;
-    background-color: #bdbdbd;
-    border-color: #bdbdbd;
+  .new_child_buttons {
+    .custom_button {
+      border-radius: 500px;
+      color: #fff;
+    }
+  
+    .custom_clear_button {
+      border-radius: 500px;
+      color: #fff;
+      background-color: #bdbdbd;
+      border-color: #bdbdbd;
+    }
   }
 
   .custom_input {

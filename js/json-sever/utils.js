@@ -1,5 +1,5 @@
-// const url = "https://cgwweb.onrender.com";
-const url = 'http://localhost:3000';
+const url = "https://cgwweb.onrender.com";
+// const url = 'http://localhost:3000';
 
 let token = localStorage.getItem('jwtToken') || "";
 // let signupInfo =     {
