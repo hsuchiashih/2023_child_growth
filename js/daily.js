@@ -87,7 +87,7 @@ function handleFormData(data) {
     }
   }
   console.log(daily_record);
-  if(_response.data.length == 0 && !_response[0]){
+  if(!_response || _response.data.length == 0){
     addDailyRecord(daily_record);
   }else{
     updateDailyRecord(daily_record);
@@ -96,22 +96,25 @@ function handleFormData(data) {
   // window.location.href = document.referrer;
 }
 function renderValue(){
-
-  $('#wakeup')[0].value = _response.data[0].wakeup_time;
-  $('#sleep')[0].value = _response.data[0].sleep_time;
-  $('#breakfast')[0].value = _response.data[0].breakfast_records[0].content;
-  document.querySelector('#breakfastNM').checked = _response.data[0].breakfast_records[0].noBreadMilk == 'Y'? true:false;
-  document.querySelector('#breakfastND').checked = _response.data[0].breakfast_records[0].noDessert == 'Y'? true:false;
-  $('#lunch')[0].value = _response.data[0].lunch_records[0].content;
-  document.querySelector('#lunchNM').checked = _response.data[0].lunch_records[0].noBreadMilk == 'Y'? true:false;
-  document.querySelector('#lunchND').checked = _response.data[0].lunch_records[0].noDessert == 'Y'? true:false;
-  $('#dinner')[0].value = _response.data[0].dinner_records[0].content;
-  document.querySelector('#dinnerNM').checked = _response.data[0].dinner_records[0].noBreadMilk == 'Y'? true:false;
-  document.querySelector('#dinnerND').checked = _response.data[0].dinner_records[0].noDessert == 'Y'? true:false;
+  if(!_response){
+     console.log("當日尚無紀錄");
+  }else{
+    $('#wakeup')[0].value = _response.data[0].wakeup_time;
+    $('#sleep')[0].value = _response.data[0].sleep_time;
+    $('#breakfast')[0].value = _response.data[0].breakfast_records[0].content;
+    document.querySelector('#breakfastNM').checked = _response.data[0].breakfast_records[0].noBreadMilk == 'Y'? true:false;
+    document.querySelector('#breakfastND').checked = _response.data[0].breakfast_records[0].noDessert == 'Y'? true:false;
+    $('#lunch')[0].value = _response.data[0].lunch_records[0].content;
+    document.querySelector('#lunchNM').checked = _response.data[0].lunch_records[0].noBreadMilk == 'Y'? true:false;
+    document.querySelector('#lunchND').checked = _response.data[0].lunch_records[0].noDessert == 'Y'? true:false;
+    $('#dinner')[0].value = _response.data[0].dinner_records[0].content;
+    document.querySelector('#dinnerNM').checked = _response.data[0].dinner_records[0].noBreadMilk == 'Y'? true:false;
+    document.querySelector('#dinnerND').checked = _response.data[0].dinner_records[0].noDessert == 'Y'? true:false;
+  }
 }
 function emptyValue(){
-
-  $('#wakeup')[0].value = "";
+    
+    $('#wakeup')[0].value = "";
   $('#sleep')[0].value = "";
   $('#breakfast')[0].value = "";
   document.querySelector('#breakfastNM').checked = false;

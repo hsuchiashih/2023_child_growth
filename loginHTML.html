@@ -16,12 +16,13 @@
             <div
               class="member-item mb-3 d-flex justify-content-between align-items-center"
             >
-              <label for="memberEmail" class="form-label">信箱</label>
+              <label for="memberEmail" class="form-label" >信箱</label>
               <input
                 type="email"
                 class="form-control"
                 id="memberEmail"
                 placeholder="輸入您的電子信箱"
+                value="pikachu@mail.com"
               />
             </div>
             <div
@@ -33,6 +34,7 @@
                 class="form-control"
                 id="memberPassword"
                 placeholder="請輸入您的密碼至少6個字"
+                 value="wda@123"
               />
             </div>
             <div
@@ -87,6 +89,7 @@
             }
           console.log(loginInfo);
           login(data.memberEmail,data.memberPassword);
+          let loginSeconds = url == "http://localhost:3000"?500:5000;
           setTimeout(()=>{
             console.log(_response);
             if(_response.status.toString().startsWith('2')){
@@ -94,12 +97,12 @@
               setTimeout(() => {
                 // console.log(`${data.memberEmail},${data.memberPassword}`);
                 login(data.memberEmail,data.memberPassword);
-                // window.location.href = "./daily.html";
+                window.location.href = "./daily.html";
               }, 500);
             }else{
               alert(`${_response.data || _response.message}`);
             }
-          },500);
+          },loginSeconds);
         }
       </script>
     <!-- 頁面JS -->
