@@ -1,5 +1,5 @@
-const url = "https://cgwweb.onrender.com";
-// const url = 'http://localhost:3000';
+const url = 'http://localhost:3000';
+// const url = "https://cgwweb.onrender.com";
 
 let token = localStorage.getItem('jwtToken') || "";
 // let signupInfo =     {
@@ -22,7 +22,7 @@ let token = localStorage.getItem('jwtToken') || "";
 //     }
 
 // let data;
-let userInfo;
+let userInfo= JSON.parse(localStorage.getItem('userData')) || "";
 // let kidsList;
 // let recentSleepTime;
 // let sleepTimeByMonth;
@@ -31,7 +31,7 @@ let userInfo;
 // let testData;
 // let signupData;
 // let addKidData;
-let _response;
+let _response = "";
 
 setFormListener();
 

@@ -89,6 +89,7 @@
             }
           console.log(loginInfo);
           login(data.memberEmail,data.memberPassword);
+          let loginSeconds = url == "http://localhost:3000"?500:5000;
           setTimeout(()=>{
             console.log(_response);
             if(_response.status.toString().startsWith('2')){
@@ -101,7 +102,7 @@
             }else{
               alert(`${_response.data || _response.message}`);
             }
-          },5000);
+          },loginSeconds);
         }
       </script>
     <!-- 頁面JS -->
