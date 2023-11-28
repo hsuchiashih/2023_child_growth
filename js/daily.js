@@ -87,7 +87,7 @@ function handleFormData(data) {
     }
   }
   console.log(daily_record);
-  if(_response.data.length == 0 && !_response[0]){
+  if(!_response || _response.data.length == 0){
     addDailyRecord(daily_record);
   }else{
     updateDailyRecord(daily_record);
