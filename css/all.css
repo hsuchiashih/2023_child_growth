@@ -12311,7 +12311,16 @@ textarea.form-control-lg {
   font-size: 1.3rem;
   font-weight: 700;
 }
-.child_list_container #chart_container {
+.child_list_container .child_list_buttons .custom_button {
+  border-radius: 500px;
+  color: #fff;
+}
+.child_list_container .child_list_buttons p {
+  font-size: 25px;
+  padding: 10px 20px;
+  font-weight: 700;
+}
+.child_list_container .chart_container {
   width: 100%;
   height: 500px;
 }
@@ -13308,23 +13317,15 @@ textarea.form-control-lg {
   flex-shrink: 0;
   color: #525252;
 }
-.section-member-main .member-item .form-label.custom {
-  flex-shrink: unset;
-  line-height: 24px;
-}
 .section-member-main .member-item .form-control {
   width: auto;
   flex-grow: 1;
   margin-left: 20px;
   border: 2px solid #e28666;
   text-indent: 0.3em;
-  color: #525252;
+  color: #d1d1d1;
   height: 40px;
   border-radius: 10px;
-}
-.section-member-main .member-item .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #d1d1d1;
-  opacity: 1; /* Firefox */
 }
 
 .login-btn-style {

@@ -61,6 +61,18 @@
     font-weight: 700;
   }
 
+  .child_list_buttons {
+    .custom_button {
+      border-radius: 500px;
+      color: #fff;
+    }
+  
+    & p {
+      font-size: 25px;
+      padding: 10px 20px;
+      font-weight: 700;
+    }
+  }
   // .img_container {
   //   width: 100%;
   //   height: 100%;
@@ -80,7 +92,7 @@
   //   }
   // }
 
-  #chart_container {
+  .chart_container {
     width: 100%;
     height: 500px;
   }
