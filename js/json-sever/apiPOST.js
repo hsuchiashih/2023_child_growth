@@ -15,15 +15,19 @@ function signup(
     .post(`${url}/signup`, signupInfo)
     .then(function (response) {
       localStorage.setItem('jwtToken', response.data.accessToken);
-      // token = response.data.accessToken;
-      data = response.data;
+      localStorage.setItem('userData',JSON.stringify(response.data.user));
+      token = response.data.accessToken;;
+      // data = response.data;
       _response = response;
       delete _response.data.password;
       console.log(_response);
     })
     .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
+      console.log(error);
+      _response = error;
+      if(error.message=='Network Error'){
+        alert('伺服器未開啟');
+      }
     });
 }
 
@@ -38,7 +42,7 @@ function login(email = "pikachu@mail.com", password = "wda@123") {
       localStorage.setItem('userData',JSON.stringify(response.data.user));
       token = response.data.accessToken;
       // token = response.data.accessToken;
-      userInfo = response.data.user;
+      // userInfo = response.data.user;
       _response = response;
       console.log(response);
       getUserInfo(response.data.user.id);
@@ -47,9 +51,16 @@ function login(email = "pikachu@mail.com", password = "wda@123") {
       console.log(error);
       _response = error;
       if(error.message=='Network Error'){
-        alert('db.json伺服器未開啟');
+        alert('伺服器未開啟');
       }
     });
+}
+
+function logout(){
+  localStorage.removeItem('jwtToken');
+  localStorage.removeItem('userData');
+  alert("登出並回首頁(跳轉尚未開啟)");
+  // window.location.href = "./";
 }
 
 function addKid(

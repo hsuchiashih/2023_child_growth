@@ -83,6 +83,66 @@
       "modified_time": "2023-11-27 07:20:00",
       "isExist": "Y",
       "id": 7
+    },
+    {
+      "email": "2@mail.com",
+      "password": "$2a$10$WUB0YtXKbIlTxw6hzuqQu.Q7o2B6/rRUUjkF0vLaRqwUwl85Toqqi",
+      "username": "2",
+      "gender": "2",
+      "user_birth": "2023-11-30",
+      "user_avatar": "",
+      "created_at": "2023-11-30 06:21:38",
+      "modified_time": "2023-11-30 06:21:38",
+      "isExist": "Y",
+      "id": 8
+    },
+    {
+      "email": "3@mial.com",
+      "password": "$2a$10$8.p/bXULqTXPUHgybATvK.hEOikhTLlHrWFTpqlv4DiCugWyi2JWa",
+      "username": "3",
+      "gender": "3",
+      "user_birth": "2023-11-30",
+      "user_avatar": "",
+      "created_at": "2023-11-30 06:28:04",
+      "modified_time": "2023-11-30 06:28:04",
+      "isExist": "Y",
+      "id": 9
+    },
+    {
+      "email": "4@mail.com",
+      "password": "$2a$10$bfqXhOweulVWir7X0Q8duOGtQrjz/8hSTdaDoY/AgatNTWhV/YNq2",
+      "username": "4",
+      "gender": "4",
+      "user_birth": "2023-11-30",
+      "user_avatar": "",
+      "created_at": "2023-11-30 06:35:55",
+      "modified_time": "2023-11-30 06:35:55",
+      "isExist": "Y",
+      "id": 10
+    },
+    {
+      "email": "5@mail.com",
+      "password": "$2a$10$y0unK/3qRaEi8xoDFxDfwuC1LXjIbcwMezt25s2cGJe0VmpPrHs1O",
+      "username": "5",
+      "gender": "5",
+      "user_birth": "2023-11-30",
+      "user_avatar": "",
+      "created_at": "2023-11-30 06:41:08",
+      "modified_time": "2023-11-30 06:41:08",
+      "isExist": "Y",
+      "id": 11
+    },
+    {
+      "email": "6@mail.com",
+      "password": "$2a$10$ZmEKvvue.drcX2wXT7bnGeCu3B3wj3n65sSM.JYwdGKcgyJoNajK6",
+      "username": "6",
+      "gender": "6",
+      "user_birth": "2023-11-30",
+      "user_avatar": "",
+      "created_at": "2023-11-30 06:43:28",
+      "modified_time": "2023-11-30 06:43:28",
+      "isExist": "Y",
+      "id": 12
     }
   ],
   "kids": [
