@@ -1,7 +1,15 @@
 const url = 'http://localhost:3000';
 // const url = "https://cgwweb.onrender.com";
-
 let token = localStorage.getItem('jwtToken') || "";
+
+if(!token){
+  let isMustLogin = "";
+  if(isMustLogin){
+    localStorage.setItem('whereTo',window.location.href);
+    window.location.href = "./loginHTML.html"
+  }
+}
+
 // let signupInfo =     {
 //       email: "pikachu@mail.com",
 //       username: "皮卡丘",

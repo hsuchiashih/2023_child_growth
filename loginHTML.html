@@ -80,6 +80,38 @@
     <!-- 頁面JS -->
     <!-- menu/JS -->
       <script>
+        // checkLogin();
+        // function checkLogin(){
+          
+        //   // 獲取網址中的 search 部分，例如 "?record_date=2023-11-09"
+        //   var queryString = window.location.search;
+
+        //   // 使用 URLSearchParams 解析 search 部分
+        //   var urlParams = new URLSearchParams(queryString);
+
+        //   // 獲取 record_date 參數的值
+        //   var whereTo = urlParams.get('whereTo');
+        //   console.log();
+        //   if(whereTo != ""){
+        //     if(token == ""){
+        //       switch (whereTo) {
+        //         case "member":
+        //           window.location.href = "./member.html";
+        //           break;
+        //         case "childlist":
+        //           window.location.href = "./childlist.html";
+        //           break;
+        //         case "data-analysis":
+        //           window.location.href = "./data-analysis.html";
+        //           break;
+              
+        //         default:
+        //           break;
+        //       }
+        //     }
+        //   }
+
+        // }
         // login();
         function handleFormData(data) {
           // 在這裡處理你的數據
@@ -97,7 +129,7 @@
               setTimeout(() => {
                 // console.log(`${data.memberEmail},${data.memberPassword}`);
                 login(data.memberEmail,data.memberPassword);
-                window.location.href = "./daily.html";
+                window.location.href = localStorage.getItem('whereTo') || "./daily.html";
               }, 500);
             }else{
               alert(`${_response.data || _response.message}`);
