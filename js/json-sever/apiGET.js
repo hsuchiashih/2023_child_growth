@@ -24,6 +24,7 @@ function getUserInfo(userId ='1') {
       userInfo = response.data;
       _response = response;
       delete _response.data.password;
+      localStorage.setItem('userData',JSON.stringify(_response.data));
       console.log(_response);
     })
     .catch(function (error) {

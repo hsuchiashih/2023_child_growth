@@ -77,67 +77,7 @@
     <script src="js/json-sever/apiGET.js"></script>
     <script src="js/json-sever/apiPOST.js"></script>
     <script src="js/json-sever/apiPATCH.js"></script>
-    <!-- 頁面JS -->
+    <script src="js/login.js"></script>
     <!-- menu/JS -->
-      <script>
-        // checkLogin();
-        // function checkLogin(){
-          
-        //   // 獲取網址中的 search 部分，例如 "?record_date=2023-11-09"
-        //   var queryString = window.location.search;
-
-        //   // 使用 URLSearchParams 解析 search 部分
-        //   var urlParams = new URLSearchParams(queryString);
-
-        //   // 獲取 record_date 參數的值
-        //   var whereTo = urlParams.get('whereTo');
-        //   console.log();
-        //   if(whereTo != ""){
-        //     if(token == ""){
-        //       switch (whereTo) {
-        //         case "member":
-        //           window.location.href = "./member.html";
-        //           break;
-        //         case "childlist":
-        //           window.location.href = "./childlist.html";
-        //           break;
-        //         case "data-analysis":
-        //           window.location.href = "./data-analysis.html";
-        //           break;
-              
-        //         default:
-        //           break;
-        //       }
-        //     }
-        //   }
-
-        // }
-        // login();
-        function handleFormData(data) {
-          // 在這裡處理你的數據
-          let loginInfo = {
-              email: data.memberEmail,
-              password: data.memberPassword,
-            }
-          console.log(loginInfo);
-          login(data.memberEmail,data.memberPassword);
-          let loginSeconds = url == "http://localhost:3000"?500:5000;
-          setTimeout(()=>{
-            console.log(_response);
-            if(_response.status.toString().startsWith('2')){
-              alert('登入成功，跳轉到每日紀錄(待改)');
-              setTimeout(() => {
-                // console.log(`${data.memberEmail},${data.memberPassword}`);
-                // login(data.memberEmail,data.memberPassword);
-                let whereTo = localStorage.getItem('whereTo');
-                localStorage.removeItem('whereTo');
-                window.location.href = whereTo|| "./";
-              }, 500);
-            }else{
-              alert(`${_response.data || _response.message}`);
-            }
-          },loginSeconds);
-        }
-      </script>
     <!-- 頁面JS -->
 </html>

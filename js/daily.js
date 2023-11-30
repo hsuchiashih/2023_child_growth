@@ -96,7 +96,7 @@ function handleFormData(data) {
   // window.location.href = document.referrer;
 }
 function renderValue(){
-  if(!_response){
+  if(!_response.data || _response.data == ""){
      console.log("當日尚無紀錄");
   }else{
     $('#wakeup')[0].value = _response.data[0].wakeup_time;
