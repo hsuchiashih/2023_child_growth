@@ -13551,14 +13551,14 @@ textarea.form-control-lg {
   border-radius: 30px;
 }
 .section-memberOnly-message .add {
-  width: 260px;
+  width: 13.4715vw;
   height: 260px;
   border-radius: 30px;
   background-color: #d49460;
 }
 .section-memberOnly-message .section-memberOnly-item {
-  width: 260px;
-  height: 260px;
+  width: 13.4715vw;
+  height: 13.4715vw;
   overflow: hidden;
   margin-left: 20px;
   border-radius: 30px;
@@ -13568,11 +13568,14 @@ textarea.form-control-lg {
   vertical-align: middle;
 }
 .section-memberOnly-message .section-memberOnly-pic {
-  width: 300px;
+  width: 16.917vw;
   margin-right: 100px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .section-memberOnly-message .section-memberOnly-pic img {
   width: 100%;
+  height: 100%;
   vertical-align: middle;
 }
 .section-memberOnly-message .section-memberOnly-insideCard {
@@ -13580,8 +13583,8 @@ textarea.form-control-lg {
   border-radius: 20px;
 }
 .section-memberOnly-message .section-memberOnly-insideCard p {
-  font-size: 26px;
-  color: 525252;
+  font-size: 1.34715vw;
+  color: #525252;
   font-weight: 500;
   letter-spacing: 0.1em;
 }
@@ -13604,6 +13607,52 @@ textarea.form-control-lg {
   width: 100%;
 }
 
+@media (width < 768px) {
+  .section-memberOnly-message {
+    padding: 22px;
+    padding-bottom: 0px;
+    background-color: #f5e1d3;
+    border-radius: 30px;
+  }
+  .section-memberOnly-message .add {
+    width: 50px;
+    height: 260px;
+    border-radius: 30px;
+    background-color: #d49460;
+  }
+  .section-memberOnly-message .section-memberOnly-item {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin-left: 20px;
+    border-radius: 30px;
+  }
+  .section-memberOnly-message .section-memberOnly-item img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  .section-memberOnly-message .section-memberOnly-pic {
+    width: 200px;
+    margin: auto;
+  }
+  .section-memberOnly-message .section-memberOnly-pic img {
+    width: 100%;
+    vertical-align: middle;
+  }
+  .section-memberOnly-message .section-memberOnly-insideCard {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+  .section-memberOnly-message .section-memberOnly-insideCard p {
+    font-size: 16px;
+    color: #525252;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+  .section-memberOnly-message .section-memberOnly-insideCard p + p {
+    margin-top: 1em;
+  }
+}
 body {
   font-family: "Tilt Neon", "Noto Sans TC", sans-serif;
 }/*# sourceMappingURL=all.css.map */
