@@ -31,7 +31,7 @@ function signup(
     });
 }
 
-function login(email = "pikachu@mail.com", password = "wda@123") {
+function login(email = "Charizard@mail.com", password = "wda@123") {
   axios
     .post(`${url}/login`, {
       email: email,
@@ -41,6 +41,7 @@ function login(email = "pikachu@mail.com", password = "wda@123") {
       localStorage.setItem('jwtToken', response.data.accessToken);
       localStorage.setItem('userData',JSON.stringify(response.data.user));
       token = response.data.accessToken;
+      userInfo = response.data.user;
       // token = response.data.accessToken;
       // userInfo = response.data.user;
       _response = response;
@@ -59,6 +60,9 @@ function login(email = "pikachu@mail.com", password = "wda@123") {
 function logout(){
   localStorage.removeItem('jwtToken');
   localStorage.removeItem('userData');
+  token ="";
+  userInfo="";
+  _response="";
   alert("登出並回首頁(跳轉尚未開啟)");
   // window.location.href = "./";
 }

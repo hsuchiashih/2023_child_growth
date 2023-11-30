@@ -1,9 +1,11 @@
-const url = 'http://localhost:3000';
-// const url = "https://cgwweb.onrender.com";
+// const url = 'http://localhost:3000';
+const url = "https://cgwweb.onrender.com";
 let token = localStorage.getItem('jwtToken') || "";
 
 if(!token){
-  let isMustLogin = "";
+  const pathnames = [ //進入以下頁面會帶到login頁面
+"/2023_child_growth/new-child.html","/2023_child_growth/daily.html","/2023_child_growth/member.html","/2023_child_growth/childList.html","/2023_child_growth/dataAnalysis.html"];
+  let isMustLogin = pathnames.includes(window.location.pathname);
   if(isMustLogin){
     localStorage.setItem('whereTo',window.location.href);
     window.location.href = "./loginHTML.html"
