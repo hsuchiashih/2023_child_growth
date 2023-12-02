@@ -1,4 +1,4 @@
-function signup(
+function signup_origin(
   signupInfo = {
     email: "dragonite@mail.com",
     username: "快龍",
@@ -29,6 +29,43 @@ function signup(
         alert('伺服器未開啟');
       }
     });
+}
+function signup(
+  signupInfo = {
+    email: "dragonite@mail.com",
+    username: "快龍",
+    password: "wda@123",
+    gender: "female",
+    user_birth: "2023-09-13",
+    user_avatar: "userURL",
+  },
+) {
+  return new Promise((resolve, reject) => {
+    
+  signupInfo.created_at = getDatetime();
+  signupInfo.modified_time = getDatetime();
+  signupInfo.isExist = "Y";
+  axios
+    .post(`${url}/signup`, signupInfo)
+      .then(response => {
+        localStorage.setItem('jwtToken', response.data.accessToken);
+        localStorage.setItem('userData',JSON.stringify(response.data.user));
+        token = response.data.accessToken;
+        // data = response.data;
+        _response = response;
+        delete _response.data.password;
+        console.log(_response);
+        resolve(response.data);
+      })
+      .catch(error => {
+      console.log(error);
+      _response = error;
+      if(error.message=='Network Error'){
+        alert('伺服器未開啟');
+      }
+        reject(error);
+      });
+  });
 }
 
 function login(email = "Charizard@mail.com", password = "wda@123") {

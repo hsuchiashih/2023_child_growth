@@ -1,3 +1,6 @@
+console.log("Charizard@mail.com");
+console.log("wda@123");
+
 function handleFormData(data) {
   // 在這裡處理你的數據
   let loginInfo = {
@@ -16,7 +19,7 @@ function handleFormData(data) {
         // login(data.memberEmail,data.memberPassword);
         let whereTo = localStorage.getItem('whereTo');
         localStorage.removeItem('whereTo');
-        window.location.href = whereTo|| "./";
+        window.location.href = whereTo|| "./daily.html";
       }, 500);
     }else{
       alert(`${_response.data || _response.message}`);

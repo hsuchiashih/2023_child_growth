@@ -137,7 +137,11 @@ function getMonthlyRecords(num = 1, kidNum = 0) {
     });
 }
 function getDailyRecords(date = getMonthDate(), kidNum = 0) {
-  if(!userInfo.kids)return console.log('使用者無兒童');
+  if(!userInfo.kids){
+    alert('使用者無兒童');
+    return window.location.href = "./member.html" 
+  }
+    
   axios
     .get(
       `${url}/600/sleep_records?kidId=${userInfo.kids[
