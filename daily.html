@@ -413,7 +413,25 @@
 				});
 			});
 		</script>
-		<script></script>
+		<script>
+			$(".owl-change-kid").owlCarousel({
+				loop: true,
+				margin: 10,
+				nav: true,
+				navText: [
+					"<img src='./src/index/prev-arrow.svg'>",
+					"<img src='./src/index/next-arrow.svg'>",
+				],
+				responsive: {
+					0: {
+						items: 1,
+					},
+					768: {
+						items: 1,
+					},
+				},
+			});
+		</script>
 		<!-- 頁面JS -->
 	</body>
 </html>
