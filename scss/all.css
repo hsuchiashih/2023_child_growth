@@ -12477,7 +12477,11 @@ textarea.form-control-lg {
 }
 
 .data_Analysis_container {
-  min-width: 375px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("../src/home/bg-program.png");
 }
 .data_Analysis_container .main_title {
   font-size: 40px;
@@ -12497,11 +12501,13 @@ textarea.form-control-lg {
   border-radius: 10px;
 }
 .data_Analysis_container .kid_select {
+  max-width: 200px;
   height: 50px;
   border-radius: 10px;
+  margin-left: auto;
 }
 .data_Analysis_container .margin_test {
-  margin: 300px auto 60px auto;
+  padding-top: 300px;
 }
 .data_Analysis_container .card_container {
   width: 90%;
@@ -12540,6 +12546,22 @@ textarea.form-control-lg {
   }
 }
 
+@media (width < 768px) {
+  .data_Analysis_container {
+    background-image: url("../src/index/phone-program.png");
+  }
+  .data_Analysis_container .kid_select {
+    height: 50px;
+    border-radius: 10px;
+    max-width: 60%;
+    margin: auto;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .data_Analysis_container .margin_test {
+    padding-top: 100px;
+  }
+}
 .section-banner {
   padding-top: 80px;
 }
