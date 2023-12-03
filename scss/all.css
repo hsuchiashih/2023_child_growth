@@ -11985,7 +11985,7 @@ textarea.form-control-lg {
 }
 
 .navbar {
-  top: 4.15vw;
+  top: 4vw;
   position: fixed !important;
   width: 100%;
   z-index: 9999;
@@ -12029,7 +12029,7 @@ textarea.form-control-lg {
   border-radius: 100px;
   line-height: 0;
   box-shadow: #d49460 0px 4px 12px;
-  transform: translateX(23.52331vw);
+  transform: translateX(19.5vw);
   justify-content: center;
   flex-direction: column;
   align-items: center;
@@ -12057,7 +12057,7 @@ textarea.form-control-lg {
   border-radius: 100px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   gap: 1.042vw;
-  transform: translateX(-23.52331vw);
+  transform: translateX(-19.5vw);
   background-color: #fff;
 }
 .login-items p {
@@ -12180,7 +12180,7 @@ textarea.form-control-lg {
 /* footer start*/
 .section-footer {
   background-image: url(../src/home/bg-footer.png);
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 100px 100px 0 0;
 }
@@ -12209,14 +12209,14 @@ textarea.form-control-lg {
   width: -moz-fit-content;
   width: fit-content;
   padding-top: 170px;
-  padding-right: 16.63212vw;
+  padding-right: 15vw;
 }
 .section-item-right > ul li {
   display: flex;
   align-items: center;
 }
 .section-item-right > ul li a {
-  font-size: 1.042vw;
+  font-size: 20px;
   text-decoration: none;
   letter-spacing: 1.2px;
   color: #1d1d1d;
@@ -12253,7 +12253,7 @@ textarea.form-control-lg {
   width: 162px;
   top: 100%;
   right: 50%;
-  transform: translate(50%, -100%);
+  transform: translate(50%, -99%);
 }
 .footer-house img {
   width: 100%;
@@ -12384,14 +12384,18 @@ textarea.form-control-lg {
 }
 
 .child_list_container {
-  min-width: 375px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("../src/home/bg-program.png");
 }
 .child_list_container .main_title {
   font-size: 40px;
   font-weight: 700;
 }
 .child_list_container .margin_test {
-  margin: 300px auto 60px auto;
+  padding-top: 250px;
 }
 .child_list_container .card_container {
   width: 90%;
@@ -12452,32 +12456,97 @@ textarea.form-control-lg {
   width: 100%;
   height: 500px;
 }
+
 @media (max-width: 992px) {
+  .child_list_container {
+    background-image: url("../src/index/phone-program.png");
+  }
+  .child_list_container .margin_test {
+    padding-top: 100px;
+  }
+  .child_list_container .card_container {
+    width: 90%;
+    background-color: #f5e1d3;
+    margin: auto;
+    border-radius: 3rem;
+  }
+  .child_list_container .card_container .card_body {
+    height: 100%;
+    padding: 2rem;
+  }
   .child_list_container .child_data_block {
-    font-size: 1rem;
-    line-height: 2rem;
+    align-self: center;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .child_list_container .img_container {
+    display: inline-block;
+    border-radius: 2rem;
+    overflow: hidden;
+    width: 100%;
+    height: 460px;
+  }
+  .child_list_container .img_container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: -170px;
+       object-position: -170px;
+  }
+  .child_list_container .icon_container {
+    display: inline-block;
+    overflow: hidden;
+    width: 60px;
+    height: 100%;
+  }
+  .child_list_container .icon_container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .child_list_container .hint_text {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .child_list_container .child_list_buttons .custom_button {
+    border-radius: 500px;
+    color: #fff;
+  }
+  .child_list_container .child_list_buttons p {
+    font-size: 25px;
+    padding: 10px 20px;
+    font-weight: 700;
+  }
+  .child_list_container .chart_container {
+    width: 100%;
+    height: 500px;
   }
 }
 @media (max-width: 1200px) {
-  .child_list_container #chart_container {
+  #chart_container {
     height: 300px;
   }
-  .child_list_container .img_container {
+  .img_container {
     height: 300px;
   }
-  .child_list_container .img_container img {
+  .img_container img {
     -o-object-position: unset;
        object-position: unset;
   }
 }
 @media (max-width: 1400px) {
-  .child_list_container .hint_text {
+  .hint_text {
     font-size: 1rem;
   }
 }
-
 .data_Analysis_container {
-  min-width: 375px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("../src/home/bg-program.png");
 }
 .data_Analysis_container .main_title {
   font-size: 40px;
@@ -12497,11 +12566,13 @@ textarea.form-control-lg {
   border-radius: 10px;
 }
 .data_Analysis_container .kid_select {
+  max-width: 200px;
   height: 50px;
   border-radius: 10px;
+  margin-left: auto;
 }
 .data_Analysis_container .margin_test {
-  margin: 300px auto 60px auto;
+  padding-top: 300px;
 }
 .data_Analysis_container .card_container {
   width: 90%;
@@ -12534,12 +12605,28 @@ textarea.form-control-lg {
   width: 100%;
   height: 500px;
 }
+
 @media (max-width: 1200px) {
-  .data_Analysis_container #chart_container {
+  #chart_container {
     height: 300px;
   }
 }
-
+@media (width < 768px) {
+  .data_Analysis_container {
+    background-image: url("../src/index/phone-program.png");
+  }
+  .data_Analysis_container .kid_select {
+    height: 50px;
+    border-radius: 10px;
+    max-width: 60%;
+    margin: auto;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .data_Analysis_container .margin_test {
+    padding-top: 100px;
+  }
+}
 .section-banner {
   padding-top: 80px;
 }
@@ -12571,7 +12658,8 @@ textarea.form-control-lg {
 .carousel-item-txt p {
   font-size: 1.65803vw;
   letter-spacing: 2px;
-  font-weight: 500;
+  line-height: 1.6;
+  font-weight: 400;
   color: #424242;
   letter-spacing: 2px;
   margin-bottom: 0.5em;
