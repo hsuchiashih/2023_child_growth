@@ -8,18 +8,10 @@
 		<link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
 		<title>兒童成長網站</title>
 		<!-- CSS -->
-		<link rel="stylesheet" href="./css/all.css" />
+		<link rel="stylesheet" href="./scss/all.css" />
 		<link rel="stylesheet" href="./css/reset.css" />
 	</head>
 	<body>
-		<style>
-			body {
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-attachment: fixed;
-				background-image: url("./src/home/bg-program.svg");
-			}
-		</style>
 		<div class="wrap">
 			<!-- 手機板選單 -->
 			<div class="phone-nav w-100">
@@ -381,7 +373,7 @@
 					str += `
           <div class="row card_body">
            
-            <div class="col-6 col-xl-3 mb-5 mb-xl-0">
+            <div class="col-12 col-xl-3 mb-5 mb-xl-0">
               <a href="everyDay.html">
                 <div class="img_container">
                     <img src="./src/home/banner_2.jpg" />
@@ -399,7 +391,7 @@
               </a>  
               </div>
             
-            <div class="col-6 col-xl-3 child_data_block">
+            <div class="col-12 col-xl-3 child_data_block">
               <p>${item.kid_name}</p>
               <p>身高：<span>${item.ini_height}</span>cm</p>
               <p>體重：<span>${item.ini_weight}</span>kg</p>
