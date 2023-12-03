@@ -8,21 +8,20 @@ function handleFormData(data) {
       password: data.memberPassword,
     }
   console.log(loginInfo);
-  login(data.memberEmail,data.memberPassword);
-  let loginSeconds = url == "http://localhost:3000"?500:5000;
-  setTimeout(()=>{
+  login(data.memberEmail,data.memberPassword).then(response=>{
+    // _response = response;
     console.log(_response);
     if(_response.status.toString().startsWith('2')){
       alert('登入成功，跳轉到每日紀錄(待改)');
-      setTimeout(() => {
-        // console.log(`${data.memberEmail},${data.memberPassword}`);
-        // login(data.memberEmail,data.memberPassword);
-        let whereTo = localStorage.getItem('whereTo');
-        localStorage.removeItem('whereTo');
-        window.location.href = whereTo|| "./daily.html";
-      }, 500);
+      let whereTo = localStorage.getItem('whereTo');
+      localStorage.removeItem('whereTo');
+      window.location.href = whereTo|| "./daily.html";
     }else{
+      // _response = response;
       alert(`${_response.data || _response.message}`);
     }
-  },loginSeconds);
+  }).catch(error=>{
+    // _response = error;
+    console.log(error);
+  });
 }
