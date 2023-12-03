@@ -41,7 +41,6 @@ function signup(
   },
 ) {
   return new Promise((resolve, reject) => {
-    
   signupInfo.created_at = getDatetime();
   signupInfo.modified_time = getDatetime();
   signupInfo.isExist = "Y";
@@ -69,29 +68,33 @@ function signup(
 }
 
 function login(email = "Charizard@mail.com", password = "wda@123") {
-  axios
-    .post(`${url}/login`, {
-      email: email,
-      password: password,
-    })
-    .then(function (response) {
-      localStorage.setItem('jwtToken', response.data.accessToken);
-      localStorage.setItem('userData',JSON.stringify(response.data.user));
-      token = response.data.accessToken;
-      userInfo = response.data.user;
-      // token = response.data.accessToken;
-      // userInfo = response.data.user;
-      _response = response;
-      console.log(response);
-      getUserInfo(response.data.user.id);
-    })
-    .catch(function (error) {
-      console.log(error);
-      _response = error;
-      if(error.message=='Network Error'){
-        alert('伺服器未開啟');
-      }
-    });
+  return new Promise((resolve, reject) => {
+    axios
+      .post(`${url}/login`, {
+        email: email,
+        password: password,
+      })
+      .then(function (response) {
+        localStorage.setItem('jwtToken', response.data.accessToken);
+        localStorage.setItem('userData',JSON.stringify(response.data.user));
+        token = response.data.accessToken;
+        userInfo = response.data.user;
+        // token = response.data.accessToken;
+        // userInfo = response.data.user;
+        _response = response;
+        console.log(response);
+        getUserInfo(response.data.user.id);
+        resolve(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+        _response = error;
+        if(error.message=='Network Error'){
+          alert('伺服器未開啟');
+        }
+        reject(error);
+      });
+  });
 }
 
 function logout(){
