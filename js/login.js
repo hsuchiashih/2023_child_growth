@@ -15,7 +15,7 @@ function handleFormData(data) {
       alert('登入成功，跳轉到每日紀錄(待改)');
       let whereTo = localStorage.getItem('whereTo');
       localStorage.removeItem('whereTo');
-      window.location.href = whereTo|| "./daily.html";
+      // window.location.href = whereTo|| "./dataAnalysis.html";
     }else{
       // _response = response;
       alert(`${_response.data || _response.message}`);

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="zh-tw">
   <head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="兒童成長網站" />
@@ -46,10 +47,10 @@
               <div class="login-item-pic">
                 <img src="./src/home/login-pic.svg" alt="user-pic" />
               </div>
-              <p>使用者A</p>
+              <p class="user-name">使用者A</p>
             </a>
             <a
-              class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="login-out-box d-flex flex-column align-items-center text-decoration-none logout"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/logout.svg" alt="login-out-pic" />
@@ -58,7 +59,7 @@
             </a>
             <!-- 未登入 -->
             <a
-              class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="login-out-box d-flex flex-column align-items-center text-decoration-none login"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/person.png" alt="login-out-pic" />
@@ -126,10 +127,10 @@
                   <div class="login-item-pic">
                     <img src="./src/home/login-pic.svg" alt="user-pic" />
                   </div>
-                  <p>使用者A</p>
+                  <p class="user-name">使用者A</p>
                 </a>
                 <a
-                  class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-out-box d-flex flex-column align-items-center text-decoration-none logout"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/logout.svg" alt="login-out-pic" />
@@ -138,7 +139,7 @@
                 </a>
                 <!-- 未登入 -->
                 <a
-                  class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none login"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/person.png" alt="login-out-pic" />
@@ -591,5 +592,12 @@
         },
       });
     </script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <script src="js/json-sever/utils.js"></script>
+    <script src="js/json-sever/apiGET.js"></script>
+    <script src="js/json-sever/apiPOST.js"></script>
+    <script src="js/json-sever/apiPATCH.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
