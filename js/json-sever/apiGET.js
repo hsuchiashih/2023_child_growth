@@ -34,25 +34,30 @@ function getUserInfo(userId ='1') {
 }
 function getRecentSleepTime(kidNum = 0) {
   // login();
-  axios
-    .get(
-      `${url}/600/sleep_records?kidId=${userInfo.kids[
-        kidNum
-      ].id.toString()}&userId=${userInfo.id.toString()}&_sort=record_date&_order=desc&_limit=7`,
-      {
-        headers: {
-          authorization: `Bearer ${token}`,
+  return new Promise((resolve, reject) => {
+
+    axios
+      .get(
+        `${url}/600/sleep_records?kidId=${userInfo.kids[
+          kidNum
+        ].id.toString()}&userId=${userInfo.id.toString()}&_sort=record_date&_order=desc&_limit=7`,
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
         },
-      },
-    )
-    .then(function (response) {
-      console.log(response);
-      _response = response;
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
-    });
+      )
+      .then(function (response) {
+        console.log(response);
+        _response = response;
+        resolve(response);
+      })
+      .catch(function (error) {
+        console.log(error.response);
+        _response = error.response;
+        reject(error);
+      });
+  })
 }
 function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0) {
   // login();
