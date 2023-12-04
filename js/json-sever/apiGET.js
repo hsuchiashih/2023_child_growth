@@ -61,6 +61,7 @@ function getRecentSleepTime(kidNum = 0) {
 }
 function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0) {
   // login();
+
   console.log(`${url}/600/sleep_records?kidId=${userInfo.kids[
         kidNum
       ].id.toString()}&record_date_gte=${getMonthDate(
@@ -94,15 +95,17 @@ function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0) {
     .then(function (response) {
       console.log(response);
       _response = response;
+      return _response;
     })
     .catch(function (error) {
       console.log(error.response);
       _response = error.response;
+      return _response;
     });
 }
 function getFoodRecordsByMonth(kidNum = 0, year = 0, month = 0) {
   // login();
-  axios
+  return axios
     .get(
       `${url}/600/sleep_records?kidId=${userInfo.kids[
         kidNum
@@ -124,10 +127,12 @@ function getFoodRecordsByMonth(kidNum = 0, year = 0, month = 0) {
     .then(function (response) {
       console.log(response);
       _response = response;
+      return _response
     })
     .catch(function (error) {
       console.log(error.response);
       _response = error.response;
+      return _response
     });
 }
 function getCurrentMonthlyRecord(num = 1, kidNum = 0) {
@@ -154,7 +159,7 @@ function getCurrentMonthlyRecord(num = 1, kidNum = 0) {
 }
 function getWholeMonthlyRecords(num = 36, kidNum = 0) {
   // login();
-  axios
+  return axios
     .get(
       `${url}/600/monthly_records?kidId=${userInfo.kids[
         kidNum
@@ -168,10 +173,12 @@ function getWholeMonthlyRecords(num = 36, kidNum = 0) {
     .then(function (response) {
       console.log(response);
       _response = response;
+      return _response
     })
     .catch(function (error) {
       console.log(error.response);
       _response = error.response;
+      return _response
     });
 }
 function getDailyRecords(date = getMonthDate(), kidNum = 0) {
