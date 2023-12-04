@@ -58,8 +58,9 @@ function getRecentSleepTime(kidNum = 0) {
       });
   })
 }
-function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0) {
+function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0, userInfo) {
   // login();
+  console.log(userInfo)
   return new Promise((resolve, reject) => {
 
     axios
@@ -93,7 +94,7 @@ function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0) {
       });
   })
 }
-function getFoodRecordsByMonth(kidNum = 0, year = 0, month = 0) {
+function getFoodRecordsByMonth(kidNum = 0, year = 0, month = 0, userInfo) {
   // login();
   return axios
     .get(

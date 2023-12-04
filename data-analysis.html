@@ -502,8 +502,8 @@
         window.addEventListener("resize", myChart.resize);
       }
       //渲染每月睡眠時間紀錄圖表
-      function renderSleepTimeByMonthChart(kidNum, year, month) {
-        getSleepTimeByMonth(kidNum, year, month).then((response) => {
+      function renderSleepTimeByMonthChart(kidNum, year, month, userInfo) {
+        getSleepTimeByMonth(kidNum, year, month, userInfo).then((response) => {
           const xAxisData = transformChartData(response, "record_date");
           const wakeUpSeriesData = transformChartData(response, "wakeup_time");
           const sleepSeriesData = transformChartData(response, "sleep_time");
@@ -580,12 +580,14 @@
       async function renderDailyRecordsTable(
         kidNum,
         dailyRecordsTableYear,
-        dailyRecordsTableMonth
+        dailyRecordsTableMonth,
+        userInfo
       ) {
         const response = await getFoodRecordsByMonth(
           kidNum,
           dailyRecordsTableYear,
-          dailyRecordsTableMonth
+          dailyRecordsTableMonth,
+          userData
         );
         const dailyRecordsData = transformDailyRecordsData(response);
         if (document.getElementById("wrapper").innerHTML === "") {
@@ -606,12 +608,14 @@
         renderSleepTimeByMonthChart(
           kidNum,
           sleepTimeChartYear,
-          sleepTimeChartMonth
+          sleepTimeChartMonth,
+          userData
         );
         renderDailyRecordsTable(
           kidNum,
           dailyRecordsTableYear,
-          dailyRecordsTableMonth
+          dailyRecordsTableMonth,
+          userData
         );
         // renderMonthlyRecordsTable(kidNum);
       }
@@ -643,7 +647,8 @@
         renderSleepTimeByMonthChart(
           kidNum,
           sleepTimeChartYear,
-          sleepTimeChartMonth
+          sleepTimeChartMonth,
+          userData
         );
       }
       function dailyRecordshandler(e) {
@@ -654,7 +659,8 @@
         renderDailyRecordsTable(
           kidNum,
           dailyRecordsTableYear,
-          dailyRecordsTableMonth
+          dailyRecordsTableMonth,
+          userData
         );
       }
 
@@ -667,14 +673,16 @@
           renderSleepTimeByMonthChart(
             kidNum,
             sleepTimeChartYear,
-            sleepTimeChartMonth
+            sleepTimeChartMonth,
+            userData
           );
           renderDailyRecordsTable(
             kidNum,
             dailyRecordsTableYear,
-            dailyRecordsTableMonth
+            dailyRecordsTableMonth,
+            userData
           );
-          renderMonthlyRecordsTable(kidNum);
+          // renderMonthlyRecordsTable(kidNum);
         });
       document.getElementById("sleepTimeDatePicker").value = nowDateString;
       document.getElementById("dailyRecordsPicker").value = nowDateString;
