@@ -54,7 +54,7 @@ function signup(
         _response = response;
         delete _response.data.password;
         console.log(_response);
-        resolve(response.data);
+        resolve(response);
       })
       .catch(error => {
       console.log(error);
@@ -103,8 +103,8 @@ function logout(){
   token ="";
   userInfo="";
   _response="";
-  alert("登出並回首頁(跳轉尚未開啟)");
-  // window.location.href = "./";
+  alert("登出並回首頁");
+  window.location.href = "./";
 }
 
 function addKid(
@@ -118,11 +118,12 @@ function addKid(
     kid_avatar: "kidURL",
   },
 ) {
-  kidInfo.userId = kidInfo.userId ? kidInfo.userId : userInfo.id;
-  kidInfo.created_at = getDatetime();
-  kidInfo.modified_time = getDatetime();
-  kidInfo.isExist = "Y";
-  axios
+  return new Promise((resolve, reject) => {
+    kidInfo.userId = kidInfo.userId ? kidInfo.userId : userInfo.id;
+    kidInfo.created_at = getDatetime();
+    kidInfo.modified_time = getDatetime();
+    kidInfo.isExist = "Y";
+    axios
     .post(`${url}/600/kids`, kidInfo, {
       
       headers: {
@@ -132,11 +133,14 @@ function addKid(
     .then(function (response) {
       console.log(response);
       _response = response;
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
-    });
+      resolve(response);
+      })
+      .catch(function (error) {
+        console.log(error.response);
+        _response = error.response;
+        reject(error.response);
+      });
+  });
 }
 
 function addMonthlyRecord(
@@ -147,26 +151,30 @@ function addMonthlyRecord(
   },
   kidNum,
 ) {
-  monthlyRecord.userId = monthlyRecord.userId
+  return new Promise((resolve, reject) => {
+    monthlyRecord.userId = monthlyRecord.userId
     || userInfo.id;
-  monthlyRecord.kidId = monthlyRecord.kidId
+    monthlyRecord.kidId = monthlyRecord.kidId
     || userInfo.kids[kidNum].id;
-  monthlyRecord.created_at = getDatetime();
-
-  axios
+    monthlyRecord.created_at = getDatetime();
+    
+    axios
     .post(`${url}/600/monthly_records`, monthlyRecord, {
       headers: {
         authorization: `Bearer ${token}`,
-      },
-    })
-    .then(function (response) {
-      console.log(response);
-      _response = response;
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
-    });
+        },
+      })
+      .then(function (response) {
+        console.log(response);
+        _response = response;
+        resolve(response);
+      })
+      .catch(function (error) {
+        console.log(error.response);
+        _response = error.response;
+        reject(error.response);
+      });
+  })
 }
 /*
     "sleep_record":{
@@ -252,8 +260,8 @@ async function addDailyRecord(
   addDinnerRecord(daily_record.dinner_record, kidNum);
 }
 async function addSleepRecord(sleep_record, kidNum=0) {
-  console.log(sleep_record);
-  console.log(userInfo);
+  // console.log(sleep_record);
+  // console.log(userInfo);
   sleep_record.kidId = userInfo.kids[kidNum].id || sleep_record.kidId;
   sleep_record.userId = userInfo.id || sleep_record.userId;
   sleep_record.record_date = sleep_record.record_date ||getMonthDate();
@@ -273,7 +281,7 @@ async function addSleepRecord(sleep_record, kidNum=0) {
         },
       },
     );
-    console.log(response.data);
+    console.log(response);
     return (_response[0] = response);
   } catch (error) {
     console.log(error.response);
