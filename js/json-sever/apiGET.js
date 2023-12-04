@@ -13,24 +13,28 @@ function apiGET(route = "/kids/1") {
 
 function getUserInfo(userId ='1') {
   // login();
-  let id =userInfo.id || userId;
-  axios
-    .get(`${url}/600/users/${id.toString()}?_embed=kids`, {
-      headers: {
-        authorization: `Bearer ${token}`,
-      },
-    })
-    .then(function (response) {
-      userInfo = response.data;
-      _response = response;
-      delete _response.data.password;
-      localStorage.setItem('userData',JSON.stringify(_response.data));
-      console.log(_response);
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
-    });
+    return new Promise((resolve, reject) => {
+      let id =userInfo.id || userId;
+      axios
+      .get(`${url}/600/users/${id.toString()}?_embed=kids`, {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      })
+      .then(function (response) {
+        userInfo = response.data;
+        _response = response;
+        delete _response.data.password;
+        localStorage.setItem('userData',JSON.stringify(_response.data));
+        console.log(_response);
+        resolve(response);
+      })
+      .catch(function (error) {
+        console.log(error.response);
+        _response = error.response;
+        reject(error.response);
+      });
+  })
 }
 function getRecentSleepTime(kidNum = 0) {
   // login();
@@ -54,14 +58,13 @@ function getRecentSleepTime(kidNum = 0) {
       .catch(function (error) {
         console.log(error.response);
         _response = error.response;
-        reject(error);
+        reject(error.response);
       });
   })
 }
 function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0) {
   // login();
   return new Promise((resolve, reject) => {
-
     axios
       .get(
         `${url}/600/sleep_records?kidId=${userInfo.kids[
@@ -89,95 +92,99 @@ function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0) {
       .catch(function (error) {
         console.log(error.response);
         _response = error.response;
-        reject(error);
+        reject(error.response);
       });
   })
 }
 function getFoodRecordsByMonth(kidNum = 0, year = 0, month = 0) {
-  // login();
-  return axios
-    .get(
-      `${url}/600/sleep_records?kidId=${userInfo.kids[
-        kidNum
-      ].id.toString()}&_sort=record_date&_order=asc&record_date_gte=${getMonthDate(
-        "firstDay",
-        year,
-        month,
-      )}&record_date_lte=${getMonthDate(
-        "lastDay",
-        year,
-        month,
-      )}&_embed=breakfast_records&_embed=lunch_records&_embed=dinner_records`,
-      {
-        headers: {
-          authorization: `Bearer ${token}`,
+    return new Promise((resolve, reject) => {
+      axios.get(
+        `${url}/600/sleep_records?kidId=${userInfo.kids[
+          kidNum
+        ].id.toString()}&_sort=record_date&_order=asc&record_date_gte=${getMonthDate(
+          "firstDay",
+          year,
+          month,
+          )}&record_date_lte=${getMonthDate(
+            "lastDay",
+            year,
+            month,
+            )}&_embed=breakfast_records&_embed=lunch_records&_embed=dinner_records`,
+            {
+              headers: {
+            authorization: `Bearer ${token}`,
+          },
         },
-      },
-    )
-    .then(function (response) {
-      console.log(response);
-      _response = response;
-      return _response
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
-      return _response
-    });
+        )
+        .then(function (response) {
+          console.log(response);
+        _response = response;
+        resolve(response);
+      })
+      .catch(function (error) {
+        console.log(error.response);
+        _response = error.response;
+        reject(error.response);
+      });
+  })
 }
 function getCurrentMonthlyRecord(num = 1, kidNum = 0) {
-  // login();
-  axios
-    .get(
-      `${url}/600/monthly_records?kidId=${userInfo.kids[
-        kidNum
-      ].id.toString()}&_sort=record_month&_order=desc&_limit=${num}`,
-      {
-        headers: {
-          authorization: `Bearer ${token}`,
+    return new Promise((resolve, reject) => {
+      axios
+      .get(
+        `${url}/600/monthly_records?kidId=${userInfo.kids[
+          kidNum
+        ].id.toString()}&_sort=record_month&_order=desc&_limit=${num}`,
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
         },
-      },
-    )
-    .then(function (response) {
-      console.log(response);
-      _response = response;
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
-    });
+        )
+        .then(function (response) {
+          console.log(response);
+          _response = response;
+          resolve(response);
+        })
+        .catch(function (error) {
+          console.log(error.response);
+          _response = error.response;
+          reject(error.response);
+      });
+  })
 }
 function getWholeMonthlyRecords(num = 36, kidNum = 0) {
-  // login();
-  return axios
-    .get(
-      `${url}/600/monthly_records?kidId=${userInfo.kids[
-        kidNum
-      ].id.toString()}&_sort=record_month&_order=desc&_limit=${num}`,
-      {
-        headers: {
-          authorization: `Bearer ${token}`,
+    return new Promise((resolve, reject) => {
+      axios
+      .get(
+        `${url}/600/monthly_records?kidId=${userInfo.kids[
+          kidNum
+        ].id.toString()}&_sort=record_month&_order=desc&_limit=${num}`,
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
         },
-      },
-    )
-    .then(function (response) {
-      console.log(response);
-      _response = response;
-      return _response
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
-      return _response
-    });
+        )
+        .then(function (response) {
+          console.log(response);
+          _response = response;
+          resolve(response);
+        })
+        .catch(function (error) {
+          console.log(error.response);
+          _response = error.response;
+          reject(error.response);
+      });
+  })
 }
 function getDailyRecords(date = getMonthDate(), kidNum = 0) {
   if(!userInfo.kids){
     alert('使用者無兒童');
     return window.location.href = "./member.html" 
   }
-    
-  axios
+  return new Promise((resolve, reject) => {
+    axios
     .get(
       `${url}/600/sleep_records?kidId=${userInfo.kids[
         kidNum
@@ -187,14 +194,17 @@ function getDailyRecords(date = getMonthDate(), kidNum = 0) {
           authorization: `Bearer ${token}`,
         },
       },
-    )
-    .then(function (response) {
-      console.log(response);
-      _response = response;
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
-    });
+      )
+      .then(function (response) {
+        console.log(response);
+        _response = response;
+        resolve(response);
+      })
+      .catch(function (error) {
+        console.log(error.response);
+        _response = error.response;
+        reject(error.response);
+      });
+  })
 }
 

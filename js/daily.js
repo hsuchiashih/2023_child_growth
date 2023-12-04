@@ -87,17 +87,18 @@ function handleFormData(data) {
     }
   }
   console.log(daily_record);
-  if(!_response || _response.data.length == 0){
-    addDailyRecord(daily_record);
-  }else{
+  if(_response.data.length != 0 || !!_response[1]){
     updateDailyRecord(daily_record);
+  }else{
+    addDailyRecord(daily_record);
   }
-  console.log(_response);
+  // console.log(_response);
   // window.location.href = document.referrer;
 }
-function renderValue(){
+function renderValue(_response){
   if(!_response.data || _response.data == ""){
-     console.log("當日尚無紀錄");
+    emptyValue(); 
+    alert("當日尚無紀錄");
   }else{
     $('#wakeup')[0].value = _response.data[0].wakeup_time;
     $('#sleep')[0].value = _response.data[0].sleep_time;
@@ -113,8 +114,7 @@ function renderValue(){
   }
 }
 function emptyValue(){
-    
-    $('#wakeup')[0].value = "";
+  $('#wakeup')[0].value = "";
   $('#sleep')[0].value = "";
   $('#breakfast')[0].value = "";
   document.querySelector('#breakfastNM').checked = false;
@@ -128,9 +128,12 @@ function emptyValue(){
 }
 
 document.querySelector('#datepicker').addEventListener('change', function(event) {
-    emptyValue();
-    getDailyRecords(event.target.value);
-    setTimeout(renderValue,500);
+  console.log("dateChanged");
+  emptyValue();
+  getDailyRecords(event.target.value).then((response)=>{
+    console.log(response);
+    renderValue(response)
+  });
 });
 
 function enteringRender(){
@@ -144,19 +147,13 @@ function enteringRender(){
   var recordDate = urlParams.get('record_date');
   var kidNum = urlParams.get('kidNum');
   console.log(recordDate);
-  console.log(kidNum);
+  // console.log(kidNum);
   if(recordDate != null){
-    // login();
-    setTimeout(()=>{getDailyRecords(recordDate,kidNum=0)
-    document.querySelector('#datepicker').value = recordDate;
-    }, 500);
-    setTimeout(renderValue, 1000);
+    getDailyRecords(recordDate,kidNum=0).then((response)=>{
+      renderValue(response); 
+      document.querySelector('#datepicker').value = recordDate.toString();
+    });
   }else{
     initialRender(getDailyRecords);
   }
 }
-
-document.querySelector('#datepicker').addEventListener('change', function(event) {
-    getDailyRecords(event.target.value);
-    setTimeout(renderValue,500);
-});

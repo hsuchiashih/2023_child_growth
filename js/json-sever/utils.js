@@ -1,3 +1,4 @@
+setFormListener();
 // const url = 'http://localhost:3000';
 const url = "https://cgwweb.onrender.com";
 
@@ -5,46 +6,22 @@ let token = localStorage.getItem('jwtToken') || "";
 
 if(!token){
   const pathnames = [ //進入以下頁面會帶到login頁面
-"/2023_child_growth/new-child.html","/2023_child_growth/daily.html","/2023_child_growth/member.html","/2023_child_growth/childList.html","/2023_child_growth/dataAnalysis.html"];
+"/2023_child_growth/new-child.html",
+"/2023_child_growth/daily.html",
+"/2023_child_growth/member.html",
+"/2023_child_growth/child-list.html",
+"/2023_child_growth/data-analysis.html"];
   let isMustLogin = pathnames.includes(window.location.pathname);
   if(isMustLogin){
+    alert("移轉到登入頁，登入後回此頁面");
     localStorage.setItem('whereTo',window.location.href);
-    window.location.href = "./loginHTML.html"
+    window.location.href = "./login.html"
   }
 }
 
-// let signupInfo =     {
-//       email: "pikachu@mail.com",
-//       username: "皮卡丘",
-//       password: "wda@123",
-//       gender: "female",
-//       user_birth: "2023-09-13",
-//       user_avatar: "userURL",
-//       created_at: getDatetime(),
-//       "isExist": "Y"
-//     }
-// let loginInfo =     {
-//       email: "pikachu@mail.com",
-//       password: "wda@123",
-//     }
-// let updateInfo = {
-//       id: "",
-//       password: "wda@123",
-//     }
-
-// let data;
 let userInfo= JSON.parse(localStorage.getItem('userData')) || "";
-// let kidsList;
-// let recentSleepTime;
-// let sleepTimeByMonth;
-// let foodRecordsByMonth;
-// let monthlyRecords;
-// let testData;
-// let signupData;
-// let addKidData;
 let _response = "";
 
-// setFormListener();
 
 function getDatetime() {
   const now = new Date();
@@ -375,6 +352,7 @@ function setFormListener(){
 
 function initialRender(func){
   // login();
-  setTimeout(func, 500);
-  setTimeout(renderValue, 1000);
+  func().then(
+    response=>renderValue(response)
+  );
 }
