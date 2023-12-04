@@ -1,374 +1,375 @@
 <!doctype html>
 <html lang="zh-tw">
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="keywords" content="兒童成長網站" />
-		<meta name="description" content="兒童成長網站" />
-		<link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
-		<title>兒童成長網站</title>
-		<!-- CSS -->
-		<link rel="stylesheet" href="./css/all.css" />
-		<link rel="stylesheet" href="./css/reset.css" />
-	</head>
-	<body>
-		<div class="wrap">
-			<!-- 手機板選單 -->
-			<h1 class="logo-box d-flex d-md-none">
-				<a class="navbar-brand logopic d-block" href="./index.html">
-					<img src="./src/home/top-logo.png" alt="logo" />
-				</a>
-				<span>兒童成長網站</span>
-			</h1>
-			<div class="hb-btn-container">
-				<input id="menu-toggle" type="checkbox" />
-				<label class="menu-button-container" for="menu-toggle">
-					<div class="menu-button"></div>
-				</label>
-			</div>
-			<div class="phone-container position-fixed">
-				<ul class="phone-list-nav p-0">
-					<li><a href="./services.html">服務介紹</a></li>
-					<li><a href="./member.html">會員專區</a></li>
-					<li><a href="./child-list.html">兒童清單</a></li>
-					<li><a href="./data-analysis.html">數據分析</a></li>
-					<li><a href="./contactUs.html">聯絡我們</a></li>
-					<li><a href="./daily.html">每日紀錄</a></li>
-					<!-- user-login -->
-					<div class="login-items d-flex">
-						<!-- 已登入 -->
-						<a
-							href="#"
-							class="login-user-box d-flex flex-column align-items-center text-decoration-none"
-						>
-							<div class="login-item-pic">
-								<img src="./src/home/login-pic.svg" alt="user-pic" />
-							</div>
-							<p>使用者A</p>
-						</a>
-						<a
-							class="login-out-box d-flex flex-column align-items-center text-decoration-none"
-							href="#"
-							><div class="login-item-pic">
-								<img src="./src/home/logout.svg" alt="login-out-pic" />
-							</div>
-							<p>登出</p>
-						</a>
-						<!-- 未登入 -->
-						<a
-							class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
-							href="#"
-							><div class="login-item-pic">
-								<img src="./src/home/person.png" alt="login-out-pic" />
-							</div>
-							<p>點擊登入</p>
-						</a>
-					</div>
-				</ul>
-			</div>
-			<!-- 桌機板選單 -->
-			<header class="main-header d-none d-md-block">
-				<nav class="navbar navbar-expand-lg navbar-main">
-					<div class="container-fluid p-0">
-						<h1 class="logo-box d-flex">
-							<a class="navbar-brand logopic d-block" href="./index.html">
-								<img src="./src/home/top-logo.png" alt="logo" />
-							</a>
-							<span>兒童成長網站</span>
-						</h1>
-						<div
-							class="collapse navbar-collapse top-navbar-body"
-							id="navbarSupportedContent"
-						>
-							<ul
-								class="navbar-nav top-navbar-menu mb-2 mb-lg-0 flex-wrap mx-auto"
-							>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./services.html"
-										>服務介紹<br />
-										<span>Service</span>
-									</a>
-								</li>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./member.html"
-										>會員專區<br />
-										<span>Member</span>
-									</a>
-								</li>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./child-list.html"
-										>兒童清單<br />
-										<span>Kids</span>
-									</a>
-								</li>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./data-analysis.html"
-										>數據分析<br />
-										<span>Charts</span>
-									</a>
-								</li>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./contact.html"
-										>聯絡我們<br />
-										<span>Contact</span>
-									</a>
-								</li>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./contact.html"
-										>每日紀錄<br />
-										<span>Daily</span>
-									</a>
-								</li>
-							</ul>
-							<!-- user-login -->
-							<div class="login-items d-flex">
-								<!-- 已登入 -->
-								<a
-									href="#"
-									class="login-user-box d-flex flex-column align-items-center text-decoration-none"
-								>
-									<div class="login-item-pic">
-										<img src="./src/home/login-pic.svg" alt="user-pic" />
-									</div>
-									<p>使用者A</p>
-								</a>
-								<a
-									class="login-out-box d-flex flex-column align-items-center text-decoration-none"
-									href="#"
-									><div class="login-item-pic">
-										<img src="./src/home/logout.svg" alt="login-out-pic" />
-									</div>
-									<p>登出</p>
-								</a>
-								<!-- 未登入 -->
-								<a
-									class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
-									href="#"
-									><div class="login-item-pic">
-										<img src="./src/home/person.png" alt="login-out-pic" />
-									</div>
-									<p>點擊登入</p>
-								</a>
-							</div>
-						</div>
-					</div>
-				</nav>
-			</header>
-			<!-- 兒童清單 -->
-			<div class="container-fluid p-0 m-0 text-secondary child_list_container">
-				<div class="row margin_test justify-content-center align-items-center">
-					<div class="col-12 text-center">
-						<h2 class="mb-5 main_title">兒童清單</h2>
-					</div>
-					<div class="col-12 align-self-center mb-5">
-						<div class="row">
-							<div class="col-12">
-								<div id="cardContainer" class="card_container">
-									<div class="row card_body">
-										<div
-											class="d-flex justify-content-center align-items-center"
-										>
-											<div class="spinner-border text-primary" role="status">
-												<span class="visually-hidden"></span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 text-center p-0 child_list_buttons">
-						<a href="new-child.html">
-							<button
-								id="addButton"
-								type="button"
-								class="btn btn-primary custom_button"
-							>
-								<p>新增兒童 +</p>
-							</button>
-						</a>
-					</div>
-				</div>
-			</div>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="兒童成長網站" />
+    <meta name="description" content="兒童成長網站" />
+    <link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
+    <title>兒童成長網站</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 手機板選單 -->
+      <h1 class="logo-box d-flex d-md-none">
+        <a class="navbar-brand logopic d-block" href="./index.html">
+          <img src="./src/home/top-logo.png" alt="logo" />
+        </a>
+        <span>兒童成長網站</span>
+      </h1>
+      <div class="hb-btn-container">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+      </div>
+      <div class="phone-container position-fixed">
+        <ul class="phone-list-nav p-0">
+          <li><a href="./services.html">服務介紹</a></li>
+          <li><a href="./member.html">會員專區</a></li>
+          <li><a href="./child-list.html">兒童清單</a></li>
+          <li><a href="./data-analysis.html">數據分析</a></li>
+          <li><a href="./contactUs.html">聯絡我們</a></li>
+          <li><a href="./daily.html">每日紀錄</a></li>
+          <!-- user-login -->
+          <div class="login-items d-flex">
+            <!-- 已登入 -->
+            <a
+              href="#"
+              class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+            >
+              <div class="login-item-pic">
+                <img src="./src/home/login-pic.svg" alt="user-pic" />
+              </div>
+              <p>使用者A</p>
+            </a>
+            <a
+              class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+              href="#"
+              ><div class="login-item-pic">
+                <img src="./src/home/logout.svg" alt="login-out-pic" />
+              </div>
+              <p>登出</p>
+            </a>
+            <!-- 未登入 -->
+            <a
+              class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+              href="#"
+              ><div class="login-item-pic">
+                <img src="./src/home/person.png" alt="login-out-pic" />
+              </div>
+              <p>點擊登入</p>
+            </a>
+          </div>
+        </ul>
+      </div>
+      <!-- 桌機板選單 -->
+      <header class="main-header d-none d-md-block">
+        <nav class="navbar navbar-expand-lg navbar-main">
+          <div class="container-fluid p-0">
+            <h1 class="logo-box d-flex">
+              <a class="navbar-brand logopic d-block" href="./index.html">
+                <img src="./src/home/top-logo.png" alt="logo" />
+              </a>
+              <span>兒童成長網站</span>
+            </h1>
+            <div
+              class="collapse navbar-collapse top-navbar-body"
+              id="navbarSupportedContent"
+            >
+              <ul
+                class="navbar-nav top-navbar-menu mb-2 mb-lg-0 flex-wrap mx-auto"
+              >
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./services.html"
+                    >服務介紹<br />
+                    <span>Service</span>
+                  </a>
+                </li>
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./member.html"
+                    >會員專區<br />
+                    <span>Member</span>
+                  </a>
+                </li>
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./child-list.html"
+                    >兒童清單<br />
+                    <span>Kids</span>
+                  </a>
+                </li>
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./data-analysis.html"
+                    >數據分析<br />
+                    <span>Charts</span>
+                  </a>
+                </li>
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./contactUs.html"
+                    >聯絡我們<br />
+                    <span>Contact</span>
+                  </a>
+                </li>
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./daily.html"
+                    >每日紀錄<br />
+                    <span>Daily</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- user-login -->
+              <div class="login-items d-flex">
+                <!-- 已登入 -->
+                <a
+                  href="#"
+                  class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+                >
+                  <div class="login-item-pic">
+                    <img src="./src/home/login-pic.svg" alt="user-pic" />
+                  </div>
+                  <p>使用者A</p>
+                </a>
+                <a
+                  class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  href="#"
+                  ><div class="login-item-pic">
+                    <img src="./src/home/logout.svg" alt="login-out-pic" />
+                  </div>
+                  <p>登出</p>
+                </a>
+                <!-- 未登入 -->
+                <a
+                  class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  href="#"
+                  ><div class="login-item-pic">
+                    <img src="./src/home/person.png" alt="login-out-pic" />
+                  </div>
+                  <p>點擊登入</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- 兒童清單 -->
+      <div class="container-fluid p-0 m-0 text-secondary child_list_container">
+        <div class="row margin_test justify-content-center align-items-center">
+          <div class="col-12 text-center">
+            <h2 class="mb-5 main_title">兒童清單</h2>
+          </div>
+          <div class="col-12 align-self-center mb-5">
+            <div class="row">
+              <div class="col-12">
+                <div id="cardContainer" class="card_container">
+                  <div class="row card_body">
+                    <div
+                      class="d-flex justify-content-center align-items-center"
+                    >
+                      <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 text-center p-0 child_list_buttons">
+            <a href="new-child.html">
+              <button
+                id="addButton"
+                type="button"
+                class="btn btn-primary custom_button"
+              >
+                <p>新增兒童 +</p>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
 
-			<!-- footer -->
-			<footer class="section-footer container-fluid position-relative">
-				<div class="row">
-					<div class="col-12 col-md-6">
-						<div class="section-footer-item">
-							<h3>兒童成長管理</h3>
-							<div class="section-footer-box d-flex">
-								<div class="section-footer-pic">
-									<img src="./src/home/Facebook.png" alt="fb" />
-								</div>
-								<div class="section-footer-pic">
-									<img src="./src/home/twitter.png" alt="tw" />
-								</div>
-								<div class="section-footer-pic">
-									<img src="./src/home/Instagram.png" alt="ig" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 p-0">
-						<div class="section-item-right">
-							<ul class="d-flex flex-wrap justify-content-center p-0">
-								<li><a href="#">服務介紹</a></li>
-								<li><a href="#">會員專區</a></li>
-								<li><a href="#">兒童清單</a></li>
-								<li><a href="#">數據分析</a></li>
-								<li><a href="#">聯絡我們</a></li>
-							</ul>
-							<div class="section-footer-join">
-								<button>
-									<p>Team Project —— Join Us</p>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-house position-absolute d-none d-md-block">
-					<img src="./src/home/left.house.png" alt="" />
-				</div>
-			</footer>
-			<!-- footer -->
-			<section class="section-copyright">
-				<p>Copyright &copy; 2023 All rights reserved.</p>
-			</section>
-		</div>
+      <!-- footer -->
+      <footer class="section-footer container-fluid position-relative">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="section-footer-item">
+              <h3>兒童成長管理</h3>
+              <div class="section-footer-box d-flex">
+                <div class="section-footer-pic">
+                  <img src="./src/home/Facebook.png" alt="fb" />
+                </div>
+                <div class="section-footer-pic">
+                  <img src="./src/home/twitter.png" alt="tw" />
+                </div>
+                <div class="section-footer-pic">
+                  <img src="./src/home/Instagram.png" alt="ig" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 p-0">
+            <div class="section-item-right">
+              <ul class="d-flex flex-wrap justify-content-center p-0">
+                <li><a href="./services.html">服務介紹</a></li>
+                <li><a href="./member.html">會員專區</a></li>
+                <li><a href="./child-list.html">兒童清單</a></li>
+                <li><a href="./data-analysis.html">數據分析</a></li>
+                <li><a href="./contactUs.html">聯絡我們</a></li>
+                <li><a href="./daily.html">每日記錄</a></li>
+              </ul>
+              <div class="section-footer-join">
+                <button>
+                  <p>Team Project —— Join Us</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-house position-absolute d-none d-md-block">
+          <img src="./src/home/left.house.png" alt="" />
+        </div>
+      </footer>
+      <!-- footer -->
+      <section class="section-copyright">
+        <p>Copyright &copy; 2023 All rights reserved.</p>
+      </section>
+    </div>
 
-		<!-- Js套件 -->
-		<!-- jquery -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<!-- owlJS -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-		<!-- bs -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
-		<!-- axios -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
-		<!-- echart -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
-		<!-- grid.js -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.0.6/gridjs.production.min.js"></script>
-		<!-- sweetalert2 -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.1/sweetalert2.min.js"></script>
-		<!-- validate.js -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
-		<!-- JS套件 -->
+    <!-- Js套件 -->
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- owlJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- bs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+    <!-- echart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+    <!-- grid.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.0.6/gridjs.production.min.js"></script>
+    <!-- sweetalert2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.1/sweetalert2.min.js"></script>
+    <!-- validate.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <!-- JS套件 -->
 
-		<!-- 頁面JS -->
-		<!-- menu/JS -->
-		<script>
-			const url = "https://cgwweb.onrender.com";
-			let token = "";
-			let userInfo = "";
-			/**
-			 *  @todo
-			 *  登入功能暫時放頁面中，因為需要取得token、userInfo
-			 *  待token、userInfo 存入全域範圍，即可刪除
-			 */
-			function getToken(email = "pikachu@mail.com", password = "wda@123") {
-				return axios
-					.post(`${url}/login`, {
-						email: email,
-						password: password,
-					})
-					.then(function (response) {
-						return response.data.accessToken;
-					})
-					.catch(function (error) {
-						console.log(error);
-						_response = error;
-						if (error.message == "Network Error") {
-							alert("db.json伺服器未開啟");
-						}
-					});
-			}
-			function getUserId(email = "pikachu@mail.com", password = "wda@123") {
-				return axios
-					.post(`${url}/login`, {
-						email: email,
-						password: password,
-					})
-					.then(function (response) {
-						return response.data.user.id;
-					})
-					.catch(function (error) {
-						console.log(error);
-						_response = error;
-						if (error.message == "Network Error") {
-							alert("db.json伺服器未開啟");
-						}
-					});
-			}
+    <!-- 頁面JS -->
+    <!-- menu/JS -->
+    <script>
+      const url = "https://cgwweb.onrender.com";
+      let token = "";
+      let userInfo = "";
+      /**
+       *  @todo
+       *  登入功能暫時放頁面中，因為需要取得token、userInfo
+       *  待token、userInfo 存入全域範圍，即可刪除
+       */
+      function getToken(email = "pikachu@mail.com", password = "wda@123") {
+        return axios
+          .post(`${url}/login`, {
+            email: email,
+            password: password,
+          })
+          .then(function (response) {
+            return response.data.accessToken;
+          })
+          .catch(function (error) {
+            console.log(error);
+            _response = error;
+            if (error.message == "Network Error") {
+              alert("db.json伺服器未開啟");
+            }
+          });
+      }
+      function getUserId(email = "pikachu@mail.com", password = "wda@123") {
+        return axios
+          .post(`${url}/login`, {
+            email: email,
+            password: password,
+          })
+          .then(function (response) {
+            return response.data.user.id;
+          })
+          .catch(function (error) {
+            console.log(error);
+            _response = error;
+            if (error.message == "Network Error") {
+              alert("db.json伺服器未開啟");
+            }
+          });
+      }
 
-			//取得使用者資料與小孩資料
-			function getUserInfo(token, userId) {
-				let id = userInfo.id || userId;
-				return axios
-					.get(`${url}/600/users/${id.toString()}?_embed=kids`, {
-						headers: {
-							authorization: `Bearer ${token}`,
-						},
-					})
-					.then(function (response) {
-						userInfo = response.data;
-						_response = response;
-						delete _response.data.password;
+      //取得使用者資料與小孩資料
+      function getUserInfo(token, userId) {
+        let id = userInfo.id || userId;
+        return axios
+          .get(`${url}/600/users/${id.toString()}?_embed=kids`, {
+            headers: {
+              authorization: `Bearer ${token}`,
+            },
+          })
+          .then(function (response) {
+            userInfo = response.data;
+            _response = response;
+            delete _response.data.password;
 
-						return userInfo;
-					})
-					.catch(function (error) {
-						console.log(error.response);
-						_response = error.response;
-					});
-			}
-			//取得小孩睡眠時間
-			function getRecentSleepTime(token, userInfo, kidNum) {
-				return axios
-					.get(
-						`${url}/600/sleep_records?kidId=${userInfo.kids[
-							kidNum
-						].id.toString()}&userId=${userInfo.id.toString()}&_sort=record_date&_order=desc&_limit=7`,
-						{
-							headers: {
-								authorization: `Bearer ${token}`,
-							},
-						}
-					)
-					.then(function (response) {
-						_response = response;
-						return response.data;
-					})
-					.catch(function (error) {
-						console.log(error.response);
-						_response = error.response;
-					});
-			}
-			//結合小孩資料與小孩睡眠時間資料
-			async function combineKidListWithSleepTimeChartData() {
-				const token = await getToken();
-				const userId = await getUserId();
-				const userInfo = await getUserInfo(token, userId);
-				const kidListWithSleepTimeChartData = await Promise.all(
-					userInfo.kids.map(async (item, index) => {
-						item.sleepTimeData = await getRecentSleepTime(
-							token,
-							userInfo,
-							index
-						);
-						return item;
-					})
-				);
+            return userInfo;
+          })
+          .catch(function (error) {
+            console.log(error.response);
+            _response = error.response;
+          });
+      }
+      //取得小孩睡眠時間
+      function getRecentSleepTime(token, userInfo, kidNum) {
+        return axios
+          .get(
+            `${url}/600/sleep_records?kidId=${userInfo.kids[
+              kidNum
+            ].id.toString()}&userId=${userInfo.id.toString()}&_sort=record_date&_order=desc&_limit=7`,
+            {
+              headers: {
+                authorization: `Bearer ${token}`,
+              },
+            }
+          )
+          .then(function (response) {
+            _response = response;
+            return response.data;
+          })
+          .catch(function (error) {
+            console.log(error.response);
+            _response = error.response;
+          });
+      }
+      //結合小孩資料與小孩睡眠時間資料
+      async function combineKidListWithSleepTimeChartData() {
+        const token = await getToken();
+        const userId = await getUserId();
+        const userInfo = await getUserInfo(token, userId);
+        const kidListWithSleepTimeChartData = await Promise.all(
+          userInfo.kids.map(async (item, index) => {
+            item.sleepTimeData = await getRecentSleepTime(
+              token,
+              userInfo,
+              index
+            );
+            return item;
+          })
+        );
 
-				return kidListWithSleepTimeChartData;
-			}
-			//渲染小孩資料
-			function renderKidData(data) {
-				const cardContainer = document.getElementById("cardContainer");
-				let str = "";
-				data.forEach((item) => {
-					str += `
+        return kidListWithSleepTimeChartData;
+      }
+      //渲染小孩資料
+      function renderKidData(data) {
+        const cardContainer = document.getElementById("cardContainer");
+        let str = "";
+        data.forEach((item) => {
+          str += `
           <div class="row card_body">
            
             <div class="col-12 col-xl-3 mb-5 mb-xl-0">
@@ -399,128 +400,128 @@
             </div>
           </div>
           `;
-				});
+        });
 
-				cardContainer.innerHTML = str;
-			}
-			// 渲染小孩睡眠時間圖表
-			function renderChart(chartId, data) {
-				const dom = document.getElementById(chartId);
-				const myChart = echarts.init(dom, "light", {
-					renderer: "canvas",
-					useDirtyRect: false,
-				});
-				const app = {};
-				const ROOT_PATH = "https://echarts.apache.org/examples";
-				let option;
-				// const data = [
-				//   ["2023-10-15", 7],
-				//   ["2023-10-16", 7],
-				//   ["2023-10-17", 6],
-				//   ["2023-10-18", 5],
-				//   ["2023-10-19", 9],
-				//   ["2023-10-21", 5],
-				//   ["2023-10-21", 8],
-				// ];
-				function creatChart(data) {
-					myChart.setOption(
-						(option = {
-							title: {
-								text: "近七天睡眠時間",
-								left: "1%",
-							},
-							tooltip: {
-								trigger: "axis",
-							},
-							grid: {
-								left: "5%",
-								right: "15%",
-								bottom: "10%",
-							},
-							xAxis: [
-								{
-									data: data.map(function (item) {
-										return item[0];
-									}),
-								},
-							],
-							yAxis: [
-								{
-									type: "value",
-								},
-							],
-							dataZoom: [
-								{
-									type: "inside",
-								},
-							],
-							visualMap: [
-								{
-									type: "piecewise",
-									seriesIndex: 0,
-									top: 50,
-									right: 10,
-									pieces: [
-										{
-											min: 0,
-											max: 6.9,
-											label: "睡眠時間小於7小時",
-											color: "#D49460",
-										},
-										{
-											min: 7,
-											max: 8.9,
-											label: "睡眠時間標準7~9小時",
-											color: "#FFC500",
-										},
-										{
-											min: 9,
-											max: 24,
-											label: "睡眠時間大於9小時",
-											color: "#FFF2C7",
-										}, // 表示 value 等于 123 的情况。
-									],
-								},
-							],
-							series: [
-								{
-									name: "睡眠時長",
-									type: "bar",
-									data: data.map(function (item) {
-										return item[1];
-									}),
-								},
-							],
-						})
-					);
-				}
+        cardContainer.innerHTML = str;
+      }
+      // 渲染小孩睡眠時間圖表
+      function renderChart(chartId, data) {
+        const dom = document.getElementById(chartId);
+        const myChart = echarts.init(dom, "light", {
+          renderer: "canvas",
+          useDirtyRect: false,
+        });
+        const app = {};
+        const ROOT_PATH = "https://echarts.apache.org/examples";
+        let option;
+        // const data = [
+        //   ["2023-10-15", 7],
+        //   ["2023-10-16", 7],
+        //   ["2023-10-17", 6],
+        //   ["2023-10-18", 5],
+        //   ["2023-10-19", 9],
+        //   ["2023-10-21", 5],
+        //   ["2023-10-21", 8],
+        // ];
+        function creatChart(data) {
+          myChart.setOption(
+            (option = {
+              title: {
+                text: "近七天睡眠時間",
+                left: "1%",
+              },
+              tooltip: {
+                trigger: "axis",
+              },
+              grid: {
+                left: "5%",
+                right: "15%",
+                bottom: "10%",
+              },
+              xAxis: [
+                {
+                  data: data.map(function (item) {
+                    return item[0];
+                  }),
+                },
+              ],
+              yAxis: [
+                {
+                  type: "value",
+                },
+              ],
+              dataZoom: [
+                {
+                  type: "inside",
+                },
+              ],
+              visualMap: [
+                {
+                  type: "piecewise",
+                  seriesIndex: 0,
+                  top: 50,
+                  right: 10,
+                  pieces: [
+                    {
+                      min: 0,
+                      max: 6.9,
+                      label: "睡眠時間小於7小時",
+                      color: "#D49460",
+                    },
+                    {
+                      min: 7,
+                      max: 8.9,
+                      label: "睡眠時間標準7~9小時",
+                      color: "#FFC500",
+                    },
+                    {
+                      min: 9,
+                      max: 24,
+                      label: "睡眠時間大於9小時",
+                      color: "#FFF2C7",
+                    }, // 表示 value 等于 123 的情况。
+                  ],
+                },
+              ],
+              series: [
+                {
+                  name: "睡眠時長",
+                  type: "bar",
+                  data: data.map(function (item) {
+                    return item[1];
+                  }),
+                },
+              ],
+            })
+          );
+        }
 
-				if (option && typeof option === "object") {
-					myChart.setOption(option);
-				}
-				creatChart(data);
-				window.addEventListener("resize", myChart.resize);
-			}
-			// 畫面渲染動作
-			async function renderChildList() {
-				const kidListWithSleepTimeChartData =
-					await combineKidListWithSleepTimeChartData();
-				await renderKidData(kidListWithSleepTimeChartData);
-				await kidListWithSleepTimeChartData.map((item) => {
-					const chartId = `chartContainer_${item.id}`;
-					const chartData = item.sleepTimeData.map((data) => {
-						const result = [data.record_date, data.sleep_hours];
+        if (option && typeof option === "object") {
+          myChart.setOption(option);
+        }
+        creatChart(data);
+        window.addEventListener("resize", myChart.resize);
+      }
+      // 畫面渲染動作
+      async function renderChildList() {
+        const kidListWithSleepTimeChartData =
+          await combineKidListWithSleepTimeChartData();
+        await renderKidData(kidListWithSleepTimeChartData);
+        await kidListWithSleepTimeChartData.map((item) => {
+          const chartId = `chartContainer_${item.id}`;
+          const chartData = item.sleepTimeData.map((data) => {
+            const result = [data.record_date, data.sleep_hours];
 
-						return result;
-					});
+            return result;
+          });
 
-					renderChart(chartId, chartData);
-				});
-			}
+          renderChart(chartId, chartData);
+        });
+      }
 
-			// 進行畫面渲染
-			renderChildList();
-		</script>
-		<!-- 頁面JS -->
-	</body>
+      // 進行畫面渲染
+      renderChildList();
+    </script>
+    <!-- 頁面JS -->
+  </body>
 </html>

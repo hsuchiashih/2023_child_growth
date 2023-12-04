@@ -1,355 +1,356 @@
 <!doctype html>
 <html lang="zh-tw">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="keywords" content="兒童成長網站" />
-		<meta name="description" content="兒童成長網站" />
-		<link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
-		<title>兒童成長網站</title>
-		<!-- CSS -->
-		<link rel="stylesheet" href="./css/all.css" />
-	</head>
-	<body>
-		<div class="wrap">
-			<!-- 手機板選單 -->
-			<h1 class="logo-box d-flex d-md-none">
-				<a class="navbar-brand logopic d-block" href="./index.html">
-					<img src="./src/home/top-logo.png" alt="logo" />
-				</a>
-				<span>兒童成長網站</span>
-			</h1>
-			<div class="hb-btn-container">
-				<input id="menu-toggle" type="checkbox" />
-				<label class="menu-button-container" for="menu-toggle">
-					<div class="menu-button"></div>
-				</label>
-			</div>
-			<div class="phone-container position-fixed">
-				<ul class="phone-list-nav p-0">
-					<li><a href="./services.html">服務介紹</a></li>
-					<li><a href="./member.html">會員專區</a></li>
-					<li><a href="./child-list.html">兒童清單</a></li>
-					<li><a href="./data-analysis.html">數據分析</a></li>
-					<li><a href="./contactUs.html">聯絡我們</a></li>
-					<li><a href="./daily.html">每日紀錄</a></li>
-					<!-- user-login -->
-					<div class="login-items d-flex">
-						<!-- 已登入 -->
-						<a
-							href="#"
-							class="login-user-box d-flex flex-column align-items-center text-decoration-none"
-						>
-							<div class="login-item-pic">
-								<img src="./src/home/login-pic.svg" alt="user-pic" />
-							</div>
-							<p>使用者A</p>
-						</a>
-						<a
-							class="login-out-box d-flex flex-column align-items-center text-decoration-none"
-							href="#"
-							><div class="login-item-pic">
-								<img src="./src/home/logout.svg" alt="login-out-pic" />
-							</div>
-							<p>登出</p>
-						</a>
-						<!-- 未登入 -->
-						<a
-							class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
-							href="#"
-							><div class="login-item-pic">
-								<img src="./src/home/person.png" alt="login-out-pic" />
-							</div>
-							<p>點擊登入</p>
-						</a>
-					</div>
-				</ul>
-			</div>
-			<!-- 桌機板選單 -->
-			<header class="main-header d-none d-md-block">
-				<nav class="navbar navbar-expand-lg navbar-main">
-					<div class="container-fluid p-0">
-						<h1 class="logo-box d-flex">
-							<a class="navbar-brand logopic d-block" href="./index.html">
-								<img src="./src/home/top-logo.png" alt="logo" />
-							</a>
-							<span>兒童成長網站</span>
-						</h1>
-						<div
-							class="collapse navbar-collapse top-navbar-body"
-							id="navbarSupportedContent"
-						>
-							<ul
-								class="navbar-nav top-navbar-menu mb-2 mb-lg-0 flex-wrap mx-auto"
-							>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./services.html"
-										>服務介紹<br />
-										<span>Service</span>
-									</a>
-								</li>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./member.html"
-										>會員專區<br />
-										<span>Member</span>
-									</a>
-								</li>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./child-list.html"
-										>兒童清單<br />
-										<span>Kids</span>
-									</a>
-								</li>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./data-analysis.html"
-										>數據分析<br />
-										<span>Charts</span>
-									</a>
-								</li>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./contact.html"
-										>聯絡我們<br />
-										<span>Contact</span>
-									</a>
-								</li>
-								<li class="nav-item top-navbar-item">
-									<a class="nav-link top-navbar-txt" href="./contact.html"
-										>每日紀錄<br />
-										<span>Daily</span>
-									</a>
-								</li>
-							</ul>
-							<!-- user-login -->
-							<div class="login-items d-flex">
-								<!-- 已登入 -->
-								<a
-									href="#"
-									class="login-user-box d-flex flex-column align-items-center text-decoration-none"
-								>
-									<div class="login-item-pic">
-										<img src="./src/home/login-pic.svg" alt="user-pic" />
-									</div>
-									<p>使用者A</p>
-								</a>
-								<a
-									class="login-out-box d-flex flex-column align-items-center text-decoration-none"
-									href="#"
-									><div class="login-item-pic">
-										<img src="./src/home/logout.svg" alt="login-out-pic" />
-									</div>
-									<p>登出</p>
-								</a>
-								<!-- 未登入 -->
-								<a
-									class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
-									href="#"
-									><div class="login-item-pic">
-										<img src="./src/home/person.png" alt="login-out-pic" />
-									</div>
-									<p>點擊登入</p>
-								</a>
-							</div>
-						</div>
-					</div>
-				</nav>
-			</header>
-			<!-- 上面是Header -->
-			<div
-				class="container-fluid img_container p-0 m-0 text-secondary new_child_container"
-			>
-				<form action="" id="myForm">
-					<div
-						class="row container margin_test justify-content-center align-items-center"
-					>
-						<div class="col-12 text-center">
-							<h2 class="mb-5 main_title">聯絡我們</h2>
-						</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="兒童成長網站" />
+    <meta name="description" content="兒童成長網站" />
+    <link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
+    <title>兒童成長網站</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/all.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- 手機板選單 -->
+      <h1 class="logo-box d-flex d-md-none">
+        <a class="navbar-brand logopic d-block" href="./index.html">
+          <img src="./src/home/top-logo.png" alt="logo" />
+        </a>
+        <span>兒童成長網站</span>
+      </h1>
+      <div class="hb-btn-container">
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <div class="menu-button"></div>
+        </label>
+      </div>
+      <div class="phone-container position-fixed">
+        <ul class="phone-list-nav p-0">
+          <li><a href="./services.html">服務介紹</a></li>
+          <li><a href="./member.html">會員專區</a></li>
+          <li><a href="./child-list.html">兒童清單</a></li>
+          <li><a href="./data-analysis.html">數據分析</a></li>
+          <li><a href="./contactUs.html">聯絡我們</a></li>
+          <li><a href="./daily.html">每日紀錄</a></li>
+          <!-- user-login -->
+          <div class="login-items d-flex">
+            <!-- 已登入 -->
+            <a
+              href="#"
+              class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+            >
+              <div class="login-item-pic">
+                <img src="./src/home/login-pic.svg" alt="user-pic" />
+              </div>
+              <p>使用者A</p>
+            </a>
+            <a
+              class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+              href="#"
+              ><div class="login-item-pic">
+                <img src="./src/home/logout.svg" alt="login-out-pic" />
+              </div>
+              <p>登出</p>
+            </a>
+            <!-- 未登入 -->
+            <a
+              class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+              href="#"
+              ><div class="login-item-pic">
+                <img src="./src/home/person.png" alt="login-out-pic" />
+              </div>
+              <p>點擊登入</p>
+            </a>
+          </div>
+        </ul>
+      </div>
+      <!-- 桌機板選單 -->
+      <header class="main-header d-none d-md-block">
+        <nav class="navbar navbar-expand-lg navbar-main">
+          <div class="container-fluid p-0">
+            <h1 class="logo-box d-flex">
+              <a class="navbar-brand logopic d-block" href="./index.html">
+                <img src="./src/home/top-logo.png" alt="logo" />
+              </a>
+              <span>兒童成長網站</span>
+            </h1>
+            <div
+              class="collapse navbar-collapse top-navbar-body"
+              id="navbarSupportedContent"
+            >
+              <ul
+                class="navbar-nav top-navbar-menu mb-2 mb-lg-0 flex-wrap mx-auto"
+              >
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./services.html"
+                    >服務介紹<br />
+                    <span>Service</span>
+                  </a>
+                </li>
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./member.html"
+                    >會員專區<br />
+                    <span>Member</span>
+                  </a>
+                </li>
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./child-list.html"
+                    >兒童清單<br />
+                    <span>Kids</span>
+                  </a>
+                </li>
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./data-analysis.html"
+                    >數據分析<br />
+                    <span>Charts</span>
+                  </a>
+                </li>
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./contactUs.html"
+                    >聯絡我們<br />
+                    <span>Contact</span>
+                  </a>
+                </li>
+                <li class="nav-item top-navbar-item">
+                  <a class="nav-link top-navbar-txt" href="./daily.html"
+                    >每日紀錄<br />
+                    <span>Daily</span>
+                  </a>
+                </li>
+              </ul>
+              <!-- user-login -->
+              <div class="login-items d-flex">
+                <!-- 已登入 -->
+                <a
+                  href="#"
+                  class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+                >
+                  <div class="login-item-pic">
+                    <img src="./src/home/login-pic.svg" alt="user-pic" />
+                  </div>
+                  <p>使用者A</p>
+                </a>
+                <a
+                  class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  href="#"
+                  ><div class="login-item-pic">
+                    <img src="./src/home/logout.svg" alt="login-out-pic" />
+                  </div>
+                  <p>登出</p>
+                </a>
+                <!-- 未登入 -->
+                <a
+                  class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  href="#"
+                  ><div class="login-item-pic">
+                    <img src="./src/home/person.png" alt="login-out-pic" />
+                  </div>
+                  <p>點擊登入</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- 上面是Header -->
+      <div
+        class="container-fluid img_container p-0 m-0 text-secondary new_child_container"
+      >
+        <form action="" id="myForm">
+          <div
+            class="row container margin_test justify-content-center align-items-center"
+          >
+            <div class="col-12 text-center">
+              <h2 class="mb-5 main_title">聯絡我們</h2>
+            </div>
 
-						<div class="col-12 col-md-8 col-xl-6 align-self-center">
-							<div class="row">
-								<div class="col-6">
-									<div class="mb-3">
-										<label for="input-name" class="form-label">姓名</label>
-										<input
-											value="123"
-											type="text"
-											class="form-control custom_input"
-											id="input-name"
-											required
-										/>
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="mb-3">
-										<label for="input-gender" class="form-label">性別</label>
-										<br />
-										<input
-											value="male"
-											type="radio"
-											class="radio"
-											name="input-gender"
-										/>男
-										<input
-											value="female"
-											type="radio"
-											class="radio"
-											name="input-gender"
-											checked
-										/>女
-										<input
-											value="doNotOffer"
-											type="radio"
-											class="radio"
-											name="input-gender"
-										/>不提供
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="mb-3">
-										<label for="input-email" class="form-label">信箱</label>
-										<input
-											value="123"
-											type="text"
-											class="form-control custom_input"
-											id="input-email"
-											required
-										/>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="mb-3">
-										<label for="input-phone" class="form-label">連絡電話</label>
-										<input
-											value="123"
-											type="text"
-											class="form-control custom_input"
-											id="input-phone"
-										/>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="mb-3">
-										<label for="textarea-content" class="form-label"
-											>內容</label
-										>
-										<textarea
-											class="form-control custom_input"
-											id="textarea-content"
-											cols="20"
-											rows="5"
-											required
-										>
+            <div class="col-12 col-md-8 col-xl-6 align-self-center">
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="input-name" class="form-label">姓名</label>
+                    <input
+                      value="123"
+                      type="text"
+                      class="form-control custom_input"
+                      id="input-name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label for="input-gender" class="form-label">性別</label>
+                    <br />
+                    <input
+                      value="male"
+                      type="radio"
+                      class="radio"
+                      name="input-gender"
+                    />男
+                    <input
+                      value="female"
+                      type="radio"
+                      class="radio"
+                      name="input-gender"
+                      checked
+                    />女
+                    <input
+                      value="doNotOffer"
+                      type="radio"
+                      class="radio"
+                      name="input-gender"
+                    />不提供
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="input-email" class="form-label">信箱</label>
+                    <input
+                      value="123"
+                      type="text"
+                      class="form-control custom_input"
+                      id="input-email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="input-phone" class="form-label">連絡電話</label>
+                    <input
+                      value="123"
+                      type="text"
+                      class="form-control custom_input"
+                      id="input-phone"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <label for="textarea-content" class="form-label"
+                      >內容</label
+                    >
+                    <textarea
+                      class="form-control custom_input"
+                      id="textarea-content"
+                      cols="20"
+                      rows="5"
+                      required
+                    >
 123</textarea
-										>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-					<div
-						class="row container justify-content-center align-items-center mx-auto"
-					>
-						<div class="col-12 col-md-8 col-xl-6 mb-5 text-end">
-							<button
-								type="button"
-								class="btn btn-primary custom_clear_button me-3"
-							>
-								清除資料
-							</button>
-							<button type="submit" class="btn btn-primary custom_button">
-								送出新增
-							</button>
-						</div>
-					</div>
-				</form>
-			</div>
-			<!-- 下面是footer -->
-			<footer class="section-footer container-fluid position-relative">
-				<div class="row">
-					<div class="col-12 col-md-6">
-						<div class="section-footer-item">
-							<h3>兒童成長管理</h3>
-							<div class="section-footer-box d-flex">
-								<div class="section-footer-pic">
-									<img src="./src/home/Facebook.png" alt="fb" />
-								</div>
-								<div class="section-footer-pic">
-									<img src="./src/home/twitter.png" alt="tw" />
-								</div>
-								<div class="section-footer-pic">
-									<img src="./src/home/Instagram.png" alt="ig" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-md-6 p-0">
-						<div class="section-item-right">
-							<ul class="d-flex flex-wrap justify-content-center p-0">
-								<li><a href="#">服務介紹</a></li>
-								<li><a href="#">會員專區</a></li>
-								<li><a href="#">兒童清單</a></li>
-								<li><a href="#">數據分析</a></li>
-								<li><a href="#">聯絡我們</a></li>
-							</ul>
-							<div class="section-footer-join">
-								<button>
-									<p>Team Project —— Join Us</p>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-house position-absolute d-none d-md-block">
-					<img src="./src/home/left.house.png" alt="" />
-				</div>
-			</footer>
-			<section class="section-copyright">
-				<p>Copyright &copy; 2023 All rights reserved.</p>
-			</section>
-		</div>
-		<!-- Js套件 -->
-		<!-- jquery -->
-		<script src="node_modules/jquery/dist/jquery.min.js"></script>
-		<!-- owlJS -->
-		<script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-		<!-- bs -->
-		<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-		<!-- axios -->
-		<script src="node_modules/axios/dist/axios.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-		<!-- JS套件 -->
-		<script src="js/json-sever/utils.js"></script>
-		<script src="js/json-sever/apiGET.js"></script>
-		<script src="js/json-sever/apiPOST.js"></script>
-		<script src="js/json-sever/apiPATCH.js"></script>
-		<!-- 頁面JS -->
-		<!-- menu/JS -->
-		<script>
-			$(document).ready(function () {
-				$(".owl-carousel").owlCarousel();
-			});
-			document.addEventListener("DOMContentLoaded", function () {
-				const menuButtonContainer = document.querySelector(
-					".menu-button-container"
-				);
-				const phoneContainer = document.querySelector(".phone-container");
+          <div
+            class="row container justify-content-center align-items-center mx-auto"
+          >
+            <div class="col-12 col-md-8 col-xl-6 mb-5 text-end">
+              <button
+                type="button"
+                class="btn btn-primary custom_clear_button me-3"
+              >
+                清除資料
+              </button>
+              <button type="submit" class="btn btn-primary custom_button">
+                送出新增
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- 下面是footer -->
+      <footer class="section-footer container-fluid position-relative">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="section-footer-item">
+              <h3>兒童成長管理</h3>
+              <div class="section-footer-box d-flex">
+                <div class="section-footer-pic">
+                  <img src="./src/home/Facebook.png" alt="fb" />
+                </div>
+                <div class="section-footer-pic">
+                  <img src="./src/home/twitter.png" alt="tw" />
+                </div>
+                <div class="section-footer-pic">
+                  <img src="./src/home/Instagram.png" alt="ig" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 p-0">
+            <div class="section-item-right">
+              <ul class="d-flex flex-wrap justify-content-center p-0">
+                <li><a href="./services.html">服務介紹</a></li>
+                <li><a href="./member.html">會員專區</a></li>
+                <li><a href="./child-list.html">兒童清單</a></li>
+                <li><a href="./data-analysis.html">數據分析</a></li>
+                <li><a href="./contactUs.html">聯絡我們</a></li>
+                <li><a href="./daily.html">每日記錄</a></li>
+              </ul>
+              <div class="section-footer-join">
+                <button>
+                  <p>Team Project —— Join Us</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-house position-absolute d-none d-md-block">
+          <img src="./src/home/left.house.png" alt="" />
+        </div>
+      </footer>
+      <section class="section-copyright">
+        <p>Copyright &copy; 2023 All rights reserved.</p>
+      </section>
+    </div>
+    <!-- Js套件 -->
+    <!-- jquery -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- owlJS -->
+    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <!-- bs -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- axios -->
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <!-- JS套件 -->
+    <script src="js/json-sever/utils.js"></script>
+    <script src="js/json-sever/apiGET.js"></script>
+    <script src="js/json-sever/apiPOST.js"></script>
+    <script src="js/json-sever/apiPATCH.js"></script>
+    <!-- 頁面JS -->
+    <!-- menu/JS -->
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel();
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButtonContainer = document.querySelector(
+          ".menu-button-container"
+        );
+        const phoneContainer = document.querySelector(".phone-container");
 
-				let isPhoneContainerVisible = false;
+        let isPhoneContainerVisible = false;
 
-				menuButtonContainer.addEventListener("click", function () {
-					if (isPhoneContainerVisible) {
-						phoneContainer.style.display = "none";
-					} else {
-						phoneContainer.style.display = "block";
-					}
-					isPhoneContainerVisible = !isPhoneContainerVisible;
-				});
-			});
-		</script>
-		<script></script>
-		<script src="js/contactUs.js"></script>
-		<!-- 頁面JS -->
-	</body>
+        menuButtonContainer.addEventListener("click", function () {
+          if (isPhoneContainerVisible) {
+            phoneContainer.style.display = "none";
+          } else {
+            phoneContainer.style.display = "block";
+          }
+          isPhoneContainerVisible = !isPhoneContainerVisible;
+        });
+      });
+    </script>
+    <script></script>
+    <script src="js/contactUs.js"></script>
+    <!-- 頁面JS -->
+  </body>
 </html>
