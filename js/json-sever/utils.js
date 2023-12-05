@@ -1,8 +1,12 @@
-setFormListener();
+
 // const url = 'http://localhost:3000';
 const url = "https://cgwweb.onrender.com";
-
+let userInfo= JSON.parse(localStorage.getItem('userData')) || "";
+let _response = "";
 let token = localStorage.getItem('jwtToken') || "";
+
+setFormListener();
+
 
 if(!token){
   const pathnames = [ //進入以下頁面會帶到login頁面
@@ -19,8 +23,7 @@ if(!token){
   }
 }
 
-let userInfo= JSON.parse(localStorage.getItem('userData')) || "";
-let _response = "";
+
 
 
 function getDatetime() {
@@ -342,13 +345,15 @@ function processForm() {
 
 
 function setFormListener(){
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('form').addEventListener('submit',function(event){
-      event.preventDefault();
-      processForm();
+  if(!!document.querySelector('form')){
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelector('form').addEventListener('submit',function(event){
+        event.preventDefault();
+        processForm();
+      });
     });
-  });
-}
+  }
+  }
 
 function initialRender(func){
   // login();
@@ -356,3 +361,4 @@ function initialRender(func){
     response=>renderValue(response)
   );
 }
+
