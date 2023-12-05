@@ -62,7 +62,7 @@ function getRecentSleepTime(kidNum = 0) {
       });
   })
 }
-function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0, userInfo) {
+function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0) {
   // login();
   console.log(userInfo)
   return new Promise((resolve, reject) => {
