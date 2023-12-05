@@ -17,147 +17,227 @@
   </head>
   <body>
     <div class="wrap">
-      <!-- 手機板選單 -->
-      <h1 class="logo-box d-flex d-md-none">
-        <a class="navbar-brand logopic d-block" href="./index.html">
-          <img src="./src/home/top-logo.png" alt="logo" />
-        </a>
-        <span>兒童成長網站</span>
-      </h1>
-      <div class="hb-btn-container">
-        <input id="menu-toggle" type="checkbox" />
-        <label class="menu-button-container" for="menu-toggle">
-          <div class="menu-button"></div>
-        </label>
-      </div>
-      <div class="phone-container position-fixed">
-        <ul class="phone-list-nav p-0">
-          <li><a href="./services.html">服務介紹</a></li>
-          <li><a href="./member.html">會員專區</a></li>
-          <li><a href="./child-list.html">兒童清單</a></li>
-          <li><a href="./data-analysis.html">數據分析</a></li>
-          <li><a href="./contactUs.html">聯絡我們</a></li>
-          <li><a href="./daily.html">每日紀錄</a></li>
-          <!-- user-login -->
-          <div class="login-items d-flex">
-            <!-- 已登入 -->
-            <a
-              href="#"
-              class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+    <!-- 手機板選單 -->
+    <h1 class="logo-box d-flex d-md-none">
+      <a class="navbar-brand logopic d-block" href="./index.html">
+        <img src="./src/home/top-logo.png" alt="logo" />
+      </a>
+      <span>兒童成長網站</span>
+    </h1>
+    <div class="hb-btn-container">
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+    </div>
+    <div class="phone-container position-fixed">
+      <ul class="phone-list-nav p-0">
+        <li><a href="./services.html">服務介紹</a></li>
+        <li><a href="./member.html">會員專區</a></li>
+        <li><a href="./child-list.html">兒童清單</a></li>
+        <li><a href="./data-analysis.html">數據分析</a></li>
+        <li><a href="./contactUs.html">聯絡我們</a></li>
+        <li><a href="./daily.html">每日紀錄</a></li>
+        <!-- user-login -->
+        <div class="login-items d-flex">
+          <!-- 已登入 -->
+          <a
+            href="#"
+            class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+          >
+            <div class="login-item-pic">
+              <img src="./src/home/login-pic.svg" alt="user-pic" />
+            </div>
+            <p class="user-name">使用者A</p>
+          </a>
+          <a
+            class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+            href="#"
+            ><div class="login-item-pic">
+              <img src="./src/home/logout.svg" alt="login-out-pic" />
+            </div>
+            <p>登出</p>
+          </a>
+          <!-- 未登入 -->
+          <a
+            class="d-flex flex-column align-items-center text-decoration-none login-box"
+            href="#"
+            ><div class="login-item-pic">
+              <img src="./src/home/person.png" alt="login-out-pic" />
+            </div>
+            <p>點擊登入</p>
+          </a>
+        </div>
+      </ul>
+    </div>
+    <!-- 桌機板選單 -->
+    <header class="main-header d-none d-md-block">
+      <nav class="navbar navbar-expand-lg navbar-main">
+        <div class="container-fluid p-0">
+          <h1 class="logo-box d-flex">
+            <a class="navbar-brand logopic d-block" href="./index.html">
+              <img src="./src/home/top-logo.png" alt="logo" />
+            </a>
+            <span>兒童成長網站</span>
+          </h1>
+          <div
+            class="collapse navbar-collapse top-navbar-body"
+            id="navbarSupportedContent"
+          >
+            <ul
+              class="navbar-nav top-navbar-menu mb-2 mb-lg-0 flex-wrap mx-auto"
             >
-              <div class="login-item-pic">
-                <img src="./src/home/login-pic.svg" alt="user-pic" />
-              </div>
-              <p class="user-name">使用者A</p>
-            </a>
-            <a
-              class="login-out-box d-flex flex-column align-items-center text-decoration-none"
-              href="#"
-              ><div class="login-item-pic">
-                <img src="./src/home/logout.svg" alt="login-out-pic" />
-              </div>
-              <p>登出</p>
-            </a>
-            <!-- 未登入 -->
-            <a
-              class="d-flex flex-column align-items-center text-decoration-none login-box"
-              href="#"
-              ><div class="login-item-pic">
-                <img src="./src/home/person.png" alt="login-out-pic" />
-              </div>
-              <p>點擊登入</p>
-            </a>
-          </div>
-        </ul>
-      </div>
-      <!-- 桌機板選單 -->
-      <header class="main-header d-none d-md-block">
-        <nav class="navbar navbar-expand-lg navbar-main">
-          <div class="container-fluid p-0">
-            <h1 class="logo-box d-flex">
-              <a class="navbar-brand logopic d-block" href="./index.html">
-                <img src="./src/home/top-logo.png" alt="logo" />
-              </a>
-              <span>兒童成長網站</span>
-            </h1>
-            <div
-              class="collapse navbar-collapse top-navbar-body"
-              id="navbarSupportedContent"
-            >
-              <ul
-                class="navbar-nav top-navbar-menu mb-2 mb-lg-0 flex-wrap mx-auto"
+              <li class="nav-item top-navbar-item">
+                <a class="nav-link top-navbar-txt" href="./services.html"
+                  >服務介紹<br />
+                  <span>Service</span>
+                </a>
+              </li>
+              <li class="nav-item top-navbar-item">
+                <a class="nav-link top-navbar-txt" href="./member.html"
+                  >會員專區<br />
+                  <span>Member</span>
+                </a>
+              </li>
+              <li class="nav-item top-navbar-item">
+                <a class="nav-link top-navbar-txt" href="./child-list.html"
+                  >兒童清單<br />
+                  <span>Kids</span>
+                </a>
+              </li>
+              <li class="nav-item top-navbar-item">
+                <a class="nav-link top-navbar-txt" href="./data-analysis.html"
+                  >數據分析<br />
+                  <span>Charts</span>
+                </a>
+              </li>
+              <li class="nav-item top-navbar-item">
+                <a class="nav-link top-navbar-txt" href="./contactUs.html"
+                  >聯絡我們<br />
+                  <span>Contact</span>
+                </a>
+              </li>
+              <li class="nav-item top-navbar-item">
+                <a class="nav-link top-navbar-txt" href="./daily.html"
+                  >每日紀錄<br />
+                  <span>Daily</span>
+                </a>
+              </li>
+            </ul>
+            <!-- user-login -->
+            <div class="login-items d-flex">
+              <!-- 已登入 -->
+              <a
+                href="#"
+                class="login-user-box d-flex flex-column align-items-center text-decoration-none"
               >
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./services.html"
-                    >服務介紹<br />
-                    <span>Service</span>
-                  </a>
-                </li>
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./member.html"
-                    >會員專區<br />
-                    <span>Member</span>
-                  </a>
-                </li>
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./child-list.html"
-                    >兒童清單<br />
-                    <span>Kids</span>
-                  </a>
-                </li>
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./data-analysis.html"
-                    >數據分析<br />
-                    <span>Charts</span>
-                  </a>
-                </li>
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./contactUs.html"
-                    >聯絡我們<br />
-                    <span>Contact</span>
-                  </a>
-                </li>
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./daily.html"
-                    >每日紀錄<br />
-                    <span>Daily</span>
-                  </a>
-                </li>
-              </ul>
-              <!-- user-login -->
-              <div class="login-items d-flex">
-                <!-- 已登入 -->
-                <a
-                  href="#"
-                  class="login-user-box d-flex flex-column align-items-center text-decoration-none"
-                >
-                  <div class="login-item-pic">
-                    <img src="./src/home/login-pic.svg" alt="user-pic" />
-                  </div>
-                  <p class="user-name">使用者A</p>
-                </a>
-                <a
-                  class="login-out-box d-flex flex-column align-items-center text-decoration-none"
-                  href="#"
-                  ><div class="login-item-pic">
-                    <img src="./src/home/logout.svg" alt="login-out-pic" />
-                  </div>
-                  <p>登出</p>
-                </a>
-                <!-- 未登入 -->
-                <a
-                  class="login-box d-flex flex-column align-items-center text-decoration-none"
-                  href="#"
-                  ><div class="login-item-pic">
-                    <img src="./src/home/person.png" alt="login-out-pic" />
-                  </div>
-                  <p>點擊登入</p>
-                </a>
-              </div>
+                <div class="login-item-pic">
+                  <img src="./src/home/login-pic.svg" alt="user-pic" />
+                </div>
+                <p class="user-name">使用者A</p>
+              </a>
+              <a
+                class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+                href="#"
+                ><div class="login-item-pic">
+                  <img src="./src/home/logout.svg" alt="login-out-pic" />
+                </div>
+                <p>登出</p>
+              </a>
+              <!-- 未登入 -->
+              <a
+                class="login-box d-flex flex-column align-items-center text-decoration-none"
+                href="#"
+                ><div class="login-item-pic">
+                  <img src="./src/home/person.png" alt="login-out-pic" />
+                </div>
+                <p>點擊登入</p>
+              </a>
             </div>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
+    <section class="section-banner">
+      <div class="owl-banner owl-carousel owl-theme">
+        <div class="item">
+          <img
+            class="img-fluid d-none d-md-block"
+            src="./src/home/banner_1.jpg"
+            alt="pic"
+          />
+          <img
+            class="img-fluid d-block d-md-none"
+            src="./src/index/banner01_phone.png"
+            alt="pic"
+          />
+          <div class="carousel-item-txt position-absolute d-flex flex-column">
+            <h3 class="order-1">育兒有道，從此不迷路</h3>
+            <p>管理師陪跑提供正確飲食管理<br />、線上乾貨課程</p>
+            <button class="carousel-button order-2">
+              <a href="#"> 立即體驗 </a>
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <img
+            class="img-fluid d-none d-md-block"
+            src="./src/home/banner_2.jpg"
+            alt="pic"
+          />
+          <img
+            class="img-fluid d-block d-md-none"
+            src="./src/index/banner02_phone.png"
+            alt="pic"
+          />
+          <div class="carousel-item-txt position-absolute d-flex flex-column">
+            <h3 class="order-1">成長管理，一站搞定</h3>
+            <p>透過每天追蹤吃、動、睡，<br />讓孩子變得更健康</p>
+            <button class="carousel-button order-2">
+              <a href="#"> 立即體驗 </a>
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <img
+            class="img-fluid d-none d-md-block"
+            src="./src/home/banner_3.jpg"
+            alt="pic"
+          />
+          <img
+            class="img-fluid d-block d-md-none"
+            src="./src/index/banner03_phone.png"
+            alt="pic"
+          />
+          <div class="carousel-item-txt position-absolute d-flex flex-column">
+            <h3 class="order-1">漢方茶包讓成長更健康</h3>
+            <p>針對個人體質調整，讓營養<br />更好吸收進身體裡</p>
+            <button class="carousel-button order-2">
+              <a href="#"> 立即體驗 </a>
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <img
+            class="img-fluid d-none d-md-block"
+            src="./src/home/banner_2.jpg"
+            alt="pic"
+          />
+          <img
+            class="img-fluid d-block d-md-none"
+            src="./src/index/banner02_phone.png"
+            alt=""
+          />
+          <div class="carousel-item-txt position-absolute d-flex flex-column">
+            <h3 class="order-1">成長管理，一站搞定</h3>
+            <p>透過每天追蹤吃、動、睡，<br />讓孩子變得更健康</p>
+            <button class="carousel-button order-2">
+              <a href="#"> 立即體驗 </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
       <!-- 上面是Header -->
       <form id="myForm">
         <input type="text" id="id1" value="value1">
@@ -173,6 +253,7 @@
         <button type="submit">送出</button>
       </form> 
       <!-- 下面是footer -->
+      <!-- 下面是footer -->      
       <footer class="section-footer container-fluid position-relative">
         <div class="row">
           <div class="col-12 col-md-6">
@@ -194,11 +275,12 @@
           <div class="col-12 col-md-6 p-0">
             <div class="section-item-right">
               <ul class="d-flex flex-wrap justify-content-center p-0">
-                <li><a href="#">服務介紹</a></li>
-                <li><a href="#">會員專區</a></li>
-                <li><a href="child-list.html">兒童清單</a></li>
-                <li><a href="#">數據分析</a></li>
-                <li><a href="#">聯絡我們</a></li>
+                <li><a href="./services.html">服務介紹</a></li>
+                <li><a href="./member.html">會員專區</a></li>
+                <li><a href="./child-list.html">兒童清單</a></li>
+                <li><a href="./data-analysis.html">數據分析</a></li>
+                <li><a href="./contactUs.html">聯絡我們</a></li>
+                <li><a href="./daily.html">每日記錄</a></li>
               </ul>
               <div class="section-footer-join">
                 <button>
@@ -274,5 +356,32 @@
         //渲染網頁請寫一個renderValue(){}//名稱勿改
       </script>    
     <!-- 頁面JS -->
+    <script>
+      $(".owl-banner").owlCarousel({
+        loop: true,
+        margin: 24,
+        nav: true,
+        canter: true,
+        navText: [
+          "<img src='./src/index/prev-arrow.svg'>",
+          "<img src='./src/index/next-arrow.svg'>",
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 1,
+            canter: true,
+            stagePadding: 100,
+          },
+          1200: {
+            items: 1,
+            canter: true,
+            stagePadding: 400,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
