@@ -139,7 +139,7 @@ function getFoodRecordsByMonth(kidNum = 0, year = 0, month = 0) {
       });
   })
 }
-function getCurrentMonthlyRecord(num = 1, kidNum = 0) {
+function getMonthlyRecords(num = 1, kidNum = 0) {
     return new Promise((resolve, reject) => {
       axios
       .get(
@@ -164,31 +164,31 @@ function getCurrentMonthlyRecord(num = 1, kidNum = 0) {
       });
   })
 }
-function getWholeMonthlyRecords(num = 36, kidNum = 0) {
-    return new Promise((resolve, reject) => {
-      axios
-      .get(
-        `${url}/600/monthly_records?kidId=${userInfo.kids[
-          kidNum
-        ].id.toString()}&_sort=record_month&_order=desc&_limit=${num}`,
-        {
-          headers: {
-            authorization: `Bearer ${token}`,
-          },
-        },
-        )
-        .then(function (response) {
-          console.log(response);
-          _response = response;
-          resolve(response);
-        })
-        .catch(function (error) {
-          console.log(error.response);
-          _response = error.response;
-          reject(error.response);
-      });
-  })
-}
+// function getWholeMonthlyRecords(num = 36, kidNum = 0) {
+//     return new Promise((resolve, reject) => {
+//       axios
+//       .get(
+//         `${url}/600/monthly_records?kidId=${userInfo.kids[
+//           kidNum
+//         ].id.toString()}&_sort=record_month&_order=desc&_limit=${num}`,
+//         {
+//           headers: {
+//             authorization: `Bearer ${token}`,
+//           },
+//         },
+//         )
+//         .then(function (response) {
+//           console.log(response);
+//           _response = response;
+//           resolve(response);
+//         })
+//         .catch(function (error) {
+//           console.log(error.response);
+//           _response = error.response;
+//           reject(error.response);
+//       });
+//   })
+// }
 function getDailyRecords(date = getMonthDate(), kidNum = 0) {
   return new Promise((resolve, reject) => {
     axios
