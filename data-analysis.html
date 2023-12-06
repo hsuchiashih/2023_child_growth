@@ -11,6 +11,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
     <link
       rel="stylesheet"
       href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
@@ -213,36 +214,39 @@
                   </div>
                 </div>
                 <div class="card_container">
-                  <div class="row card_body">
+                  <div id="chartContainer" class="row card_body">
                     <div class="col-12">
                       <div id="chart_container"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- <div class="col-12 mb-5">
+              <div class="col-12 mb-5">
                 <div class="title_container d-flex align-items-center mb-2">
                   <div class="icon_container">
                     <img src="./src/home/img-crown.png" />
                   </div>
                   <h2 class="sub_title me-3">身高體重趨勢</h2>
-                  <input
-                    class="kid-date rounded-3 border-0"
-                    type="month"
-                    id="monthpicker"
-                    name="monthpicker"
-                    min="2023-01"
-                    value="2023-11"
-                  />
+                  <!-- <input
+                    class="kid-date rounded-3 border-0" 
+                    type="number"
+                    min="2020"
+                    max="2099"
+                    step="1"
+                    value="2020"
+                    onchange="monthRecordshandler(event)"/> -->
                 </div>
                 <div class="card_container">
-                  <div class="row card_body">
-                    <div class="col-12">
+                  <div id="chartContainer2" class="row card_body">
+                    <!-- <div class="col-12">
                       <div id="chart_container2"></div>
+                    </div> -->
+                    <div class="col-12">
+                      <h2 class="sub_title">查無資料</h2>
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <div class="col-12 mb-5">
                 <div class="title_container d-flex align-items-center mb-2">
                   <div class="icon_container">
@@ -260,27 +264,27 @@
                   />
                 </div>
                 <div class="card_container">
-                  <div class="row card_body">
+                  <div id="dailyRecordsContainer" class="row card_body">
                     <div class="col-12">
                       <div id="wrapper"></div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!-- <div class="col-12 mb-5">
+              <div class="col-12 mb-5">
                 <div class="title_container d-flex align-items-center mb-2">
                   <div class="icon_container">
                     <img src="./src/home/img-crown.png" />
                   </div>
                   <h2 class="sub_title me-3">每月紀錄清單</h2>
-                  <input
+                  <!-- <input
                     class="kid-date rounded-3 border-0"
                     type="month"
                     id="monthpicker2"
                     name="monthpicker"
                     min="2023-01"
                     value="2023-11"
-                  />
+                  /> -->
                 </div>
                 <div class="card_container">
                   <div class="row card_body">
@@ -289,7 +293,7 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
@@ -507,11 +511,31 @@
           const xAxisData = transformChartData(response, "record_date");
           const wakeUpSeriesData = transformChartData(response, "wakeup_time");
           const sleepSeriesData = transformChartData(response, "sleep_time");
-          creatSleepTimeByMonthChart(
-            xAxisData,
-            wakeUpSeriesData,
-            sleepSeriesData
-          );
+          const chartContainer = document.getElementById('chartContainer')
+          let str = ''
+          if (response.data.length !== 0) {
+            str += 
+              `
+              <div class="col-12">
+                <div id="chart_container"></div>
+              </div>
+              `
+            chartContainer.innerHTML = str;
+            creatSleepTimeByMonthChart(
+              xAxisData,
+              wakeUpSeriesData,
+              sleepSeriesData
+            );
+          } else {
+            str += 
+              `
+              <div class="col-12">
+                <h2 class="sub_title">查無資料</h2>
+              </div>
+              `
+            chartContainer.innerHTML = str;
+          }
+          
         });
       }
 
@@ -528,13 +552,51 @@
             item.sleep_time,
             Number(item.sleep_time.split(":")[0]) < 21 ? "V" : null,
             item.sleep_hours >= 8 ? "V" : null,
-            null,
-            null,
+            isNoBreadMilk(
+              item.breakfast_records[0],
+              item.lunch_records[0],
+              item.dinner_records[0]
+            ) ? "V" : null,
+            isNoDessert(
+              item.breakfast_records[0],
+              item.lunch_records[0],
+              item.dinner_records[0]
+            ) ? "V" : null,
             item.breakfast_records[0] ? item.breakfast_records[0].content : "",
             item.lunch_records[0] ? item.lunch_records[0].content : "",
             item.dinner_records[0] ? item.dinner_records[0].content : "",
           ];
         });
+      }
+      //確認是否無甜食
+      function isNoDessert(breakfast_records, lunch_records, dinner_records) {
+        if (breakfast_records && lunch_records && dinner_records) {
+          if (breakfast_records.noDessert === 'N'
+            && lunch_records.noDessert === 'N'
+            && dinner_records.noDessert === 'N') 
+          {
+            return true
+          } else {
+            return false
+          }
+        } else {
+            return false
+        }
+      }
+      //確認是否無麥奶
+      function isNoBreadMilk(breakfast_records, lunch_records, dinner_records) {
+        if (breakfast_records && lunch_records && dinner_records) {
+          if (breakfast_records.noBreadMilk === 'N'
+            && lunch_records.noBreadMilk === 'N'
+            && dinner_records.noBreadMilk === 'N') {
+              return true
+            } else {
+              return false
+            }
+        } else {
+          return false
+        }
+       
       }
       //製作每日紀錄表格
       function creatDailyRecordsTable(data) {
@@ -590,11 +652,32 @@
           userData
         );
         const dailyRecordsData = transformDailyRecordsData(response);
-        if (document.getElementById("wrapper").innerHTML === "") {
-          creatDailyRecordsTable(dailyRecordsData);
+        const dailyRecordsContainer = document.getElementById('dailyRecordsContainer');
+        let str = '';
+        if (dailyRecordsData.length !== 0) {
+          str = 
+          `
+            <div class="col-12">
+              <div id="wrapper"></div>
+            </div>
+          `
+          dailyRecordsContainer.innerHTML = str;
+          if (document.getElementById("wrapper").innerHTML === "") {
+            creatDailyRecordsTable(dailyRecordsData);
+          } else {
+            updateDailyRecordsTable(grid, dailyRecordsData);
+          }
         } else {
-          updateDailyRecordsTable(grid, dailyRecordsData);
+          console.log('123')
+          str = 
+          `
+            <div class="col-12">
+              <h2 class="sub_title">查無資料</h2>
+            </div>
+          `
+          dailyRecordsContainer.innerHTML = str;
         }
+
       }
 
       //渲染數據分析頁面
@@ -602,8 +685,7 @@
         await login();
         await getUserInfo();
         token = localStorage.getItem("jwtToken");
-        userData = JSON.parse(localStorage.getItem("userKidsData"));
-        console.log(userData);
+        userData = JSON.parse(localStorage.getItem("userData"));
         renderKidSelect(userData);
         renderSleepTimeByMonthChart(
           kidNum,
@@ -617,7 +699,7 @@
           dailyRecordsTableMonth,
           userData
         );
-        // renderMonthlyRecordsTable(kidNum);
+        renderMonthlyRecordsTable(kidNum);
       }
 
       // init數據分析頁面
@@ -690,10 +772,7 @@
       /**
        * todo
        * 每月紀錄未完成
-       * 查無資料畫面未完成
-       * Q1 kidNum是要傳index 還是id？
        * Q2 getMonthlyRecords的num是指？
-       * Q3 目前沒有辦法正常顯示，因為userInfo原本是有包含Kids，但最新進度沒有包含了，是否要再創另外一個變數存有包含kids的userInfo?
        */
 
       //轉換為每月紀錄需要的data
@@ -726,20 +805,16 @@
         }).render(document.getElementById("wrapper2"));
       }
       //渲染每月紀錄表格
-      async function renderMonthlyRecordsTable() {
-        const response = await getMonthlyRecords();
+      async function renderMonthlyRecordsTable(kidNum) {
+        const response = await getCurrentMonthlyRecord(kidNum);
+        console.log('response', response)
         const monthlyRecordsData = transformMonthlyRecordsData(response);
         creatMonthlyRecordsTable(monthlyRecordsData);
       }
 
       function monthRecordshandler(e) {
-        const [year, month] = e.target.value.split("-");
-        monthRecordsTableYear = year;
-        monthRecordsTableMonth = month;
         renderMonthlyRecordsTable(
-          kidNum,
-          monthRecordsTableYear,
-          monthRecordsTableMonth
+          kidNum
         );
       }
     </script>

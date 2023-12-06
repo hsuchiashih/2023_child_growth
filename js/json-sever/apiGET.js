@@ -46,7 +46,7 @@ function getUserInfo(userId ='1') {
       });
   })
 }
-function getRecentSleepTime(kidNum = 0) {
+function getRecentSleepTime(token, userInfo, kidNum = 0) {
   // login();
   return new Promise((resolve, reject) => {
     axios
