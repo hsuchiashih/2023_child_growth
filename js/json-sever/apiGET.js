@@ -190,10 +190,6 @@ function getWholeMonthlyRecords(num = 36, kidNum = 0) {
   })
 }
 function getDailyRecords(date = getMonthDate(), kidNum = 0) {
-  if(!userInfo.kids){
-    alert('使用者無兒童');
-    return window.location.href = "./member.html" 
-  }
   return new Promise((resolve, reject) => {
     axios
     .get(

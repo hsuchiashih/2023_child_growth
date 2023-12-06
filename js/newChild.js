@@ -1,4 +1,3 @@
-const url = "https://cgwweb.onrender.com";
 const constraints = {
     childName: {
       presence: {
@@ -31,8 +30,6 @@ const constraints = {
       }
     },
   };
-let token = '';
-let userInfo = '';
 let params = {
 
 };
@@ -42,30 +39,6 @@ let params = {
  *  登入功能暫時放頁面中，因為需要取得token、userInfo
  *  待token、userInfo 存入全域範圍，即可刪除
  */
-function login(email = "pikachu@mail.com", password = "wda@123") {
-  axios
-    .post(`${url}/login`, {
-      email: email,
-      password: password,
-    })
-    .then(function (response) {
-
-      token = response.data.accessToken;
-      userInfo = response.data.user;
-      // addKid(kidInfo, token, userInfo);
-      // console.log(response);
-      _response = response;
-      getUserInfo(response.data.user.id);
-    })
-    .catch(function (error) {
-      console.log(error);
-      _response = error;
-      if(error.message=='Network Error'){
-        alert('db.json伺服器未開啟');
-      }
-    });
-}
-login();
 
 // 取得dateTime(可考慮抽共用)
 function getDatetime() {
@@ -85,6 +58,7 @@ function postNewChild(kidInfo, token, userInfo) {
   kidInfo.created_at = getDatetime();
   kidInfo.modified_time = getDatetime();
   kidInfo.isExist = "Y";
+  console.log(kidInfo);
   axios
     .post(`${url}/600/kids`, kidInfo, {
       headers: {
@@ -93,16 +67,24 @@ function postNewChild(kidInfo, token, userInfo) {
     })
     .then(function (response) {
       console.log(response);
-      Swal.fire({
-        title: '新增成功',
-        icon: 'success',
-        confirmButtonText: '關閉'
-      })
+      // Swal.fire({
+      //   title: '新增成功',
+      //   icon: 'success',
+      //   confirmButtonText: '關閉'
+      // })
       _response = response;
+      if(_response.status.toString().startsWith('2')){
+        getUserInfo(userInfo.id);
+        alert('新增成功，跳轉到新增每日紀錄');
+        window.location.href = "./daily.html";
+      }else{
+        alert(`${_response.data || _response.message}`);
+      }      
     })
     .catch(function (error) {
       console.log(error.response);
       _response = error.response;
+      alert(error.response);
     });
 }
 // 準備參數

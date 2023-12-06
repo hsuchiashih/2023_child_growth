@@ -137,6 +137,10 @@ document.querySelector('#datepicker').addEventListener('change', function(event)
 });
 
 function enteringRender(){
+  if(userInfo.kids.length == 0){
+    alert('使用者無兒童，跳轉到新增兒童');
+    return window.location.href = "./new-child.html" 
+  }
   // 獲取網址中的 search 部分，例如 "?record_date=2023-11-09"
   var queryString = window.location.search;
 
