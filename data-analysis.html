@@ -6,30 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="兒童成長網站" />
     <meta name="description" content="兒童成長網站" />
-    <link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
     <title>兒童成長網站</title>
+    <script src="./js/plugins/owl.carousel.min.js"></script>
+    <link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/sweetalert2.min.css">
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.css" />
   </head>
   <body>
-    <style>
-      body {
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        background-image: url("./src/home/bg-program.svg");
-      }
-    </style>
     <div class="wrap">
       <!-- 手機板選單 -->
       <h1 class="logo-box d-flex d-md-none">
@@ -57,15 +44,15 @@
             <!-- 已登入 -->
             <a
               href="#"
-              class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+              class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
             >
               <div class="login-item-pic">
                 <img src="./src/home/login-pic.svg" alt="user-pic" />
               </div>
-              <p>使用者A</p>
+              <p class="user-name">使用者A</p>
             </a>
             <a
-              class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/logout.svg" alt="login-out-pic" />
@@ -74,7 +61,7 @@
             </a>
             <!-- 未登入 -->
             <a
-              class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="d-flex flex-column align-items-center text-decoration-none login-box d-none"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/person.png" alt="login-out-pic" />
@@ -143,15 +130,15 @@
                 <!-- 已登入 -->
                 <a
                   href="#"
-                  class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
                 >
                   <div class="login-item-pic">
                     <img src="./src/home/login-pic.svg" alt="user-pic" />
                   </div>
-                  <p>使用者A</p>
+                  <p class="user-name">使用者A</p>
                 </a>
                 <a
-                  class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/logout.svg" alt="login-out-pic" />
@@ -160,7 +147,7 @@
                 </a>
                 <!-- 未登入 -->
                 <a
-                  class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-box d-flex flex-column align-items-center text-decoration-none d-none"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/person.png" alt="login-out-pic" />
@@ -172,6 +159,7 @@
           </div>
         </nav>
       </header>
+      <!-- 上面是Header -->
       <!-- 數據分析 -->
       <div class="w-100 text-secondary data_Analysis_container">
         <div class="row margin_test justify-content-center align-items-center">
@@ -370,6 +358,8 @@
     <script src="js/json-sever/apiGET.js"></script>
     <script src="js/json-sever/apiPOST.js"></script>
     <script src="js/json-sever/apiPATCH.js"></script>
+    <script src="js/layouts.js"></script>
+
     <!-- 頁面JS -->
     <!-- menu/JS -->
     <script>
@@ -685,7 +675,8 @@
         await login();
         await getUserInfo();
         token = localStorage.getItem("jwtToken");
-        userData = JSON.parse(localStorage.getItem("userData"));
+        userData = JSON.parse(localStorage.getItem("userKidsData"));
+        console.log(userData);
         renderKidSelect(userData);
         renderSleepTimeByMonthChart(
           kidNum,
@@ -764,7 +755,7 @@
             dailyRecordsTableMonth,
             userData
           );
-          // renderMonthlyRecordsTable(kidNum);
+          renderMonthlyRecordsTable(kidNum);
         });
       document.getElementById("sleepTimeDatePicker").value = nowDateString;
       document.getElementById("dailyRecordsPicker").value = nowDateString;
@@ -805,9 +796,8 @@
         }).render(document.getElementById("wrapper2"));
       }
       //渲染每月紀錄表格
-      async function renderMonthlyRecordsTable(kidNum) {
-        const response = await getCurrentMonthlyRecord(kidNum);
-        console.log('response', response)
+      async function renderMonthlyRecordsTable() {
+        const response = await getMonthlyRecords();
         const monthlyRecordsData = transformMonthlyRecordsData(response);
         creatMonthlyRecordsTable(monthlyRecordsData);
       }
