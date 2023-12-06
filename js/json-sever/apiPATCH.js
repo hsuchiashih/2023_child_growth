@@ -145,7 +145,7 @@ async function updateSleepRecord(sleep_record, kidNum=0) {
     sleep_record.sleep_time,
   );
   sleep_record.modified_time = getDatetime();
-  sleepRecordId = _response.data[0].id || _response[0].data.id;
+  sleepRecordId = _response[0].data.id|| _response.data[0].id;
   try {
     const response = await axios.patch(
       `${url}/600/sleep_records/${sleepRecordId}`,

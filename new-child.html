@@ -43,7 +43,7 @@
             <!-- 已登入 -->
             <a
               href="#"
-              class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+              class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
             >
               <div class="login-item-pic">
                 <img src="./src/home/login-pic.svg" alt="user-pic" />
@@ -51,7 +51,7 @@
               <p class="user-name">使用者A</p>
             </a>
             <a
-              class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/logout.svg" alt="login-out-pic" />
@@ -60,7 +60,7 @@
             </a>
             <!-- 未登入 -->
             <a
-              class="d-flex flex-column align-items-center text-decoration-none login-box"
+              class="d-flex flex-column align-items-center text-decoration-none login-box d-none"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/person.png" alt="login-out-pic" />
@@ -129,7 +129,7 @@
                 <!-- 已登入 -->
                 <a
                   href="#"
-                  class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
                 >
                   <div class="login-item-pic">
                     <img src="./src/home/login-pic.svg" alt="user-pic" />
@@ -137,7 +137,7 @@
                   <p class="user-name">使用者A</p>
                 </a>
                 <a
-                  class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/logout.svg" alt="login-out-pic" />
@@ -146,7 +146,7 @@
                 </a>
                 <!-- 未登入 -->
                 <a
-                  class="login-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-box d-flex flex-column align-items-center text-decoration-none d-none"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/person.png" alt="login-out-pic" />
@@ -156,8 +156,9 @@
               </div>
             </div>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
       <!-- 上面是Header -->
       <!-- 新增兒童 -->
       <section class="section-article">
@@ -171,7 +172,7 @@
 							class="member-item d-flex justify-content-between align-items-center"
               >
                 <label for="childName" class="form-label">姓名</label>
-                <input
+                <input value="測試小孩"
                   type="text"
                   class="form-control custom_input mb-2"
                   id="childName"
@@ -186,8 +187,8 @@
 							class="member-item d-flex justify-content-between align-items-center"
               >
                 <label for="childBirthday" class="form-label">生日</label>
-                <input
-                  type="text"
+                <input value="2023-12-06"
+                  type="date"
                   class="form-control custom_input mb-2"
                   id="childBirthday"
                   name="childBirthday"
@@ -203,7 +204,7 @@
                   class="member-item d-flex justify-content-between align-items-center"
                   >
                     <label for="childHeight" class="form-label">身高</label>
-                    <input
+                    <input value="120"
                       type="text"
                       class="form-control custom_input mb-2"
                       id="childHeight"
@@ -218,7 +219,7 @@
                   class="member-item d-flex justify-content-between align-items-center"
                   >
                     <label for="childWeight" class="form-label">體重</label>
-                    <input
+                    <input value="20"
                       type="text"
                       class="form-control custom_input mb-2 "
                       id="childWeight"
@@ -237,7 +238,7 @@
                   >
                   <label for="momHeight" class="form-label custom"
                     >媽媽身高</label>
-                    <input
+                    <input value="160"
                       type="text"
                       class="form-control mb-2"
                       id="momHeight"
@@ -254,7 +255,7 @@
                     <label for="dadHeight" class="form-label custom"
                     >爸爸身高</label
                     >
-                    <input
+                    <input value="170"
                       type="text"
                       class="form-control custom_input mb-2"
                       id="dadHeight"
