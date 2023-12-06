@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="兒童成長網站" />
     <meta name="description" content="兒童成長網站" />
-    <link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
     <title>兒童成長網站</title>
+    <script src="./js/plugins/owl.carousel.min.js"></script>
+    <link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.css" />
   </head>
   <body>
     <div class="wrap">
-      <div>分支合併測試</div>
       <!-- 手機板選單 -->
       <h1 class="logo-box d-flex d-md-none">
         <a class="navbar-brand logopic d-block" href="./index.html">
@@ -45,7 +48,7 @@
               <div class="login-item-pic">
                 <img src="./src/home/login-pic.svg" alt="user-pic" />
               </div>
-              <p>使用者A</p>
+              <p class="user-name">使用者A</p>
             </a>
             <a
               class="login-out-box d-flex flex-column align-items-center text-decoration-none"
@@ -57,7 +60,7 @@
             </a>
             <!-- 未登入 -->
             <a
-              class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="d-flex flex-column align-items-center text-decoration-none login-box"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/person.png" alt="login-out-pic" />
@@ -131,7 +134,7 @@
                   <div class="login-item-pic">
                     <img src="./src/home/login-pic.svg" alt="user-pic" />
                   </div>
-                  <p>使用者A</p>
+                  <p class="user-name">使用者A</p>
                 </a>
                 <a
                   class="login-out-box d-flex flex-column align-items-center text-decoration-none"
@@ -143,7 +146,7 @@
                 </a>
                 <!-- 未登入 -->
                 <a
-                  class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-box d-flex flex-column align-items-center text-decoration-none"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/person.png" alt="login-out-pic" />
@@ -155,8 +158,7 @@
           </div>
         </nav>
       </header>
-      <!-- 上面是Header -->
-
+            <!-- 上面是Header -->
       <div class="section-everyday container-fluid">
         <div class="row">
           <div class="col-5">
@@ -396,6 +398,7 @@
     <script src="js/json-sever/apiGET.js"></script>
     <script src="js/json-sever/apiPOST.js"></script>
     <script src="js/json-sever/apiPATCH.js"></script>
+    <script src="js/layouts.js"></script>
     <script src="js/daily.js"></script>
     <!-- 頁面JS -->
     <!-- menu/JS -->

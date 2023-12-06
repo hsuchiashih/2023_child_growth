@@ -12,8 +12,9 @@ function handleFormData(data) {
     // _response = response;
     console.log(_response);
     if(_response.status.toString().startsWith('2')){
-      alert('登入成功，跳轉到紀錄每日作息');
       let whereTo = localStorage.getItem('whereTo');
+      let message = whereTo?"原頁面":"紀錄每日作息";
+      alert(`登入成功，跳轉到${message}`);
       localStorage.removeItem('whereTo');
       window.location.href = whereTo|| "./daily.html";
     }else{

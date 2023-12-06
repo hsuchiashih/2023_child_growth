@@ -12,6 +12,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.css" />
   </head>
   <body>
     <div class="wrap">
@@ -46,7 +48,7 @@
               <div class="login-item-pic">
                 <img src="./src/home/login-pic.svg" alt="user-pic" />
               </div>
-              <p>使用者A</p>
+              <p class="user-name">使用者A</p>
             </a>
             <a
               class="login-out-box d-flex flex-column align-items-center text-decoration-none"
@@ -58,7 +60,7 @@
             </a>
             <!-- 未登入 -->
             <a
-              class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="d-flex flex-column align-items-center text-decoration-none login-box"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/person.png" alt="login-out-pic" />
@@ -132,7 +134,7 @@
                   <div class="login-item-pic">
                     <img src="./src/home/login-pic.svg" alt="user-pic" />
                   </div>
-                  <p>使用者A</p>
+                  <p class="user-name">使用者A</p>
                 </a>
                 <a
                   class="login-out-box d-flex flex-column align-items-center text-decoration-none"
@@ -144,7 +146,7 @@
                 </a>
                 <!-- 未登入 -->
                 <a
-                  class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-box d-flex flex-column align-items-center text-decoration-none"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/person.png" alt="login-out-pic" />
@@ -156,6 +158,7 @@
           </div>
         </nav>
       </header>
+      <!-- 上面是Header -->
       <section class="section-article">
         <article class="section-member-main">
           <div class="section-article-title">
@@ -297,6 +300,7 @@
     <script src="js/json-sever/apiGET.js"></script>
     <script src="js/json-sever/apiPOST.js"></script>
     <script src="js/json-sever/apiPATCH.js"></script>
+    <script src="js/layouts.js"></script>
     <script src="js/register.js"></script>
     <!-- 頁面JS -->
     <!-- menu/JS -->
