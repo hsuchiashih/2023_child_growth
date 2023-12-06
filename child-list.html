@@ -161,9 +161,9 @@
             <h2 class="mb-5 main_title">兒童清單</h2>
           </div>
           <div class="col-12 align-self-center mb-5">
-            <div class="row">
+            <div class="row" id="cardContainer">
               <div class="col-12">
-                <div id="cardContainer" class="card_container">
+                <div class="card_container">
                   <div class="row card_body">
                     <div
                       class="d-flex justify-content-center align-items-center"
@@ -177,7 +177,7 @@
               </div>
             </div>
           </div>
-          <div class="col-12 text-center p-0 child_list_buttons">
+          <div class="col-12 text-center p-0 child_list_buttons mb-5">
             <a href="new-child.html">
               <button
                 id="addButton"
@@ -258,99 +258,14 @@
     <!-- JS套件 -->
 
     <!-- 頁面JS -->
+    <script src="js/json-sever/utils.js"></script>
+    <script src="js/json-sever/apiGET.js"></script>
+    <script src="js/json-sever/apiPOST.js"></script>
+    <script src="js/json-sever/apiPATCH.js"></script>
     <!-- menu/JS -->
     <script>
-      const url = "https://cgwweb.onrender.com";
-      let token = "";
-      let userInfo = "";
-      /**
-       *  @todo
-       *  登入功能暫時放頁面中，因為需要取得token、userInfo
-       *  待token、userInfo 存入全域範圍，即可刪除
-       */
-      function getToken(email = "pikachu@mail.com", password = "wda@123") {
-        return axios
-          .post(`${url}/login`, {
-            email: email,
-            password: password,
-          })
-          .then(function (response) {
-            return response.data.accessToken;
-          })
-          .catch(function (error) {
-            console.log(error);
-            _response = error;
-            if (error.message == "Network Error") {
-              alert("db.json伺服器未開啟");
-            }
-          });
-      }
-      function getUserId(email = "pikachu@mail.com", password = "wda@123") {
-        return axios
-          .post(`${url}/login`, {
-            email: email,
-            password: password,
-          })
-          .then(function (response) {
-            return response.data.user.id;
-          })
-          .catch(function (error) {
-            console.log(error);
-            _response = error;
-            if (error.message == "Network Error") {
-              alert("db.json伺服器未開啟");
-            }
-          });
-      }
-
-      //取得使用者資料與小孩資料
-      function getUserInfo(token, userId) {
-        let id = userInfo.id || userId;
-        return axios
-          .get(`${url}/600/users/${id.toString()}?_embed=kids`, {
-            headers: {
-              authorization: `Bearer ${token}`,
-            },
-          })
-          .then(function (response) {
-            userInfo = response.data;
-            _response = response;
-            delete _response.data.password;
-
-            return userInfo;
-          })
-          .catch(function (error) {
-            console.log(error.response);
-            _response = error.response;
-          });
-      }
-      //取得小孩睡眠時間
-      function getRecentSleepTime(token, userInfo, kidNum) {
-        return axios
-          .get(
-            `${url}/600/sleep_records?kidId=${userInfo.kids[
-              kidNum
-            ].id.toString()}&userId=${userInfo.id.toString()}&_sort=record_date&_order=desc&_limit=7`,
-            {
-              headers: {
-                authorization: `Bearer ${token}`,
-              },
-            }
-          )
-          .then(function (response) {
-            _response = response;
-            return response.data;
-          })
-          .catch(function (error) {
-            console.log(error.response);
-            _response = error.response;
-          });
-      }
       //結合小孩資料與小孩睡眠時間資料
-      async function combineKidListWithSleepTimeChartData() {
-        const token = await getToken();
-        const userId = await getUserId();
-        const userInfo = await getUserInfo(token, userId);
+      async function combineKidListWithSleepTimeChartData(token, userInfo) {
         const kidListWithSleepTimeChartData = await Promise.all(
           userInfo.kids.map(async (item, index) => {
             item.sleepTimeData = await getRecentSleepTime(
@@ -361,7 +276,7 @@
             return item;
           })
         );
-
+        console.log('aaa',kidListWithSleepTimeChartData)
         return kidListWithSleepTimeChartData;
       }
       //渲染小孩資料
@@ -370,35 +285,39 @@
         let str = "";
         data.forEach((item) => {
           str += `
-          <div class="row card_body">
-           
-            <div class="col-12 col-xl-3 mb-5 mb-xl-0">
-              <a href="everyDay.html">
-                <div class="img_container">
-                    <img src="./src/home/banner_2.jpg" />
-                </div>
-                <div
-                  class="mt-3 text-center d-flex justify-content-center"
-                >
-                  <div class="icon_container">
-                    <img src="./src/home/img-hat.png" />
+          <div class="col-12 mb-5">
+            <div class="card_container">
+              <div class="row card_body">
+              
+                <div class="col-12 col-xl-3 mb-5 mb-xl-0">
+                  <a href="daily.html">
+                    <div class="img_container">
+                        <img src="./src/home/banner_2.jpg" />
+                    </div>
+                    <div
+                      class="mt-3 text-center d-flex justify-content-center"
+                    >
+                      <div class="icon_container">
+                        <img src="./src/home/img-hat.png" />
+                      </div>
+                      <p class="ml-2 align-self-center hint_text">
+                        點擊圖片進入每日紀錄
+                      </p>
+                    </div>
+                  </a>  
                   </div>
-                  <p class="ml-2 align-self-center hint_text">
-                    點擊圖片進入每日紀錄
-                  </p>
+                
+                <div class="col-12 col-xl-3 child_data_block">
+                  <p>${item.kid_name}</p>
+                  <p>身高：<span>${item.ini_height}</span>cm</p>
+                  <p>體重：<span>${item.ini_weight}</span>kg</p>
                 </div>
-              </a>  
+                <div class="col-12 col-xl-6">
+                  <div id="chartContainer_${item.id}" class="chart_container"></div>
+                </div>
               </div>
-            
-            <div class="col-12 col-xl-3 child_data_block">
-              <p>${item.kid_name}</p>
-              <p>身高：<span>${item.ini_height}</span>cm</p>
-              <p>體重：<span>${item.ini_weight}</span>kg</p>
             </div>
-            <div class="col-12 col-xl-6">
-              <div id="chartContainer_${item.id}" class="chart_container"></div>
-            </div>
-          </div>
+          </div>    
           `;
         });
 
@@ -504,16 +423,23 @@
       }
       // 畫面渲染動作
       async function renderChildList() {
+        await login();
+        await getUserInfo();
         const kidListWithSleepTimeChartData =
-          await combineKidListWithSleepTimeChartData();
+        await combineKidListWithSleepTimeChartData(token, userInfo);
         await renderKidData(kidListWithSleepTimeChartData);
         await kidListWithSleepTimeChartData.map((item) => {
           const chartId = `chartContainer_${item.id}`;
-          const chartData = item.sleepTimeData.map((data) => {
-            const result = [data.record_date, data.sleep_hours];
+          let chartData = [];
+          console.log('ccc', item.sleepTimeData);
+          if (item.sleepTimeData.length !== 0) {
+            
+              chartData = item.sleepTimeData.data.map((data) => {
+                const result = [data.record_date, data.sleep_hours];
 
-            return result;
-          });
+              return result;
+            });
+          }
 
           renderChart(chartId, chartData);
         });

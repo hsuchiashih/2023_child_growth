@@ -75,7 +75,7 @@ function logout(){
   window.location.href = "./";
 }
 
-function addKid(
+function addKid(token, userInfo,
   kidInfo = {
     kid_name: "迷你龍",
     kid_birth: "2012-09-17",
@@ -93,7 +93,7 @@ function addKid(
     kidInfo.isExist = "Y";
     axios
     .post(`${url}/600/kids`, kidInfo, {
-      
+
       headers: {
         authorization: `Bearer ${token}`,
       },

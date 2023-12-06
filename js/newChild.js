@@ -30,63 +30,10 @@ const constraints = {
       }
     },
   };
-let params = {
 
-};
+  let params = {};
 
-/**
- *  @todo
- *  登入功能暫時放頁面中，因為需要取得token、userInfo
- *  待token、userInfo 存入全域範圍，即可刪除
- */
 
-// 取得dateTime(可考慮抽共用)
-function getDatetime() {
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const day = String(now.getDate()).padStart(2, "0");
-  const hours = String(now.getHours()).padStart(2, "0");
-  const minutes = String(now.getMinutes()).padStart(2, "0");
-  const seconds = String(now.getSeconds()).padStart(2, "0");
-
-  return (formattedDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`);
-}
-// 新增兒童api
-function postNewChild(kidInfo, token, userInfo) {
-  kidInfo.userId = kidInfo.userId ? kidInfo.userId : userInfo.id;
-  kidInfo.created_at = getDatetime();
-  kidInfo.modified_time = getDatetime();
-  kidInfo.isExist = "Y";
-  console.log(kidInfo);
-  axios
-    .post(`${url}/600/kids`, kidInfo, {
-      headers: {
-        authorization: `Bearer ${token}`,
-      },
-    })
-    .then(function (response) {
-      console.log(response);
-      // Swal.fire({
-      //   title: '新增成功',
-      //   icon: 'success',
-      //   confirmButtonText: '關閉'
-      // })
-      _response = response;
-      if(_response.status.toString().startsWith('2')){
-        getUserInfo(userInfo.id);
-        alert('新增成功，跳轉到新增每日紀錄');
-        window.location.href = "./daily.html";
-      }else{
-        alert(`${_response.data || _response.message}`);
-      }      
-    })
-    .catch(function (error) {
-      console.log(error.response);
-      _response = error.response;
-      alert(error.response);
-    });
-}
 // 準備參數
 function prepareParams() {
   const childName = document.getElementById('childName').value;
@@ -145,12 +92,32 @@ function transformParams(params) {
 }
 // 送出新增按鈕功能
 document.getElementById('addButton').addEventListener('click', 
-  function addKid() {
+  function postNewChild() {
     if (token !== '') {
       const params = prepareParams();
       if(checkParams(params)) {
         const finalParams = transformParams(params);
-        postNewChild(finalParams, token, userInfo);
+        addKid(token, userInfo, finalParams)
+          .then((res) => {
+            getUserInfo(userInfo.id);
+            clear();
+            Swal.fire({
+              title: '新增成功',
+              text: '新增成功，跳轉到新增每日紀錄',
+              icon: 'success',
+              confirmButtonText: '關閉'
+            }).then((result) => {
+              if(result.isConfirmed) {
+                window.location.href = "./daily.html";
+              }
+            });
+          }).catch((err) => {
+            Swal.fire({
+              title: '新增失敗',
+              icon: 'error',
+              confirmButtonText: '關閉'
+            });
+          })
       }
     } else {
       Swal.fire({
@@ -162,7 +129,8 @@ document.getElementById('addButton').addEventListener('click',
     } 
   })
 // 清除資料按鈕功能
-document.getElementById('clearButton').addEventListener('click', 
+document.getElementById('clearButton').addEventListener('click', clear())
+
 function clear() {
   const errorInput = {
       'childName': 'nameError',
@@ -178,5 +146,5 @@ function clear() {
   })
   const params = prepareParams();
   transformParams(params);
-  
-})
+}
+
