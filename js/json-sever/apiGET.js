@@ -1,3 +1,13 @@
+init();
+function init(){//進入網站優先激活onrender
+  axios
+      .get(`${url}/users/1`)
+      .then(function (response){
+        console.log("init");
+      }).catch(function(error){
+        console.log(error.response);
+      })
+}
 function apiGET(route = "/kids/1") {
   axios
     .get(`${url}${route}`)
