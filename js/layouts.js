@@ -2,6 +2,9 @@ renderLoginOrNot();
 
 function renderLoginOrNot(){
   if(token){
+    document.querySelectorAll(".login-user-box").forEach(element => {
+      element.classList.remove("d-none");
+    });
     document.querySelectorAll(".user-name").forEach(element => {
       element.innerHTML = userInfo.username;
     });

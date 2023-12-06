@@ -29,20 +29,6 @@ function handleFormData(data) {
     console.error('Error:', error);
     alert(`${error.response.data}`);
   });
-  // signup(signupInfo);
-  // setTimeout(()=>{
-  //   console.log(_response);
-  //   if(_response.status.toString().startsWith('2')){
-  //     alert('註冊成功，自動登入並跳轉到新增兒童');
-  //     setTimeout(() => {
-  //       console.log(`${data.memberEmail},${data.memberPassword}`);
-  //       // login(data.memberEmail,data.memberPassword);
-  //       window.location.href = "./new-child.html";
-  //     }, 500);
-  //   }else{
-  //     alert(`${_response.data || _response.message}`);
-  //   }
-  // },500);
 }
 function checkPasswordMatch() {
   var password = document.getElementById('memberPassword').value;

@@ -1,35 +1,3 @@
-function signup_origin(
-  signupInfo = {
-    email: "dragonite@mail.com",
-    username: "快龍",
-    password: "wda@123",
-    gender: "female",
-    user_birth: "2023-09-13",
-    user_avatar: "userURL",
-  },
-) {
-  signupInfo.created_at = getDatetime();
-  signupInfo.modified_time = getDatetime();
-  signupInfo.isExist = "Y";
-  axios
-    .post(`${url}/signup`, signupInfo)
-    .then(function (response) {
-      localStorage.setItem('jwtToken', response.data.accessToken);
-      localStorage.setItem('userData',JSON.stringify(response.data.user));
-      token = response.data.accessToken;;
-      // data = response.data;
-      _response = response;
-      delete _response.data.password;
-      console.log(_response);
-    })
-    .catch(function (error) {
-      console.log(error);
-      _response = error;
-      if(error.message=='Network Error'){
-        alert('伺服器未開啟');
-      }
-    });
-}
 function signup(
   signupInfo = {
     email: "dragonite@mail.com",
@@ -57,7 +25,7 @@ function signup(
         resolve(response);
       })
       .catch(error => {
-      console.log(error);
+      alert(error.response);
       _response = error;
       if(error.message=='Network Error'){
         alert('伺服器未開啟');
@@ -87,7 +55,7 @@ function login(email = "Charizard@mail.com", password = "wda@123") {
         resolve(response.data);
       })
       .catch(function (error) {
-        console.log(error);
+        alert(error.response);
         _response = error;
         if(error.message=='Network Error'){
           alert('伺服器未開啟');
