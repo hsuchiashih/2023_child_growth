@@ -48,6 +48,7 @@ function login(email = "Charizard@mail.com", password = "wda@123") {
       .then(function (response) {
         localStorage.setItem('jwtToken', response.data.accessToken);
         localStorage.setItem('userData',JSON.stringify(response.data.user));
+        localStorage.setItem('onrenderActivated', "on");
         token = response.data.accessToken;
         userInfo = response.data.user;
         // token = response.data.accessToken;

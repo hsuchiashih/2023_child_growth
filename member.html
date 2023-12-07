@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="zh-tw">
   <head>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="兒童成長網站" />
@@ -11,6 +12,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.css" />
   </head>
   <body>
     <div class="wrap">
@@ -40,15 +43,15 @@
             <!-- 已登入 -->
             <a
               href="#"
-              class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+              class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
             >
               <div class="login-item-pic">
                 <img src="./src/home/login-pic.svg" alt="user-pic" />
               </div>
-              <p>使用者A</p>
+              <p class="user-name">使用者A</p>
             </a>
             <a
-              class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/logout.svg" alt="login-out-pic" />
@@ -57,7 +60,7 @@
             </a>
             <!-- 未登入 -->
             <a
-              class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="d-flex flex-column align-items-center text-decoration-none login-box d-none"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/person.png" alt="login-out-pic" />
@@ -126,15 +129,15 @@
                 <!-- 已登入 -->
                 <a
                   href="#"
-                  class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
                 >
                   <div class="login-item-pic">
                     <img src="./src/home/login-pic.svg" alt="user-pic" />
                   </div>
-                  <p>使用者A</p>
+                  <p class="user-name">使用者A</p>
                 </a>
                 <a
-                  class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/logout.svg" alt="login-out-pic" />
@@ -143,7 +146,7 @@
                 </a>
                 <!-- 未登入 -->
                 <a
-                  class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-box d-flex flex-column align-items-center text-decoration-none d-none"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/person.png" alt="login-out-pic" />
@@ -153,8 +156,10 @@
               </div>
             </div>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+    </header>
+      <!-- 上面是Header -->
       <section class="section-article">
         <article class="section-member-main section-memberOnly-main">
           <div class="section-article-title">
@@ -243,6 +248,14 @@
     ></script>
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <!-- JS套件 -->
+    <script src="js/json-sever/utils.js"></script>
+    <script src="js/json-sever/apiGET.js"></script>
+    <script src="js/json-sever/apiPOST.js"></script>
+    <script src="js/json-sever/apiPATCH.js"></script>
+    <script src="js/layouts.js"></script>
+    <script src="js/member.js"></script>
+    <!-- 頁面JS -->
     <!-- menu/JS -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
