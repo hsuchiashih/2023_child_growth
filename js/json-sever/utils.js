@@ -4,9 +4,28 @@ const url = "https://cgwweb.onrender.com";
 let userInfo= JSON.parse(localStorage.getItem('userData')) || "";
 let _response = "";
 let token = localStorage.getItem('jwtToken') || "";
+let onrenderActivated = localStorage.getItem('onrenderActivated') || "";
 
 setFormListener();
+init();
 
+function init(){//進入網站優先激活onrender.com
+  if(onrenderActivated == ""){
+    localStorage.setItem('onrenderActivated', "off");
+  }
+  if(onrenderActivated == "off"){
+    console.log("initiating");
+    axios
+    .get(`${url}/users/1`)
+    .then(function (response){
+          console.log("initiation completed");
+          localStorage.setItem('onrenderActivated', "on");
+        }).catch(function(error){
+          console.log(error.response);
+        })
+
+  }
+}
 
 if(!token){
   const pathnames = [ //進入以下頁面會帶到login頁面

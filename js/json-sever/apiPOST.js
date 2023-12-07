@@ -37,6 +37,9 @@ function signup(
 
 function login(email = "Charizard@mail.com", password = "wda@123") {
   return new Promise((resolve, reject) => {
+    if(onrenderActivated == "off"){
+      alert("伺服器開啟中，關閉視窗後等候約5秒鐘。");
+    }
     axios
       .post(`${url}/login`, {
         email: email,
