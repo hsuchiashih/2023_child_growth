@@ -672,10 +672,11 @@
 
       //渲染數據分析頁面
       async function renderDataAnalysisPage(kidNum) {
-        await login();
-        await getUserInfo();
-        token = localStorage.getItem("jwtToken");
-        userData = JSON.parse(localStorage.getItem("userKidsData"));
+        // await login();
+        // await getUserInfo();
+        // token = localStorage.getItem("jwtToken");
+        // userData = JSON.parse(localStorage.getItem("userKidsData"));
+        userData = userInfo;
         console.log(userData);
         renderKidSelect(userData);
         renderSleepTimeByMonthChart(
@@ -797,9 +798,11 @@
       }
       //渲染每月紀錄表格
       async function renderMonthlyRecordsTable() {
-        const response = await getMonthlyRecords();
-        const monthlyRecordsData = transformMonthlyRecordsData(response);
-        creatMonthlyRecordsTable(monthlyRecordsData);
+        const response = await 
+        getMonthlyRecords().then(response=>{
+          const monthlyRecordsData = transformMonthlyRecordsData(response);
+          creatMonthlyRecordsTable(monthlyRecordsData);
+        });
       }
 
       function monthRecordshandler(e) {
