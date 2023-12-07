@@ -165,7 +165,7 @@ async function updateSleepRecord(sleep_record, kidNum=0) {
 }
 function updateBreakfastRecord(breakfast_record, kidNum) {
   breakfast_record.modified_time = getDatetime();
-  breakfastRecordId = _response.data[0].breakfast_records[0].id || _response[1].data.id;
+  breakfastRecordId = _response[1].data.id || _response.data[0].breakfast_records[0].id;
   axios
     .patch(`${url}/600/breakfast_records/${breakfastRecordId}`, breakfast_record, {
       headers: {
@@ -183,7 +183,7 @@ function updateBreakfastRecord(breakfast_record, kidNum) {
 }
 function updateLunchRecord(lunch_record, kidNum) {
   lunch_record.modified_time = getDatetime();
-  lunchRecordId = _response.data[0].lunch_records[0].id || _response[2].data.id;
+  lunchRecordId = _response[2].data.id || _response.data[0].lunch_records[0].id;
   axios
     .patch(`${url}/600/lunch_records/${lunchRecordId}`, lunch_record, {
       headers: {
@@ -201,7 +201,7 @@ function updateLunchRecord(lunch_record, kidNum) {
 }
 function updateDinnerRecord(dinner_record, kidNum) {
   dinner_record.modified_time = getDatetime();
-  dinnerRecordId = _response.data[0].dinner_records[0].id || _response[3].data.id;
+  dinnerRecordId = _response[3].data.id || _response.data[0].dinner_records[0].id;
   axios
     .patch(`${url}/600/dinner_records/${dinnerRecordId}`, dinner_record, {
       headers: {
