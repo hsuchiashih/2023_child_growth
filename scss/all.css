@@ -13538,7 +13538,6 @@ textarea.form-control-lg {
   color: #494949;
 }
 .section-member-main .member-item .form-control {
-  width: auto;
   flex-grow: 1;
   margin-left: 20px;
   border: 2px solid #e28666;
