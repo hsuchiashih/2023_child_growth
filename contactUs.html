@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="兒童成長網站" />
     <meta name="description" content="兒童成長網站" />
-    <link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
     <title>兒童成長網站</title>
+    <link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
   </head>
   <body>
     <div class="wrap">
@@ -39,15 +40,15 @@
             <!-- 已登入 -->
             <a
               href="#"
-              class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+              class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
             >
               <div class="login-item-pic">
                 <img src="./src/home/login-pic.svg" alt="user-pic" />
               </div>
-              <p>使用者A</p>
+              <p class="user-name">使用者A</p>
             </a>
             <a
-              class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/logout.svg" alt="login-out-pic" />
@@ -56,7 +57,7 @@
             </a>
             <!-- 未登入 -->
             <a
-              class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+              class="d-flex flex-column align-items-center text-decoration-none login-box d-none"
               href="#"
               ><div class="login-item-pic">
                 <img src="./src/home/person.png" alt="login-out-pic" />
@@ -125,15 +126,15 @@
                 <!-- 已登入 -->
                 <a
                   href="#"
-                  class="login-user-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
                 >
                   <div class="login-item-pic">
                     <img src="./src/home/login-pic.svg" alt="user-pic" />
                   </div>
-                  <p>使用者A</p>
+                  <p class="user-name">使用者A</p>
                 </a>
                 <a
-                  class="login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/logout.svg" alt="login-out-pic" />
@@ -142,7 +143,7 @@
                 </a>
                 <!-- 未登入 -->
                 <a
-                  class="d-none login-out-box d-flex flex-column align-items-center text-decoration-none"
+                  class="login-box d-flex flex-column align-items-center text-decoration-none d-none"
                   href="#"
                   ><div class="login-item-pic">
                     <img src="./src/home/person.png" alt="login-out-pic" />
@@ -172,7 +173,7 @@
                   <div class="mb-3">
                     <label for="input-name" class="form-label">姓名</label>
                     <input
-                      value="123"
+                      
                       type="text"
                       class="form-control custom_input"
                       id="input-name"
@@ -209,7 +210,7 @@
                   <div class="mb-3">
                     <label for="input-email" class="form-label">信箱</label>
                     <input
-                      value="123"
+                      
                       type="text"
                       class="form-control custom_input"
                       id="input-email"
@@ -221,7 +222,7 @@
                   <div class="mb-3">
                     <label for="input-phone" class="form-label">連絡電話</label>
                     <input
-                      value="123"
+                      
                       type="text"
                       class="form-control custom_input"
                       id="input-phone"
@@ -240,7 +241,7 @@
                       rows="5"
                       required
                     >
-123</textarea
+</textarea
                     >
                   </div>
                 </div>
@@ -325,29 +326,10 @@
     <script src="js/json-sever/apiGET.js"></script>
     <script src="js/json-sever/apiPOST.js"></script>
     <script src="js/json-sever/apiPATCH.js"></script>
+    <script src="js/layouts.js"></script>
     <!-- 頁面JS -->
     <!-- menu/JS -->
     <script>
-      $(document).ready(function () {
-        $(".owl-carousel").owlCarousel();
-      });
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuButtonContainer = document.querySelector(
-          ".menu-button-container"
-        );
-        const phoneContainer = document.querySelector(".phone-container");
-
-        let isPhoneContainerVisible = false;
-
-        menuButtonContainer.addEventListener("click", function () {
-          if (isPhoneContainerVisible) {
-            phoneContainer.style.display = "none";
-          } else {
-            phoneContainer.style.display = "block";
-          }
-          isPhoneContainerVisible = !isPhoneContainerVisible;
-        });
-      });
     </script>
     <script></script>
     <script src="js/contactUs.js"></script>
