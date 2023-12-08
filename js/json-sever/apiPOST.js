@@ -59,7 +59,7 @@ function login(email = "Charizard@mail.com", password = "wda@123") {
         resolve(response.data);
       })
       .catch(function (error) {
-        alert(error.response);
+        alert(error.response.data);
         _response = error;
         if(error.message=='Network Error'){
           alert('伺服器未開啟');
@@ -72,6 +72,7 @@ function login(email = "Charizard@mail.com", password = "wda@123") {
 function logout(){
   localStorage.removeItem('jwtToken');
   localStorage.removeItem('userData');
+  localStorage.removeItem('onrenderActivated');
   token ="";
   userInfo="";
   _response="";
