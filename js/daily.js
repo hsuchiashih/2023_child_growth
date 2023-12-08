@@ -96,6 +96,7 @@ function handleFormData(data) {
   // window.location.href = document.referrer;
 }
 function renderValue(_response){
+  document.querySelector(".kid-name").innerHTML = userInfo.kids[0].kid_name;
   if(!_response.data || _response.data == ""){
     emptyValue(); 
     alert("當日尚無紀錄");
