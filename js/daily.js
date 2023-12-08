@@ -157,8 +157,28 @@ function enteringRender(){
     getDailyRecords(recordDate,kidNum=0).then((response)=>{
       renderValue(response); 
       document.querySelector('#datepicker').value = recordDate.toString();
+      renderKidsList();
     });
   }else{
     initialRender(getDailyRecords);
+    renderKidsList();
   }
+}
+function renderKidsList(){
+  let content = "";
+  userInfo.kids.forEach(element => {
+    content +=`
+      <div class="item">
+        <div class="owl-change-kid-pic">
+          <img
+            class="img-fluid"
+            src="./src/home/Rectangle 54 (2).png"
+            alt=""
+          />
+        </div>
+        <p>${element.kid_name}</p>
+      </div>
+    `
+  });
+  document.querySelector(".owl-change-kid").innerHTML = content;
 }
