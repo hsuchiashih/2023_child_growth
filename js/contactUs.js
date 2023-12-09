@@ -1,7 +1,7 @@
 document.querySelector(".custom_clear_button").addEventListener("click",emptyValue);
 function emptyValue(){
   $('#input-name')[0].value = "";
-  $('#input-gneder')[0].value = "";
+  // $('#input-gender')[0].value = "";
   $('#input-email')[0].value = "";
   $('#input-phone')[0].value = "";
   $('#textarea-content')[0].value = "";
