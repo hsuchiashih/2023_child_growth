@@ -9,7 +9,7 @@ function handleFormData(data) {
       email: data.memberEmail,
       username: data.memberName,
       password: data.memberPassword,
-      gender: data.memberName,
+      gender: data.gender,
       user_birth: data.membebirthday,
       user_avatar: ""
     }
