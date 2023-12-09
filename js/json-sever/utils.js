@@ -29,13 +29,20 @@ function init(){//進入網站優先激活onrender.com
 
 if(!token){
   const pathnames = [ //進入以下頁面會帶到login頁面
-"/2023_child_growth/new-child.html",
-"/2023_child_growth/daily.html",
-"/2023_child_growth/monthly.html",
-"/2023_child_growth/member.html",
-"/2023_child_growth/child-list.html",
-"/2023_child_growth/data-analysis.html"];
-  let isMustLogin = pathnames.includes(window.location.pathname);
+  "new-child.html",
+  "daily.html",
+  "monthly.html",
+  "member.html",
+  "child-list.html",
+  "data-analysis.html"];
+  const pathname = window.location.pathname;
+  // 使用 split 方法将 URL 字符串以 '/' 分割成数组
+  let segments = pathname.split('/');
+  // 获取数组中的最后一个元素
+  const pathnameLastSegment = segments[segments.length - 1];
+  // console.log(pathnameLastSegment);
+  let isMustLogin = pathnames.includes(pathnameLastSegment);
+  
   if(isMustLogin){
     alert("移轉到登入頁，登入後回此頁面");
     localStorage.setItem('whereTo',window.location.href);
