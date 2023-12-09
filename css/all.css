@@ -12227,9 +12227,6 @@ textarea.form-control-lg {
   font-size: 40px;
   font-weight: 700;
 }
-.new_child_container .margin_test {
-  margin: 300px auto 60px auto;
-}
 .new_child_container .circle_image {
   display: inline-block;
   border-radius: 50%;
@@ -12256,6 +12253,19 @@ textarea.form-control-lg {
   border-color: #e28666;
 }
 
+.contact-main-container {
+  padding-top: 300px;
+  margin: auto;
+  background-image: url(../src/home/bg-program.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+@media (width < 500px) {
+  .contact-main-container {
+    background-image: url(../src/index/phone-program.png);
+  }
+}
 .child_list_container {
   width: 100%;
   background-size: cover;
@@ -13400,14 +13410,20 @@ textarea.form-control-lg {
   flex-shrink: 0;
   color: #494949;
 }
+.section-member-main .member-item > .radio {
+  margin-left: 20px;
+}
 .section-member-main .member-item .form-control {
   flex-grow: 1;
   margin-left: 20px;
   border: 2px solid #e28666;
   text-indent: 0.3em;
-  color: #d1d1d1;
+  color: #343333;
   height: 40px;
   border-radius: 10px;
+}
+.section-member-main .member-item > input {
+  margin-right: 10px;
 }
 
 .login-btn-style {
@@ -13486,6 +13502,7 @@ textarea.form-control-lg {
     flex-shrink: 0;
     color: #525252;
   }
+  .section-member-main .member-item > .radio,
   .section-member-main .member-item .form-control {
     margin-left: 10px;
     border-radius: 5px;
