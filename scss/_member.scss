@@ -20,14 +20,20 @@
 			flex-shrink: 0;
 			color: #494949;
 		}
+		> .radio {
+			margin-left: 20px;
+		}
 		.form-control {
 			flex-grow: 1;
 			margin-left: 20px;
 			border: 2px solid #e28666;
 			text-indent: 0.3em;
-			color: #d1d1d1;
+			color: #343333;
 			height: 40px;
 			border-radius: 10px;
+		}
+		> input {
+			margin-right: 10px;
 		}
 	}
 }
@@ -104,6 +110,7 @@
 				flex-shrink: 0;
 				color: #525252;
 			}
+			> .radio,
 			.form-control {
 				margin-left: 10px;
 				border-radius: 5px;
