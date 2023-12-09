@@ -31,6 +31,7 @@ if(!token){
   const pathnames = [ //進入以下頁面會帶到login頁面
 "/2023_child_growth/new-child.html",
 "/2023_child_growth/daily.html",
+"/2023_child_growth/monthly.html",
 "/2023_child_growth/member.html",
 "/2023_child_growth/child-list.html",
 "/2023_child_growth/data-analysis.html"];

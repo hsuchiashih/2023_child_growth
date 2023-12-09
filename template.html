@@ -7,13 +7,10 @@
     <meta name="keywords" content="兒童成長網站" />
     <meta name="description" content="兒童成長網站" />
     <title>兒童成長網站</title>
-    <script src="./js/plugins/owl.carousel.min.js"></script>
     <link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="./css/owl.theme.default.css" />
   </head>
   <body>
     <div class="wrap">
@@ -160,87 +157,6 @@
       </nav>
     </header>
       <!-- 上面是Header -->
-    <section class="section-banner">
-      <div class="owl-banner owl-carousel owl-theme">
-        <div class="item">
-          <img
-            class="img-fluid d-none d-md-block"
-            src="./src/home/banner_1.jpg"
-            alt="pic"
-          />
-          <img
-            class="img-fluid d-block d-md-none"
-            src="./src/index/banner01_phone.png"
-            alt="pic"
-          />
-          <div class="carousel-item-txt position-absolute d-flex flex-column">
-            <h3 class="order-1">育兒有道，從此不迷路</h3>
-            <p>管理師陪跑提供正確飲食管理<br />、線上乾貨課程</p>
-            <button class="carousel-button order-2">
-              <a href="#"> 立即體驗 </a>
-            </button>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            class="img-fluid d-none d-md-block"
-            src="./src/home/banner_2.jpg"
-            alt="pic"
-          />
-          <img
-            class="img-fluid d-block d-md-none"
-            src="./src/index/banner02_phone.png"
-            alt="pic"
-          />
-          <div class="carousel-item-txt position-absolute d-flex flex-column">
-            <h3 class="order-1">成長管理，一站搞定</h3>
-            <p>透過每天追蹤吃、動、睡，<br />讓孩子變得更健康</p>
-            <button class="carousel-button order-2">
-              <a href="#"> 立即體驗 </a>
-            </button>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            class="img-fluid d-none d-md-block"
-            src="./src/home/banner_3.jpg"
-            alt="pic"
-          />
-          <img
-            class="img-fluid d-block d-md-none"
-            src="./src/index/banner03_phone.png"
-            alt="pic"
-          />
-          <div class="carousel-item-txt position-absolute d-flex flex-column">
-            <h3 class="order-1">漢方茶包讓成長更健康</h3>
-            <p>針對個人體質調整，讓營養<br />更好吸收進身體裡</p>
-            <button class="carousel-button order-2">
-              <a href="#"> 立即體驗 </a>
-            </button>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            class="img-fluid d-none d-md-block"
-            src="./src/home/banner_2.jpg"
-            alt="pic"
-          />
-          <img
-            class="img-fluid d-block d-md-none"
-            src="./src/index/banner02_phone.png"
-            alt=""
-          />
-          <div class="carousel-item-txt position-absolute d-flex flex-column">
-            <h3 class="order-1">成長管理，一站搞定</h3>
-            <p>透過每天追蹤吃、動、睡，<br />讓孩子變得更健康</p>
-            <button class="carousel-button order-2">
-              <a href="#"> 立即體驗 </a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-      <!-- 上面是Header -->
       <form id="myForm">
         <input type="text" id="id1" value="value1">
         <input type="text" id="id2" value="value2">
@@ -255,7 +171,6 @@
         <button type="submit">送出</button>
       </form> 
       <!-- 下面是footer -->
-      <!-- 下面是footer -->      
       <footer class="section-footer container-fluid position-relative">
         <div class="row">
           <div class="col-12 col-md-6">
@@ -303,8 +218,6 @@
     <!-- Js套件 -->
     <!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- owlJS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- bs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
     <!-- axios -->
@@ -326,9 +239,6 @@
     <!-- 頁面JS -->
     <!-- menu/JS -->
     <script>
-      $(document).ready(function () {
-        $(".owl-carousel").owlCarousel();
-      });
       document.addEventListener("DOMContentLoaded", function () {
         const menuButtonContainer = document.querySelector(
           ".menu-button-container",
@@ -358,32 +268,5 @@
         //渲染網頁請寫一個renderValue(){}//名稱勿改
       </script>    
     <!-- 頁面JS -->
-    <script>
-      $(".owl-banner").owlCarousel({
-        loop: true,
-        margin: 24,
-        nav: true,
-        canter: true,
-        navText: [
-          "<img src='./src/index/prev-arrow.svg'>",
-          "<img src='./src/index/next-arrow.svg'>",
-        ],
-        responsive: {
-          0: {
-            items: 1,
-          },
-          768: {
-            items: 1,
-            canter: true,
-            stagePadding: 100,
-          },
-          1200: {
-            items: 1,
-            canter: true,
-            stagePadding: 400,
-          },
-        },
-      });
-    </script>
   </body>
 </html>
