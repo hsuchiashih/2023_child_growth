@@ -165,14 +165,14 @@
             <div class="section-changeKids">
               <!-- 切換小孩 -->
               <div class="section-changeKids-title text-center">
-                <h3>每日記錄</h3>
+                <h3>每月記錄</h3>
               </div>
               <div class="owl-change-kid owl-carousel owl-theme">
                 <div class="item">
                   <div class="owl-change-kid-pic">
                     <img
                       class="img-fluid"
-                      src="./src/home/Rectangle 54 (2).png"
+                      src="./src/home/Rectangle 54 (1).png"
                       alt=""
                     />
                   </div>
@@ -182,7 +182,7 @@
                   <div class="owl-change-kid-pic">
                     <img
                       class="img-fluid"
-                      src="./src/home/Rectangle 54 (1).png"
+                      src="./src/home/Rectangle 54 (2).png"
                       alt=""
                     />
                   </div>
@@ -202,8 +202,8 @@
               <div
                 class="section-changeKids-btn d-flex flex-column align-items-center"
               >
-                <button type="btn" class="kidid-control-btn mb-3">
-                  <p>每月紀錄</p>
+                <button type="submit" class="kidid-control-btn mb-3">
+                  <p>每日紀錄</p>
                 </button>
                 <button
                   type="submit"
@@ -219,110 +219,17 @@
               <!-- <form id="myForm" onsubmit="return processForm()"> -->
               <input
                 class="kid-date mb-5 rounded-3 border-0"
-                type="date"
-                id="datepicker"
-                name="datepicker"
+                type="month"
+                id="monthpicker"
+                name="monthpicker"
               />
-              <div class="wakeup mb-5">
-                <label for="wakeup">起床時間</label
-                ><input type="time" id="wakeup" value="08:00" step="300" />
-                <label>
-                  <input
-                    type="radio"
-                    name="wakeup"
-                    value="07:00"
-                    class="radio rounded-3 border-0"
-                  />
-                  07:00
-                </label>
-
-                <label>
-                  <input
-                    type="radio"
-                    name="wakeup"
-                    value="08:00"
-                    class="radio rounded-3 border-0"
-                    checked
-                  />
-                  08:00
-                </label>
-
-                <label>
-                  <input
-                    type="radio"
-                    name="wakeup"
-                    value="09:00"
-                    class="radio"
-                  />
-                  09:00
-                </label>
+              <div class="height mb-5">
+                <label for="height">身高</label
+                ><input type="text" id="height"/>
               </div>
-              <div class="sleep mb-5">
-                <label for="sleep">睡覺時間</label
-                ><input type="time" id="sleep" value="22:00" step="300" />
-                <label>
-                  <input
-                    type="radio"
-                    name="sleep"
-                    value="21:00"
-                    class="radio"
-                  />
-                  21:00
-                </label>
-
-                <label>
-                  <input
-                    class="kid-form-item"
-                    type="radio"
-                    name="sleep"
-                    value="22:00"
-                    class="radio"
-                    checked
-                  />
-                  22:00
-                </label>
-
-                <label>
-                  <input
-                    class="kid-form-item"
-                    type="radio"
-                    name="sleep"
-                    value="23:00"
-                    class="radio"
-                  />
-                  23:00
-                </label>
-              </div>
-              <div class="breakfast mb-5">
-                <label for="breakfast">早餐</label
-                ><textarea id="breakfast" cols="20" rows="5"></textarea
-                ><input
-                  type="checkbox"
-                  value="Y"
-                  id="breakfastNM"
-                />無麥奶<input
-                  type="checkbox"
-                  value="Y"
-                  id="breakfastND"
-                />無甜食
-              </div>
-              <div class="lunch mb-5">
-                <label for="lunch">午餐</label
-                ><textarea id="lunch" cols="20" rows="5"></textarea
-                ><input type="checkbox" value="Y" id="lunchNM" />無麥奶<input
-                  type="checkbox"
-                  value="Y"
-                  id="lunchND"
-                />無甜食
-              </div>
-              <div class="dinner mb-5">
-                <label for="dinner">晚餐</label
-                ><textarea id="dinner" cols="20" rows="5"></textarea
-                ><input type="checkbox" value="Y" id="dinnerNM" />無麥奶<input
-                  type="checkbox"
-                  value="Y"
-                  id="dinnerND"
-                />無甜食
+              <div class="weight mb-5">
+                <label for="weight">體重</label
+                ><input type="text" id="weight" />
               </div>
               <button type="submit" class="kidid-control-btn mb-3">
                 <p>送出</p>
@@ -399,7 +306,7 @@
     <script src="js/json-sever/apiPOST.js"></script>
     <script src="js/json-sever/apiPATCH.js"></script>
     <script src="js/layouts.js"></script>
-    <script src="js/daily.js"></script>
+    <script src="js/monthly.js"></script>
     <!-- 頁面JS -->
     <!-- menu/JS -->
     <script>

@@ -89,8 +89,10 @@ function handleFormData(data) {
   console.log(daily_record);
   if(_response.data.length != 0 || !!_response[1]){
     updateDailyRecord(daily_record);
+    alert(`完成修改${data.datepicker}每日紀錄`);
   }else{
     addDailyRecord(daily_record);
+    alert(`完成新增${data.datepicker}每日紀錄`);
   }
   // console.log(_response);
   // window.location.href = document.referrer;
@@ -157,8 +159,28 @@ function enteringRender(){
     getDailyRecords(recordDate,kidNum=0).then((response)=>{
       renderValue(response); 
       document.querySelector('#datepicker').value = recordDate.toString();
+      renderKidsList();
     });
   }else{
     initialRender(getDailyRecords);
+    renderKidsList();
   }
+}
+function renderKidsList(){
+  let content = "";
+  userInfo.kids.forEach(element => {
+    content +=`
+      <div class="item">
+        <div class="owl-change-kid-pic">
+          <img
+            class="img-fluid"
+            src="./src/home/Rectangle 54 (2).png"
+            alt=""
+          />
+        </div>
+        <p class="kid-name">${element.kid_name}</p>
+      </div>
+    `
+  });
+  document.querySelector(".owl-change-kid").innerHTML = content;
 }
