@@ -13668,6 +13668,7 @@ textarea.form-control-lg {
 .section-memberOnly-message .section-memberOnly-insideCard {
   padding: 1.5rem;
   border-radius: 20px;
+  background-color: #fff;
 }
 .section-memberOnly-message .section-memberOnly-insideCard p {
   font-size: 1.34715vw;
