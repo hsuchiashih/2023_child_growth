@@ -12,12 +12,22 @@
 	.section-memberOnly-item {
 		width: 13.4715vw;
 		height: 13.4715vw;
-		overflow: hidden;
 		margin-left: 20px;
-		border-radius: 30px;
-		img {
+		p {
+			font-size: 24px;
+			letter-spacing: 0.1em;
+			margin-top: 0.3em;
+			font-weight: 400;
+			text-align: center;
+		}
+		.section-memberOnly-item-pic {
 			width: 100%;
-			vertical-align: middle;
+			border-radius: 30px;
+			overflow: hidden;
+			img {
+				width: 100%;
+				vertical-align: middle;
+			}
 		}
 	}
 	.section-memberOnly-pic {
@@ -62,7 +72,7 @@
 @media (width< 768px) {
 	.section-memberOnly-message {
 		padding: 22px;
-		padding-bottom: 0px;
+		padding-bottom: 30px;
 		background-color: #f5e1d3;
 		border-radius: 30px;
 		.add {
@@ -74,9 +84,15 @@
 		.section-memberOnly-item {
 			width: 200px;
 			height: 200px;
-			overflow: hidden;
 			margin-left: 20px;
 			border-radius: 30px;
+			p {
+				font-size: 20px;
+			}
+			.section-memberOnly-item-pic {
+				width: 100%;
+				overflow: hidden;
+			}
 			img {
 				width: 100%;
 				vertical-align: middle;
@@ -93,6 +109,7 @@
 		.section-memberOnly-insideCard {
 			padding: 1.5rem;
 			border-radius: 20px;
+			margin-top: 1rem;
 
 			p {
 				font-size: 16px;
