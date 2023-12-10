@@ -136,7 +136,7 @@ function getMonthlyRecords(num = 1, kidNum = 0) {
       .get(
         `${url}/600/monthly_records?kidId=${userInfo.kids[
           kidNum
-        ].id.toString()}&_sort=record_month&_order=desc&_limit=${num}`,
+        ].id.toString()}&_sort=create_at&_order=desc&_limit=${num}`,
         {
           headers: {
             authorization: `Bearer ${token}`,
@@ -155,31 +155,31 @@ function getMonthlyRecords(num = 1, kidNum = 0) {
       });
   })
 }
-// function getWholeMonthlyRecords(num = 36, kidNum = 0) {
-//     return new Promise((resolve, reject) => {
-//       axios
-//       .get(
-//         `${url}/600/monthly_records?kidId=${userInfo.kids[
-//           kidNum
-//         ].id.toString()}&_sort=record_month&_order=desc&_limit=${num}`,
-//         {
-//           headers: {
-//             authorization: `Bearer ${token}`,
-//           },
-//         },
-//         )
-//         .then(function (response) {
-//           console.log(response);
-//           _response = response;
-//           resolve(response);
-//         })
-//         .catch(function (error) {
-//           console.log(error.response);
-//           _response = error.response;
-//           reject(error.response);
-//       });
-//   })
-// }
+function getMonthlyRecordByMonth(month, kidNum = 0) {
+    return new Promise((resolve, reject) => {
+      axios
+      .get(
+        `${url}/600/monthly_records?kidId=${userInfo.kids[
+          kidNum
+        ].id.toString()}&record_month=${month}`,
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        },
+        )
+        .then(function (response) {
+          console.log(response);
+          _response = response;
+          resolve(response);
+        })
+        .catch(function (error) {
+          console.log(error.response);
+          _response = error.response;
+          reject(error.response);
+      });
+  })
+}
 function getDailyRecords(date = getMonthDate(), kidNum = 0) {
   return new Promise((resolve, reject) => {
     axios
