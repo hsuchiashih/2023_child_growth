@@ -122,13 +122,11 @@ function addMonthlyRecord(
     height: 96,
     weight: 9,
   },
-  kidNum,
+  kidNum=0,
 ) {
   return new Promise((resolve, reject) => {
-    monthlyRecord.userId = monthlyRecord.userId
-    || userInfo.id;
-    monthlyRecord.kidId = monthlyRecord.kidId
-    || userInfo.kids[kidNum].id;
+    monthlyRecord.kidId = userInfo.kids[kidNum].id || monthlyRecord.kidId;
+    monthlyRecord.userId = userInfo.id || monthlyRecord.userId;
     monthlyRecord.created_at = getDatetime();
     
     axios

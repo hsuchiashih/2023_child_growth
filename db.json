@@ -8145,10 +8145,11 @@
   "monthly_records": [
     {
       "id": 1,
-      "kidId": 1,
-      "userId": 1,
+      "kidId": 2,
+      "userId": 2,
       "height": 96,
-      "weight": 9,
+      "weight": 12,
+      "record_month": "2023-01",
       "create_at": "2023-09-25 08:15:34"
     },
     {
@@ -8156,128 +8157,207 @@
       "kidId": 2,
       "userId": 2,
       "height": 98,
-      "weight": 10,
-      "create_at": "2023-09-25 09:20:15"
+      "weight": 13,
+      "record_month": "2023-02",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 3,
-      "kidId": 3,
+      "kidId": 2,
       "userId": 2,
-      "height": 95,
-      "weight": 8.5,
-      "create_at": "2023-09-25 10:05:42"
+      "height": 99,
+      "weight": 14,
+      "record_month": "2023-03",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 4,
-      "kidId": 4,
-      "userId": 3,
-      "height": 100,
-      "weight": 10.5,
-      "create_at": "2023-09-25 11:40:29"
+      "kidId": 2,
+      "userId": 2,
+      "height": 103,
+      "weight": 16,
+      "record_month": "2023-04",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 5,
-      "kidId": 5,
-      "userId": 4,
-      "height": 97,
-      "weight": 9.2,
-      "create_at": "2023-09-25 12:55:18"
+      "kidId": 2,
+      "userId": 2,
+      "height": 108,
+      "weight": 17,
+      "record_month": "2023-05",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 6,
-      "kidId": 6,
-      "userId": 5,
-      "height": 102,
-      "weight": 11,
-      "create_at": "2023-09-25 14:25:37"
+      "kidId": 2,
+      "userId": 2,
+      "height": 111,
+      "weight": 18,
+      "record_month": "2023-06",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 7,
-      "kidId": 7,
-      "userId": 3,
-      "height": 99,
-      "weight": 9.8,
-      "create_at": "2023-09-25 15:50:23"
+      "kidId": 2,
+      "userId": 2,
+      "height": 113,
+      "weight": 21,
+      "record_month": "2023-07",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 8,
-      "kidId": 8,
-      "userId": 4,
-      "height": 101,
-      "weight": 10.2,
-      "create_at": "2023-09-25 16:30:09"
+      "kidId": 2,
+      "userId": 2,
+      "height": 117,
+      "weight": 23,
+      "record_month": "2023-08",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 9,
-      "kidId": 1,
-      "userId": 1,
-      "height": 95,
-      "weight": 9,
-      "create_at": "2023-09-24 08:45:30"
+      "kidId": 2,
+      "userId": 2,
+      "height": 121,
+      "weight": 24,
+      "record_month": "2023-09",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 10,
       "kidId": 2,
       "userId": 2,
-      "height": 97,
-      "weight": 9.5,
-      "create_at": "2023-09-24 09:30:17"
+      "height": 123,
+      "weight": 25,
+      "record_month": "2023-10",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 11,
-      "kidId": 3,
+      "kidId": 2,
       "userId": 2,
-      "height": 94,
-      "weight": 8.8,
-      "create_at": "2023-09-24 10:25:52"
+      "height": 130,
+      "weight": 33,
+      "record_month": "2023-11",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 12,
-      "kidId": 4,
-      "userId": 3,
-      "height": 99,
-      "weight": 9.7,
-      "create_at": "2023-09-24 11:55:41"
+      "kidId": 2,
+      "userId": 2,
+      "height": 132,
+      "weight": 37,
+      "record_month": "2023-12",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 13,
-      "kidId": 5,
-      "userId": 4,
-      "height": 96,
-      "weight": 9.2,
-      "create_at": "2023-09-24 13:10:29"
+      "kidId": 3,
+      "userId": 2,
+      "height": 136,
+      "weight": 38,
+      "record_month": "2023-01",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 14,
-      "kidId": 6,
-      "userId": 5,
-      "height": 101,
-      "weight": 10.2,
-      "create_at": "2023-09-24 14:35:17"
+      "kidId": 3,
+      "userId": 2,
+      "height": 138,
+      "weight": 42,
+      "record_month": "2023-02",
+      "create_at": "2023-09-25 08:15:34"
     },
     {
       "id": 15,
-      "kidId": 7,
-      "userId": 3,
-      "height": 98,
-      "weight": 9.5,
-      "create_at": "2023-09-24 15:50:04"
-    },
-    {
-      "kidId": 1,
-      "userId": 1,
-      "height": 96,
-      "weight": 9,
-      "create_at": "2023-09-25 08:15:34",
-      "id": 16
-    },
-    {
-      "kidId": 99999,
-      "height": 96,
-      "weight": 9,
+      "kidId": 3,
       "userId": 2,
-      "created_at": "2023-10-28 18:57:41",
-      "id": 17
+      "height": 141,
+      "weight": 46,
+      "record_month": "2023-03",
+      "create_at": "2023-09-25 08:15:34"
+    },
+    {
+      "id": 16,
+      "kidId": 3,
+      "userId": 2,
+      "height": 143,
+      "weight": 49,
+      "record_month": "2023-04",
+      "create_at": "2023-09-25 08:15:34"
+    },
+    {
+      "id": 17,
+      "kidId": 3,
+      "userId": 2,
+      "height": 145,
+      "weight": 53,
+      "record_month": "2023-05",
+      "create_at": "2023-09-25 08:15:34"
+    },
+    {
+      "id": 18,
+      "kidId": 3,
+      "userId": 2,
+      "height": 147,
+      "weight": 55,
+      "record_month": "2023-06",
+      "create_at": "2023-09-25 08:15:34"
+    },
+    {
+      "id": 19,
+      "kidId": 3,
+      "userId": 2,
+      "height": 151,
+      "weight": 58,
+      "record_month": "2023-07",
+      "create_at": "2023-09-25 08:15:34"
+    },
+    {
+      "id": 20,
+      "kidId": 3,
+      "userId": 2,
+      "height": 155,
+      "weight": 61,
+      "record_month": "2023-08",
+      "create_at": "2023-09-25 08:15:34"
+    },
+    {
+      "id": 21,
+      "kidId": 3,
+      "userId": 2,
+      "height": 157,
+      "weight": 67,
+      "record_month": "2023-09",
+      "create_at": "2023-09-25 08:15:34"
+    },
+    {
+      "id": 22,
+      "kidId": 3,
+      "userId": 2,
+      "height": 158,
+      "weight": 68,
+      "record_month": "2023-10",
+      "create_at": "2023-09-25 08:15:34"
+    },
+    {
+      "id": 23,
+      "kidId": 3,
+      "userId": 2,
+      "height": 161,
+      "weight": 69,
+      "record_month": "2023-11",
+      "create_at": "2023-09-25 08:15:34"
+    },
+    {
+      "id": 24,
+      "kidId": 3,
+      "userId": 2,
+      "height": 165,
+      "weight": 71,
+      "record_month": "2023-12",
+      "create_at": "2023-09-25 08:15:34"
     }
   ],
   "contact_us": [

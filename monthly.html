@@ -202,14 +202,28 @@
 							<div
 								class="section-changeKids-btn d-flex flex-column align-items-center"
 							>
-								<button type="submit" class="kidid-control-btn mb-3">
-									<p><a href="./daily.html"></a> 每日紀錄</p>
+								<button type="btn" class="kidid-control-btn mb-3">
+									<p>
+										<a
+											href="./daily.html"
+											class="text-decoration-none text-white"
+											href=""
+											>每日紀錄</a
+										>
+									</p>
 								</button>
 								<button
 									type="submit"
 									class="kidid-control-btn bg-dark text-white"
 								>
-									<p><a href="child-list.html"></a> 返回清單</p>
+									<p>
+										<a
+											href="./child-list.html"
+											class="text-decoration-none text-white"
+											href=""
+											>返回清單</a
+										>
+									</p>
 								</button>
 							</div>
 						</div>
@@ -225,11 +239,11 @@
 							/>
 										<div class="wakeup height mb-5">
 											<label for="height">身高</label
-											><input type="text" id="height" />
+											><input type="number" id="height" min="0" max="200" />
 										</div>
 										<div class="wakeup weight mb-5">
 											<label for="weight">體重</label
-											><input type="text" id="weight" />
+											><input type="number" id="weight"  min="0" max="99" />
 										</div>
 										<button type="submit" class="kidid-control-btn mb-3">
 											<p>送出</p>
