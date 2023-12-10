@@ -37,6 +37,7 @@ const constraints = {
 // 準備參數
 function prepareParams() {
   const childName = document.getElementById('childName').value;
+  const childGender = document.querySelector('input[name="input-gender"]:checked').value
   const childBirthday = document.getElementById('childBirthday').value;
   const childHeight = document.getElementById('childHeight').value;
   const childWeight = document.getElementById('childWeight').value;
@@ -44,15 +45,14 @@ function prepareParams() {
   const dadHeight = document.getElementById('dadHeight').value;
   const kidInfo = {
       childName,
+      childGender,
       childBirthday,
       childHeight,
       childWeight,
       momHeight,
       dadHeight
   }
-  // const kidInfo = {
 
-  // }
   return kidInfo
 }
 // 檢查參數並給錯誤提示訊息
@@ -81,6 +81,7 @@ function checkParams(params) {
 function transformParams(params) {
   const result = {
       kid_name: params.childName,
+      kid_genter: params.childGender,
       kid_birth: params.childBirthday,
       ini_height: params.childHeight,
       ini_weight: params.childWeight,
