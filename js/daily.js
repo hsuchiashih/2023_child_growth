@@ -144,17 +144,19 @@ function enteringRender(){
     alert('使用者無兒童，跳轉到新增兒童');
     return window.location.href = "./new-child.html" 
   }
-  // 獲取網址中的 search 部分，例如 "?record_date=2023-11-09"
-  var queryString = window.location.search;
-
-  // 使用 URLSearchParams 解析 search 部分
-  var urlParams = new URLSearchParams(queryString);
-
-  // 獲取 record_date 參數的值
-  var recordDate = urlParams.get('record_date');
-  var kidNum = urlParams.get('kidNum');
-  console.log(recordDate);
-  // console.log(kidNum);
+  if(window.location.search != ""){
+    // 獲取網址中的 search 部分，例如 "?record_date=2023-11-09"
+    var queryString = window.location.search;
+  
+    // 使用 URLSearchParams 解析 search 部分
+    var urlParams = new URLSearchParams(queryString);
+  
+    // 獲取 record_date 參數的值
+    var recordDate = urlParams.get('record_date');
+    var kidNum = urlParams.get('kidNum');
+    console.log(recordDate);
+    // console.log(kidNum);
+  }
   if(recordDate != null){
     getDailyRecords(recordDate,kidNum=0).then((response)=>{
       renderValue(response); 

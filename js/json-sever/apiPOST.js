@@ -17,10 +17,12 @@ function signup(
       .then(response => {
         localStorage.setItem('jwtToken', response.data.accessToken);
         localStorage.setItem('userData',JSON.stringify(response.data.user));
+        localStorage.setItem('onrenderActivated', "on");
         token = response.data.accessToken;
         // data = response.data;
         _response = response;
         delete _response.data.password;
+        getUserInfo(response.data.user.id);
         console.log(_response);
         resolve(response);
       })

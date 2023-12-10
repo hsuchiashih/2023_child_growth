@@ -10,8 +10,9 @@ function handleFormData(data) {
   }
   console.log(monthlyRecord);
   getMonthlyRecordByMonth(data.monthpicker).then(response=>{
+    console.log(response);
     if(response.data != ""){
-      alert(`該月已有紀錄，身高：${data[0].height}、體重：${data[0].weight}。`);
+      alert(`該月已有紀錄，身高：${response.data[0].height}、體重：${response.data[0].weight}。`);
       return;
     }
     addMonthlyRecord(monthlyRecord).then(response=>{
