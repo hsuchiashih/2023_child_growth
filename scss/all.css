@@ -4,8 +4,6 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import "../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
-@import "../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700&family=Tilt+Neon&display=swap");
 :root,
 [data-bs-theme=light] {
@@ -13448,10 +13446,11 @@ textarea.form-control-lg {
 }
 .section-everyday {
   width: 100%;
-  min-width: 1920px;
   padding-top: 250px;
   background-image: url(../src/home/bg-program.png);
   padding-bottom: 100px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .section-changeKids-title > h3, .section-changeKids-title > .h3 {
@@ -13527,6 +13526,51 @@ textarea.form-control-lg {
   background-color: none !important;
 }
 
+@media (width < 992px) {
+  .section-everyday {
+    padding-top: 100px;
+    background-image: url(../src/index/phone-program.png);
+    padding-bottom: 100px;
+  }
+  .kid-date {
+    width: 60%;
+    margin: auto;
+    display: block;
+  }
+  .dinner label,
+  .lunch label,
+  .breakfast label,
+  .sleep label,
+  .wakeup label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .dinner textarea,
+  .lunch textarea,
+  .breakfast textarea,
+  .sleep textarea,
+  .wakeup textarea {
+    border: 1px solid #e28666;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  .dinner input,
+  .lunch input,
+  .breakfast input,
+  .sleep input,
+  .wakeup input {
+    height: 36px;
+    border: 1px solid #e28666;
+    border-radius: 10px;
+    margin-right: 5px;
+  }
+}
+@media (width < 500px) {
+  #myForm {
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+}
 .section-member-main {
   width: 40%;
   margin: auto;

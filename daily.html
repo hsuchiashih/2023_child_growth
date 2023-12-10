@@ -13,6 +13,18 @@
 		<link rel="stylesheet" href="./css/reset.css" />
 		<link rel="stylesheet" href="./css/owl.carousel.min.css" />
 		<link rel="stylesheet" href="./css/owl.theme.default.css" />
+		<style>
+			@media (width<992px) {
+				.owl-change-kid .owl-nav .owl-prev {
+					left: 5%;
+					top: 60vw;
+				}
+				.owl-change-kid .owl-nav .owl-next {
+					right: 5%;
+					top: 60vw;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<div class="wrap">
@@ -160,7 +172,7 @@
 			<!-- 上面是Header -->
 			<div class="section-everyday container-fluid">
 				<div class="row">
-					<div class="col-5">
+					<div class="col-md-5 col-12">
 						<div class="section-changeKids">
 							<!-- 切換小孩 -->
 							<div class="section-changeKids-title text-center">
@@ -227,11 +239,11 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-7">
+					<div class="col-md-7 col-12 mt-md-0 mt-3">
 						<form id="myForm">
 							<!-- <form id="myForm" onsubmit="return processForm()"> -->
 							<input
-								class="kid-date mb-5 rounded-3 border-0"
+								class="kid-date mb-2 mb-md-5 rounded-3 border-0"
 								type="date"
 								id="datepicker"
 								name="datepicker"
