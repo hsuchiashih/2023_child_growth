@@ -382,6 +382,8 @@
       /**
        * 製作圖表function
        */
+      
+      //每月睡眠紀錄
       //轉換為chart需要的data
       function transformChartData(response, target) {
         return response.data.map((item) => {
@@ -528,11 +530,104 @@
           
         });
       }
+      
+      //身高體重紀錄
+      //製作身高體重紀錄紀錄圖表
+      function creatHeightWeightByMonthChart(
+        xAxisData,
+        heightSeriesData,
+        weightSeriesData
+      ) {
+        var dom = document.getElementById("chart_container2");
+        var myChart = echarts.init(dom, null, {
+          renderer: "canvas",
+          useDirtyRect: false,
+        });
+        var app = {};
+
+        var option;
+
+        option = {
+          xAxis: {
+            type: "category",
+            data: xAxisData,
+          },
+          yAxis: {
+            type: 'value'
+          },
+          series: [
+            {
+              data: heightSeriesData,
+              type: "line",
+              name: "身高",
+            },
+            {
+              data: weightSeriesData,
+              type: "line",
+              name: "體重",
+            },
+          ],
+          tooltip: {
+            trigger: "axis",
+            axisPointer: {
+              type: "cross",
+              animation: false,
+              label: {
+                backgroundColor: "#505765",
+              },
+            },
+          },
+          legend: {
+            data: ["身高", "體重"],
+            left: 10,
+          },
+        };
+
+        if (option && typeof option === "object") {
+          myChart.setOption(option);
+        }
+
+        window.addEventListener("resize", myChart.resize);
+      }
+      //渲染身高體重紀錄圖表
+      function renderHeightWeightByMonthChart(maxResultCount) {
+        getMonthlyRecords(maxResultCount).then((response) => {
+          const xAxisData = transformChartData(response, "record_month");
+          const heightSeriesData = transformChartData(response, "height");
+          const weightSeriesData = transformChartData(response, "weight");
+          const chartContainer = document.getElementById('chartContainer2')
+          let str = ''
+          if (response.data.length !== 0) {
+            str += 
+              `
+              <div class="col-12">
+                <div id="chart_container2"></div>
+              </div>
+              `
+            chartContainer.innerHTML = str;
+            creatHeightWeightByMonthChart(
+              xAxisData,
+              heightSeriesData,
+              weightSeriesData
+            );
+          } else {
+            str += 
+              `
+              <div class="col-12">
+                <h2 class="sub_title">查無資料</h2>
+              </div>
+              `
+            chartContainer.innerHTML = str;
+          } 
+        });
+      }
 
       /**
        * 製作表格function
        */
       const { Grid, html } = gridjs;
+
+      //每日紀錄
       //轉換為每日紀錄需要的data
       function transformDailyRecordsData(response) {
         return response.data.map((item) => {
@@ -606,7 +701,7 @@
               name: "編輯",
               formatter: (_, row) =>
                 html(
-                  `<a href='daily.html?record_date=${row["cells"][0].data}&kidNum=0'>編輯</a>`
+                  `<a href='daily.html?record_date=${row["cells"][0].data}&kidNum=${kidNum}'>編輯</a>`
                 ),
             },
           ],
@@ -669,6 +764,42 @@
 
       }
 
+      //每月紀錄
+      //轉換為每月紀錄需要的data
+      function transformMonthlyRecordsData(response) {
+        return response.data.map((item) => {
+          return [
+            // item.record_date,
+            `${item.record_month}`,
+            `${item.height}cm`,
+            `${item.weight}kg`,
+          ];
+        });
+      }
+      //製作每月紀錄表格
+      function creatMonthlyRecordsTable(data) {
+        new gridjs.Grid({
+          columns: [
+            "日期",
+            "身高",
+            "體重",
+            {
+              name: "編輯",
+              formatter: (_, row) => html(`<a href='monthly.html?record_month=${row["cells"][0].data}&kidNum=${kidNum}'>編輯</a>`),
+            },
+          ],
+          data
+        }).render(document.getElementById("wrapper2"));
+      }
+      //渲染每月紀錄表格
+      async function renderMonthlyRecordsTable(maxResultCount) {
+        const response = await 
+        getMonthlyRecords(maxResultCount).then(response =>{
+          const monthlyRecordsData = transformMonthlyRecordsData(response);
+          creatMonthlyRecordsTable(monthlyRecordsData);
+        });
+      }
+
       //渲染數據分析頁面
       async function renderDataAnalysisPage(kidNum) {
         userData = userInfo;
@@ -679,13 +810,14 @@
           sleepTimeChartMonth,
           userData
         );
+        renderHeightWeightByMonthChart(36);
         renderDailyRecordsTable(
           kidNum,
           dailyRecordsTableYear,
           dailyRecordsTableMonth,
           userData
         );
-        renderMonthlyRecordsTable(kidNum);
+        renderMonthlyRecordsTable(36);
       }
 
       // init數據分析頁面
@@ -736,7 +868,6 @@
         .getElementById("kidSelect")
         .addEventListener("change", function (e) {
           kidNum = e.target.value;
-          console.log(e.target.value);
           // 目前有找不到小孩資料的狀況(kidNum 應該要填index?)
           renderSleepTimeByMonthChart(
             kidNum,
@@ -750,7 +881,8 @@
             dailyRecordsTableMonth,
             userData
           );
-          renderMonthlyRecordsTable(kidNum);
+
+          renderMonthlyRecordsTable(36);
         });
       document.getElementById("sleepTimeDatePicker").value = nowDateString;
       document.getElementById("dailyRecordsPicker").value = nowDateString;
@@ -761,43 +893,7 @@
        * Q2 getMonthlyRecords的num是指？
        */
 
-      //轉換為每月紀錄需要的data
-      function transformMonthlyRecordsData(response) {
-        return response.data.map((item) => {
-          return [
-            // item.record_date,
-            `2023-11`,
-            `${item.height}cm`,
-            `${item.weight}kg`,
-          ];
-        });
-      }
-      //製作每月紀錄表格
-      function creatMonthlyRecordsTable(data) {
-        new gridjs.Grid({
-          columns: [
-            "日期",
-            "身高",
-            "體重",
-            {
-              name: "編輯",
-              formatter: (_, row) => html(`<a href='daily.html'>編輯</a>`),
-            },
-          ],
-          data: [
-            ["2023-10", "110cm", "17.5kg"],
-            ["2023-11", "111cm", "17.6kg"],
-          ],
-        }).render(document.getElementById("wrapper2"));
-      }
-      //渲染每月紀錄表格
-      async function renderMonthlyRecordsTable() {
-        const response = await 
-        getMonthlyRecords().then(response=>{
-          const monthlyRecordsData = transformMonthlyRecordsData(response);
-          creatMonthlyRecordsTable(monthlyRecordsData);
-        });
-      }
+
 
       function monthRecordshandler(e) {
         renderMonthlyRecordsTable(
