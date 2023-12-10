@@ -1,74 +1,115 @@
 .section-everyday {
-  width: 100%;
-  min-width: 1920px;
-  padding-top: 250px;
-  background-image: url(../src/home/bg-program.png);
-  padding-bottom: 100px;
+	width: 100%;
+	//min-width: 1920px;
+	padding-top: 250px;
+	background-image: url(../src/home/bg-program.png);
+	padding-bottom: 100px;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .section-changeKids-title {
-  > h3 {
-    font-size: 36px;
-    margin-bottom: 0.5em;
-    font-weight: 600;
-    letter-spacing: 1px;
-  }
+	> h3 {
+		font-size: 36px;
+		margin-bottom: 0.5em;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
 }
 .owl-change-kid {
-  width: 80%;
-  margin-bottom: 50px;
+	width: 80%;
+	margin-bottom: 50px;
 
-  .item {
-    width: 300px;
-    border-radius: 0;
-    margin: auto;
-    img {
-      width: 100%;
-    }
-    p {
-      font-size: 30px;
-      font-weight: 600;
-      text-align: center;
-      letter-spacing: 2px;
-      margin-top: 1em;
-    }
-  }
-  .owl-nav {
-    .owl-next {
-      right: 66px;
-      top: 100px;
-    }
-    .owl-prev {
-      left: 66px;
-      top: 100px;
-    }
-  }
+	.item {
+		width: 300px;
+		border-radius: 0;
+		margin: auto;
+		img {
+			width: 100%;
+		}
+		p {
+			font-size: 30px;
+			font-weight: 600;
+			text-align: center;
+			letter-spacing: 2px;
+			margin-top: 1em;
+		}
+	}
+	.owl-nav {
+		.owl-next {
+			right: 66px;
+			top: 100px;
+		}
+		.owl-prev {
+			left: 66px;
+			top: 100px;
+		}
+	}
 }
 .kid-date {
-  height: 50px;
-  width: 200px;
-  border-radius: 10px;
+	height: 50px;
+	width: 200px;
+	border-radius: 10px;
 }
 .dinner,
 .lunch,
 .breakfast,
 .sleep,
 .wakeup {
-  label {
-    font-size: 20px;
-    margin-right: 10px;
-  }
-  textarea {
-    border: 1px solid #e28666;
-    border-radius: 10px;
-    margin-right: 10px;
-  }
-  input {
-    height: 36px;
-    border: 1px solid #e28666;
-    border-radius: 10px;
-    margin-right: 10px;
-  }
+	label {
+		font-size: 20px;
+		margin-right: 10px;
+	}
+	textarea {
+		border: 1px solid #e28666;
+		border-radius: 10px;
+		margin-right: 10px;
+	}
+	input {
+		height: 36px;
+		border: 1px solid #e28666;
+		border-radius: 10px;
+		margin-right: 10px;
+	}
 }
 .owl-theme .owl-nav [class*="owl-"]:hover {
-  background-color: none !important ;
+	background-color: none !important ;
+}
+@media (width<992px) {
+	.section-everyday {
+		padding-top: 100px;
+		background-image: url(../src/index/phone-program.png);
+		padding-bottom: 100px;
+	}
+	.kid-date {
+		width: 60%;
+		margin: auto;
+		display: block;
+	}
+	.dinner,
+	.lunch,
+	.breakfast,
+	.sleep,
+	.wakeup {
+		label {
+			font-size: 16px;
+			margin-right: 10px;
+		}
+		textarea {
+			border: 1px solid #e28666;
+			border-radius: 10px;
+			margin-right: 10px;
+		}
+		input {
+			height: 36px;
+			border: 1px solid #e28666;
+			border-radius: 10px;
+			margin-right: 5px;
+		}
+	}
+}
+@media (width<500px) {
+	#myForm {
+		padding-left: 20px;
+		margin-top: 20px;
+	}
 }
