@@ -468,11 +468,25 @@
               data: wakeUpSeriesData,
               type: "line",
               name: "起床時間",
+              markLine: {
+                data: [
+                  {
+                    yAxis: "07:00"
+                  }
+                ]
+              }
             },
             {
               data: sleepSeriesData,
               type: "line",
               name: "睡覺時間",
+              markLine: {
+                data: [
+                  {
+                    yAxis: "21:00"
+                  }
+                ]
+              }
             },
           ],
           tooltip: {
@@ -590,8 +604,8 @@
         window.addEventListener("resize", myChart.resize);
       }
       //渲染身高體重紀錄圖表
-      function renderHeightWeightByMonthChart(maxResultCount, kidNum) {
-        getMonthlyRecords(maxResultCount, kidNum).then((response) => {
+      function renderHeightWeightByMonthChart(kidNum, maxResultCount) {
+        getMonthlyRecords(kidNum, maxResultCount).then((response) => {
           const xAxisData = transformChartData(response, "record_month");
           const heightSeriesData = transformChartData(response, "height");
           const weightSeriesData = transformChartData(response, "weight");
@@ -799,9 +813,9 @@
       }
       
       //渲染每月紀錄表格
-      async function renderMonthlyRecordsTable(maxResultCount, kidNum) {
+      async function renderMonthlyRecordsTable(kidNum, maxResultCount) {
         const response = await 
-        getMonthlyRecords(maxResultCount, kidNum).then(response =>{
+        getMonthlyRecords(kidNum, maxResultCount).then(response =>{
           const monthlyRecordsData = transformMonthlyRecordsData(response);
           const monthlyRecordsContainer = document.getElementById('monthlyRecordsContainer');
           let str = '';
@@ -840,14 +854,14 @@
           sleepTimeChartMonth,
           userData
         );
-        renderHeightWeightByMonthChart(36, kidNum);
+        renderHeightWeightByMonthChart(kidNum, 36);
         renderDailyRecordsTable(
           kidNum,
           dailyRecordsTableYear,
           dailyRecordsTableMonth,
           userData
         );
-        renderMonthlyRecordsTable(36, kidNum);
+        renderMonthlyRecordsTable(kidNum, 36);
       }
 
       // init數據分析頁面
@@ -911,8 +925,8 @@
             dailyRecordsTableMonth,
             userData
           );
-          renderHeightWeightByMonthChart(36, kidNum)
-          renderMonthlyRecordsTable(36, kidNum);
+          renderHeightWeightByMonthChart(kidNum, 36)
+          renderMonthlyRecordsTable(kidNum, 36);
         });
       document.getElementById("sleepTimeDatePicker").value = nowDateString;
       document.getElementById("dailyRecordsPicker").value = nowDateString;
