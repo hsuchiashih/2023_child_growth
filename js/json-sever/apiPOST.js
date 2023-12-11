@@ -100,7 +100,9 @@ function addKid(token, userInfo,
   });
 }
 
+
 function addMonthlyRecord(kidNum,monthlyRecord) {
+
   return new Promise((resolve, reject) => {
     monthlyRecord.kidId = userInfo.kids[kidNum].id || monthlyRecord.kidId;
     monthlyRecord.userId = userInfo.id || monthlyRecord.userId;
@@ -165,7 +167,9 @@ function addMonthlyRecord(kidNum,monthlyRecord) {
         "modified_time": "2023-09-17 14:15:30", 
     }
 */
+
 async function addDailyRecord(kidNum,daily_record) {
+
   console.log('addDailyRecord');
   await addSleepRecord(daily_record.sleep_record, kidNum);
   // console.log('addSleepRecord執行完畢');
