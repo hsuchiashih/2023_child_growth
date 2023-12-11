@@ -165,7 +165,7 @@ function addMonthlyRecord(monthlyRecord,kidNum) {
         "modified_time": "2023-09-17 14:15:30", 
     }
 */
-async function addDailyRecord(daily_record,kidNum) {
+async function addDailyRecord(kidNum,daily_record) {
   console.log('addDailyRecord');
   await addSleepRecord(daily_record.sleep_record, kidNum);
   // console.log('addSleepRecord執行完畢');

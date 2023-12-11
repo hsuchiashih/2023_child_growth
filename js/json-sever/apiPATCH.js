@@ -99,40 +99,7 @@ function deleteKid(kidNum = 0) {
       });
   })
 }
-async function updateDailyRecord(
-  daily_record = {
-    sleep_record: {
-      kidId: 99999999,
-      wakeup_time: "23:59",
-      sleep_time: "00:59",
-    },
-    breakfast_record: {
-      sleep_recordId: 99999999,
-      kidId: 99999999,
-      record_date: "2023-09-25",
-      content: "吐司、柳橙汁",
-      noBreadMilk: "N",
-      noDessert: "N",
-    },
-    lunch_record: {
-      sleep_recordId: 99999999,
-      kidId: 99999999,
-      record_date: "2023-09-25",
-      content: "沙威瑪",
-      noBreadMilk: "N",
-      noDessert: "N",
-    },
-    dinner_record: {
-      sleep_recordId: 99999999,
-      kidId: 99999999,
-      record_date: "2023-09-25",
-      content: "紅燒肉",
-      noBreadMilk: "N",
-      noDessert: "N",
-    },
-  },
-  kidNum = 0,
-) {
+async function updateDailyRecord(kidNum,daily_record) {
   console.log('updateDailyRecord');
   await updateSleepRecord(daily_record.sleep_record, kidNum);
   updateBreakfastRecord(daily_record.breakfast_record, kidNum);

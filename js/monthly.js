@@ -9,7 +9,7 @@ function handleFormData(data) {
     record_month: data.monthpicker,
   }
   console.log(monthlyRecord);
-  let kidNum=document.querySelector('.owl-item.active .item').attributes["data-kidnum"].value;
+  let kidNum = document.querySelector('.owl-item.active .item').attributes["data-kidnum"].value;
   getMonthlyRecordByMonth(kidNum,data.monthpicker).then(response=>{
     console.log(response);
     if(response.data != ""){

@@ -247,15 +247,16 @@
 								class="kid-date mb-5 rounded-3 border-0"
 								type="month"
 								id="monthpicker"
-								name="monthpicker"
+								name="monthpicker" 
+								required 
 							/>
 							<div class="wakeup height mb-5">
 								<label for="height">身高</label
-								><input type="number" id="height" />
+								><input type="number" id="height" required max="200" min="0"/>
 							</div>
 							<div class="wakeup weight mb-5">
 								<label for="weight">體重</label
-								><input type="number" id="weight" />
+								><input type="number" id="weight" required  max="200" min="0" />
 							</div>
 							<button type="submit" class="kidid-control-btn mb-3">
 								<p>送出</p>

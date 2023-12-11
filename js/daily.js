@@ -87,8 +87,9 @@ function handleFormData(data) {
     }
   }
   console.log(daily_record);
+  let kidNum = document.querySelector('.owl-item.active .item').attributes["data-kidnum"].value;
   if(_response.data.length != 0 || !!_response[1]){
-    updateDailyRecord(daily_record)
+    updateDailyRecord(kidNum,daily_record)
     .then(response=>{
       if(response.status.toString().startsWith('2')){
         alert(`完成修改${data.datepicker}每日紀錄`);
@@ -101,7 +102,7 @@ function handleFormData(data) {
       alert(error.response.data);
     });
   }else{
-    addDailyRecord(daily_record)
+    addDailyRecord(kidNum,daily_record)
         .then(response=>{
       if(response.status.toString().startsWith('2')){
         alert(`完成新增${data.datepicker}每日紀錄`);
@@ -154,7 +155,8 @@ function emptyValue(){
 document.querySelector('#datepicker').addEventListener('change', function(event) {
   console.log("dateChanged");
   emptyValue();
-  getDailyRecords(event.target.value).then((response)=>{
+  let kidNum = document.querySelector('.owl-item.active .item').attributes["data-kidnum"].value;
+  getDailyRecords(kidNum,event.target.value).then((response)=>{
     console.log(response);
     renderValue(response)
   });
@@ -179,21 +181,25 @@ function enteringRender(){
     // console.log(kidNum);
   }
   if(recordDate != null){
-    getDailyRecords(recordDate,kidNum=0).then((response)=>{
+    getDailyRecords(kidNum,recordDate).then((response)=>{
       renderValue(response); 
       document.querySelector('#datepicker').value = recordDate.toString();
       renderKidsList();
     });
   }else{
-    initialRender(getDailyRecords);
     renderKidsList();
+    // initialRender(getDailyRecords);
+    // let kidNum = document.querySelector('.owl-item.active .item').attributes["data-kidnum"].value;
+    getDailyRecords(0).then(
+      response=>renderValue(response)
+    );
   }
 }
 function renderKidsList(){
   let content = "";
-  userInfo.kids.forEach(element => {
+  userInfo.kids.forEach((element,i) => {
     content +=`
-      <div class="item">
+      <div class="item" data-kidNum=${i}>
         <div class="owl-change-kid-pic">
           <img
             class="img-fluid"
