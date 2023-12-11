@@ -130,7 +130,9 @@ document.getElementById('addButton').addEventListener('click',
     } 
   })
 // 清除資料按鈕功能
-document.getElementById('clearButton').addEventListener('click', clear())
+document.getElementById('clearButton').addEventListener('click', function(e) {
+  clear()
+})
 
 function clear() {
   const errorInput = {
