@@ -88,11 +88,32 @@ function handleFormData(data) {
   }
   console.log(daily_record);
   if(_response.data.length != 0 || !!_response[1]){
-    updateDailyRecord(daily_record);
-    alert(`完成修改${data.datepicker}每日紀錄`);
+    updateDailyRecord(daily_record)
+    .then(response=>{
+      if(response.status.toString().startsWith('2')){
+        alert(`完成修改${data.datepicker}每日紀錄`);
+      }else{
+        alert(`${response.message || response.data }`);
+      }
+    })
+    .catch(error=>{
+      _response = error;
+      alert(error.response.data);
+    });
   }else{
-    addDailyRecord(daily_record);
-    alert(`完成新增${data.datepicker}每日紀錄`);
+    addDailyRecord(daily_record)
+        .then(response=>{
+      if(response.status.toString().startsWith('2')){
+        alert(`完成新增${data.datepicker}每日紀錄`);
+      }else{
+        alert(`${response.message || response.data }`);
+      }
+    })
+    .catch(error=>{
+      _response = error;
+      alert(error.response.data);
+    });
+    
   }
   // console.log(_response);
   // window.location.href = document.referrer;
