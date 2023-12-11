@@ -275,7 +275,7 @@
                   /> -->
                 </div>
                 <div class="card_container">
-                  <div class="row card_body">
+                  <div id="monthlyRecordsContainer" class="row card_body">
                     <div class="col-12">
                       <div id="wrapper2"></div>
                     </div>
@@ -590,8 +590,8 @@
         window.addEventListener("resize", myChart.resize);
       }
       //渲染身高體重紀錄圖表
-      function renderHeightWeightByMonthChart(maxResultCount) {
-        getMonthlyRecords(maxResultCount).then((response) => {
+      function renderHeightWeightByMonthChart(maxResultCount, kidNum) {
+        getMonthlyRecords(maxResultCount, kidNum).then((response) => {
           const xAxisData = transformChartData(response, "record_month");
           const heightSeriesData = transformChartData(response, "height");
           const weightSeriesData = transformChartData(response, "weight");
@@ -761,7 +761,6 @@
           `
           dailyRecordsContainer.innerHTML = str;
         }
-
       }
 
       //每月紀錄
@@ -791,12 +790,43 @@
           data
         }).render(document.getElementById("wrapper2"));
       }
+      function updateMonthlyRecordsTable(grid, data) {
+        grid
+          .updateConfig({
+            data,
+          })
+          .forceRender();
+      }
+      
       //渲染每月紀錄表格
-      async function renderMonthlyRecordsTable(maxResultCount) {
+      async function renderMonthlyRecordsTable(maxResultCount, kidNum) {
         const response = await 
-        getMonthlyRecords(maxResultCount).then(response =>{
+        getMonthlyRecords(maxResultCount, kidNum).then(response =>{
           const monthlyRecordsData = transformMonthlyRecordsData(response);
-          creatMonthlyRecordsTable(monthlyRecordsData);
+          const monthlyRecordsContainer = document.getElementById('monthlyRecordsContainer');
+          let str = '';
+          if (monthlyRecordsData.length !== 0) {
+            str = 
+            `
+              <div class="col-12">
+                <div id="wrapper2"></div>
+              </div>
+            `
+            monthlyRecordsContainer.innerHTML = str;
+            if (document.getElementById("wrapper2").innerHTML === "") {
+              creatMonthlyRecordsTable(monthlyRecordsData);
+            } else {
+              updateMonthlyRecordsTable(grid, monthlyRecordsData);
+            }
+          } else {
+            str = 
+            `
+              <div class="col-12">
+                <h2 class="sub_title">查無資料</h2>
+              </div>
+            `
+            monthlyRecordsContainer.innerHTML = str;
+          }
         });
       }
 
@@ -810,14 +840,14 @@
           sleepTimeChartMonth,
           userData
         );
-        renderHeightWeightByMonthChart(36);
+        renderHeightWeightByMonthChart(36, kidNum);
         renderDailyRecordsTable(
           kidNum,
           dailyRecordsTableYear,
           dailyRecordsTableMonth,
           userData
         );
-        renderMonthlyRecordsTable(36);
+        renderMonthlyRecordsTable(36, kidNum);
       }
 
       // init數據分析頁面
@@ -881,25 +911,11 @@
             dailyRecordsTableMonth,
             userData
           );
-
-          renderMonthlyRecordsTable(36);
+          renderHeightWeightByMonthChart(36, kidNum)
+          renderMonthlyRecordsTable(36, kidNum);
         });
       document.getElementById("sleepTimeDatePicker").value = nowDateString;
       document.getElementById("dailyRecordsPicker").value = nowDateString;
-
-      /**
-       * todo
-       * 每月紀錄未完成
-       * Q2 getMonthlyRecords的num是指？
-       */
-
-
-
-      function monthRecordshandler(e) {
-        renderMonthlyRecordsTable(
-          kidNum
-        );
-      }
     </script>
     <script></script>
 
