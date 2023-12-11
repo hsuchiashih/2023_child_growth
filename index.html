@@ -1,618 +1,617 @@
 <!doctype html>
 <html lang="zh-tw">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="兒童成長網站" />
-    <meta name="description" content="兒童成長網站" />
-    <title>兒童成長網站</title>
-    <link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/all.css" />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="./css/owl.theme.default.css" />
-  </head>
-  <body>
-    <div class="wrap">
-      <!-- 手機板選單 -->
-      <h1 class="logo-box d-flex d-md-none">
-        <a class="navbar-brand logopic d-block" href="./index.html">
-          <img src="./src/home/top-logo.png" alt="logo" />
-        </a>
-        <span>兒童成長網站</span>
-      </h1>
-      <div class="hb-btn-container">
-        <input id="menu-toggle" type="checkbox" />
-        <label class="menu-button-container" for="menu-toggle">
-          <div class="menu-button"></div>
-        </label>
-      </div>
-      <div class="phone-container position-fixed">
-        <ul class="phone-list-nav p-0">
-          <li><a href="./services.html">服務介紹</a></li>
-          <li><a href="./member.html">會員專區</a></li>
-          <li><a href="./child-list.html">兒童清單</a></li>
-          <li><a href="./data-analysis.html">數據分析</a></li>
-          <li><a href="./contactUs.html">聯絡我們</a></li>
-          <li><a href="./daily.html">每日紀錄</a></li>
-          <!-- user-login -->
-          <div class="login-items d-flex">
-            <!-- 已登入 -->
-            <a
-              href="#"
-              class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
-            >
-              <div class="login-item-pic">
-                <img src="./src/home/login-pic.svg" alt="user-pic" />
-              </div>
-              <p class="user-name">使用者A</p>
-            </a>
-            <a
-              class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
-              href="#"
-              ><div class="login-item-pic">
-                <img src="./src/home/logout.svg" alt="login-out-pic" />
-              </div>
-              <p>登出</p>
-            </a>
-            <!-- 未登入 -->
-            <a
-              class="d-flex flex-column align-items-center text-decoration-none login-box d-none"
-              href="#"
-              ><div class="login-item-pic">
-                <img src="./src/home/person.png" alt="login-out-pic" />
-              </div>
-              <p>點擊登入</p>
-            </a>
-          </div>
-        </ul>
-      </div>
-      <!-- 桌機板選單 -->
-      <header class="main-header d-none d-md-block">
-        <nav class="navbar navbar-expand-lg navbar-main">
-          <div class="container-fluid p-0">
-            <h1 class="logo-box d-flex">
-              <a class="navbar-brand logopic d-block" href="./index.html">
-                <img src="./src/home/top-logo.png" alt="logo" />
-              </a>
-              <span>兒童成長網站</span>
-            </h1>
-            <div
-              class="collapse navbar-collapse top-navbar-body"
-              id="navbarSupportedContent"
-            >
-              <ul
-                class="navbar-nav top-navbar-menu mb-2 mb-lg-0 flex-wrap mx-auto"
-              >
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./services.html"
-                    >服務介紹<br />
-                    <span>Service</span>
-                  </a>
-                </li>
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./member.html"
-                    >會員專區<br />
-                    <span>Member</span>
-                  </a>
-                </li>
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./child-list.html"
-                    >兒童清單<br />
-                    <span>Kids</span>
-                  </a>
-                </li>
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./data-analysis.html"
-                    >數據分析<br />
-                    <span>Charts</span>
-                  </a>
-                </li>
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./contactUs.html"
-                    >聯絡我們<br />
-                    <span>Contact</span>
-                  </a>
-                </li>
-                <li class="nav-item top-navbar-item">
-                  <a class="nav-link top-navbar-txt" href="./daily.html"
-                    >每日紀錄<br />
-                    <span>Daily</span>
-                  </a>
-                </li>
-              </ul>
-              <!-- user-login -->
-              <div class="login-items d-flex">
-                <!-- 已登入 -->
-                <a
-                  href="#"
-                  class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
-                >
-                  <div class="login-item-pic">
-                    <img src="./src/home/login-pic.svg" alt="user-pic" />
-                  </div>
-                  <p class="user-name">使用者A</p>
-                </a>
-                <a
-                  class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
-                  href="#"
-                  ><div class="login-item-pic">
-                    <img src="./src/home/logout.svg" alt="login-out-pic" />
-                  </div>
-                  <p>登出</p>
-                </a>
-                <!-- 未登入 -->
-                <a
-                  class="login-box d-flex flex-column align-items-center text-decoration-none d-none"
-                  href="#"
-                  ><div class="login-item-pic">
-                    <img src="./src/home/person.png" alt="login-out-pic" />
-                  </div>
-                  <p>點擊登入</p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
-      <!-- 上面是Header -->
-      <section class="section-banner">
-        <div class="owl-banner owl-carousel owl-theme">
-          <div class="item">
-            <img
-              class="img-fluid d-none d-md-block"
-              src="./src/home/banner_1.jpg"
-              alt="pic"
-            />
-            <img
-              class="img-fluid d-block d-md-none"
-              src="./src/index/banner01_phone.png"
-              alt="pic"
-            />
-            <div class="carousel-item-txt position-absolute d-flex flex-column">
-              <h3 class="order-1">育兒有道，從此不迷路</h3>
-              <p>管理師陪跑提供正確飲食管理<br />、線上乾貨課程</p>
-              <button class="carousel-button order-2">
-                <a href="./register.html"> 立即體驗 </a>
-              </button>
-            </div>
-          </div>
-          <div class="item">
-            <img
-              class="img-fluid d-none d-md-block"
-              src="./src/home/banner_2.jpg"
-              alt="pic"
-            />
-            <img
-              class="img-fluid d-block d-md-none"
-              src="./src/index/banner02_phone.png"
-              alt="pic"
-            />
-            <div class="carousel-item-txt position-absolute d-flex flex-column">
-              <h3 class="order-1">成長管理，一站搞定</h3>
-              <p>透過每天追蹤吃、動、睡，<br />讓孩子變得更健康</p>
-              <button class="carousel-button order-2">
-                <a href="./register.html"> 立即體驗 </a>
-              </button>
-            </div>
-          </div>
-          <div class="item">
-            <img
-              class="img-fluid d-none d-md-block"
-              src="./src/home/banner_3.jpg"
-              alt="pic"
-            />
-            <img
-              class="img-fluid d-block d-md-none"
-              src="./src/index/banner03_phone.png"
-              alt="pic"
-            />
-            <div class="carousel-item-txt position-absolute d-flex flex-column">
-              <h3 class="order-1">漢方茶包讓成長更健康</h3>
-              <p>針對個人體質調整，讓營養<br />更好吸收進身體裡</p>
-              <button class="carousel-button order-2">
-                <a href="./register.html"> 立即體驗 </a>
-              </button>
-            </div>
-          </div>
-          <div class="item">
-            <img
-              class="img-fluid d-none d-md-block"
-              src="./src/home/banner_2.jpg"
-              alt="pic"
-            />
-            <img
-              class="img-fluid d-block d-md-none"
-              src="./src/index/banner02_phone.png"
-              alt=""
-            />
-            <div class="carousel-item-txt position-absolute d-flex flex-column">
-              <h3 class="order-1">成長管理，一站搞定</h3>
-              <p>透過每天追蹤吃、動、睡，<br />讓孩子變得更健康</p>
-              <button class="carousel-button order-2">
-                <a href="./register.html"> 立即體驗 </a>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-about">
-        <div class="section-about-main">
-          <!-- pc -->
-          <div class="section-about-title-box d-none d-md-flex flex-wrap">
-            <div class="section-about-title-item">
-              <div class="section-title-pic w-100">
-                <img class="img-fluid" src="./src/home/left-line.png" />
-              </div>
-            </div>
-            <div
-              class="section-about-title-item-mid d-flex flex-column align-center"
-            >
-              <p class="mx-auto">Childhood Growth Management</p>
-              <div class="section-title-pic-mid mx-auto">
-                <img src="./src/index/title-pic.svg" />
-              </div>
-            </div>
-            <div class="section-about-title-item">
-              <div class="section-title-pic w-100">
-                <img class="img-fluid" src="./src/home/right-line.png" />
-              </div>
-            </div>
-          </div>
-          <!-- phone -->
-          <div
-            class="section-about-title-box d-flex justify-content-center d-md-none"
-          >
-            <div class="section-about-phone-title">
-              <div class="section-title-pic">
-                <img src="./src/index/Frame 160.png" />
-              </div>
-              <h3 class="text-center">
-                Childhood<br />Growth<br />\ Management /
-              </h3>
-              <div class="section-title-logo mt-4 mb-4">
-                <img class="img-fluid" src="./src/index/title-pic.svg" alt="" />
-              </div>
-            </div>
-          </div>
-          <!-- content -->
-          <article class="section-about-content">
-            <p>
-              我們的平台專注於協助您記錄幼兒的成長數據，包括身高、體重、作息和飲食狀況。
-              並提供專業的支援，讓您更好地照顧孩子的健康成長，助力美好未來。
-            </p>
-          </article>
-          <div class="health-info-box d-flex flex-wrap align-items-center">
-            <div class="health-info-item position-relative">
-              <div class="health-info-item-pic position-absolute">
-                <img
-                  class="img-fluid"
-                  src="./src/home/img-tree.png"
-                  alt="icon"
-                />
-              </div>
-              <p>Height</p>
-              <span>身高</span>
-            </div>
-            <div class="health-info-item position-relative">
-              <div class="health-info-item-pic position-absolute">
-                <img
-                  class="img-fluid"
-                  src="./src/home/img-hat.png"
-                  alt="icon"
-                />
-              </div>
-              <p>Weight</p>
-              <span>體重</span>
-            </div>
-            <div class="health-info-item position-relative">
-              <div class="health-info-item-pic position-absolute">
-                <img
-                  class="img-fluid"
-                  src="./src/home/img-moon.png"
-                  alt="icon"
-                />
-              </div>
-              <p>Sleep</p>
-              <span>作息</span>
-            </div>
-            <div class="health-info-item position-relative">
-              <div class="health-info-item-pic position-absolute">
-                <img
-                  class="img-fluid"
-                  src="./src/home/img-spoon.png"
-                  alt="icon"
-                />
-              </div>
-              <p>Diet</p>
-              <span>飲食</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-program-details">
-        <div
-          class="program-details-main d-flex justify-content-between flex-wrap"
-        >
-          <div class="program-details-title w-100">
-            <h3 class="text-center">方案內容</h3>
-            <span class="d-block text-center">Program Details</span>
-          </div>
-          <div class="program-details-item">
-            <div class="program-details-pic">
-              <img class="img-fluid" src="./src/home/img-heart.png" alt="pic" />
-            </div>
-            <h3>免費使用</h3>
-            <ul>
-              <li><p>記錄每日作息</p></li>
-              <li><p>檢視圖表數據</p></li>
-            </ul>
-          </div>
-          <div class="program-details-item">
-            <div class="program-details-pic">
-              <img class="img-fluid" src="./src/home/img-star.png" alt="pic" />
-            </div>
-            <h3>年繳方案</h3>
-            <ul>
-              <li><p>影音課程</p></li>
-              <li><p>筋膜修復指導</p></li>
-              <li><p>管理師陪跑</p></li>
-              <li><p>舌頭診斷</p></li>
-              <li><p>成長果凍+漢方茶包</p></li>
-              <li><a href="./plans.html">點擊看更多</a></li>
-            </ul>
-          </div>
-          <div class="program-details-item">
-            <div class="program-details-pic">
-              <img class="img-fluid" src="./src/home/img-crown.png" alt="pic" />
-            </div>
-            <h3>每月付方案</h3>
-            <ul>
-              <li><p>漢方茶包</p></li>
-              <li><p>成長果凍</p></li>
-              <li><p>管理師諮詢</p></li>
-              <li><a href="./services.html">點擊看更多</a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="user-reviews">
-        <div class="user-review-title-box d-flex mx-auto">
-          <div class="user-review-title-pic d-none d-md-block">
-            <img
-              class="img-fluid"
-              src="./src/home/left-house01.png"
-              alt="house"
-            />
-          </div>
-          <div class="user-review-title-txt d-flex flex-column">
-            <h3 class="d-none d-md-block mt-auto">
-              心得牆<span>User Reviews</span>
-            </h3>
-            <h3 class="d-block d-md-none mt-auto">
-              心得牆<br /><span>User Reviews</span>
-            </h3>
-          </div>
-          <div class="user-review-title-pic">
-            <img
-              class="img-fluid"
-              src="./src/home/right-house02.png"
-              alt="house"
-            />
-          </div>
-        </div>
-        <div class="user-reviews-line mx-auto">
-          <img src="./src/home/Line 12.png" alt="" />
-        </div>
-        <!-- owl-reviews -->
-        <div class="owl-reviews owl-carousel owl-theme">
-          <div class="item d-flex position-relative">
-            <div class="reviews-icon position-absolute d-none d-md-block">
-              <img class="img-fluid" src="./src/home/img-hat.png" alt="" />
-            </div>
-            <div class="reviews-pic">
-              <img src="./src/home/Rectangle 54 (1).png" alt="" />
-            </div>
-            <div class="reviews-txt">
-              <h4>陳爸爸</h4>
-              <p>
-                這個育兒網站真是太方便了!我們可以輕鬆地記錄孩子的作息和飲食情況，而且每週還能追蹤身高體重的變化。這讓我們更了解寶寶的成長，真是貼心的服務。
-              </p>
-            </div>
-          </div>
-          <div class="item d-flex position-relative">
-            <div class="reviews-icon position-absolute d-none d-md-block">
-              <img class="img-fluid" src="./src/home/img-moon.png" />
-            </div>
-            <div class="reviews-pic">
-              <img src="./src/home/Rectangle 54 (2).png" />
-            </div>
-            <div class="reviews-txt">
-              <h4>李媽媽</h4>
-              <p>
-                這個育兒網站真是太棒了!不僅提供了每日作息和飲食紀錄，還能記錄寶寶的成長變化。對於忙碌的父母來說，這是一個極大的幫助，讓我們更關心孩子，不必擔心記錄。
-              </p>
-            </div>
-          </div>
-          <div class="item d-flex position-relative">
-            <div class="reviews-icon position-absolute d-none d-md-block">
-              <img class="img-fluid" src="./src/home/img-hat.png" />
-            </div>
-            <div class="reviews-pic">
-              <img src="./src/home/Rectangle 54 (1).png" />
-            </div>
-            <div class="reviews-txt">
-              <h4>陳爸爸</h4>
-              <p>
-                這個育兒網站真是太方便了!我們可以輕鬆地記錄孩子的作息和飲食情況，而且每週還能追蹤身高體重的變化。這讓我們更了解寶寶的成長，真是貼心的服務。
-              </p>
-            </div>
-          </div>
-          <div class="item d-flex position-relative">
-            <div class="reviews-icon position-absolute d-none d-md-block">
-              <img class="img-fluid" src="./src/home/img-tree.png" alt="" />
-            </div>
-            <div class="reviews-pic">
-              <img src="./src/home/Rectangle 54 (2).png" alt="" />
-            </div>
-            <div class="reviews-txt">
-              <h4>李媽媽</h4>
-              <p>
-                這個育兒網站真是太棒了!不僅提供了每日作息和飲食紀錄，還能記錄寶寶的成長變化。對於忙碌的父母來說，這是一個極大的幫助，讓我們更關心孩子，不必擔心記錄。
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="user-reviews-line mx-auto">
-          <img src="./src/home/Line 12.png" alt="" />
-        </div>
-      </section>
-      <!-- 下面是footer -->      
-      <footer class="section-footer container-fluid position-relative">
-        <div class="row">
-          <div class="col-12 col-md-6">
-            <div class="section-footer-item">
-              <h3>兒童成長管理</h3>
-              <div class="section-footer-box d-flex">
-                <div class="section-footer-pic">
-                  <img src="./src/home/Facebook.png" alt="fb" />
-                </div>
-                <div class="section-footer-pic">
-                  <img src="./src/home/twitter.png" alt="tw" />
-                </div>
-                <div class="section-footer-pic">
-                  <img src="./src/home/Instagram.png" alt="ig" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 p-0">
-            <div class="section-item-right">
-              <ul class="d-flex flex-wrap justify-content-center p-0">
-                <li><a href="./services.html">服務介紹</a></li>
-                <li><a href="./member.html">會員專區</a></li>
-                <li><a href="./child-list.html">兒童清單</a></li>
-                <li><a href="./data-analysis.html">數據分析</a></li>
-                <li><a href="./contactUs.html">聯絡我們</a></li>
-                <li><a href="./daily.html">每日記錄</a></li>
-              </ul>
-              <div class="section-footer-join">
-                <button>
-                  <p>Team Project —— Join Us</p>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-house position-absolute d-none d-md-block">
-          <img src="./src/home/left.house.png" alt="" />
-        </div>
-      </footer>
-      <section class="section-copyright">
-        <p>Copyright &copy; 2023 All rights reserved.</p>
-      </section>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="keywords" content="兒童成長網站" />
+		<meta name="description" content="兒童成長網站" />
+		<title>兒童成長網站</title>
+		<link rel="icon" href="src/head_icon/img-hat.ico" type="image/x-icon" />
+		<!-- CSS -->
+		<link rel="stylesheet" href="./scss/all.css" />
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="./css/owl.theme.default.css" />
+	</head>
+	<body>
+		<div class="wrap">
+			<!-- 手機板選單 -->
+			<h1 class="logo-box d-flex d-md-none">
+				<a class="navbar-brand logopic d-block" href="./index.html">
+					<img src="./src/home/top-logo.png" alt="logo" />
+				</a>
+				<span>兒童成長網站</span>
+			</h1>
+			<div class="hb-btn-container">
+				<input id="menu-toggle" type="checkbox" />
+				<label class="menu-button-container" for="menu-toggle">
+					<div class="menu-button"></div>
+				</label>
+			</div>
+			<div class="phone-container position-fixed">
+				<ul class="phone-list-nav p-0">
+					<li><a href="./services.html">服務介紹</a></li>
+					<li><a href="./member.html">會員專區</a></li>
+					<li><a href="./child-list.html">兒童清單</a></li>
+					<li><a href="./data-analysis.html">數據分析</a></li>
+					<li><a href="./contactUs.html">聯絡我們</a></li>
+					<li><a href="./daily.html">每日紀錄</a></li>
+					<!-- user-login -->
+					<div class="login-items d-flex">
+						<!-- 已登入 -->
+						<a
+							href="#"
+							class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
+						>
+							<div class="login-item-pic">
+								<img src="./src/home/login-pic.svg" alt="user-pic" />
+							</div>
+							<p class="user-name">使用者A</p>
+						</a>
+						<a
+							class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
+							href="#"
+							><div class="login-item-pic">
+								<img src="./src/home/logout.svg" alt="login-out-pic" />
+							</div>
+							<p>登出</p>
+						</a>
+						<!-- 未登入 -->
+						<a
+							class="d-flex flex-column align-items-center text-decoration-none login-box d-none"
+							href="#"
+							><div class="login-item-pic">
+								<img src="./src/home/person.png" alt="login-out-pic" />
+							</div>
+							<p>點擊登入</p>
+						</a>
+					</div>
+				</ul>
+			</div>
+			<!-- 桌機板選單 -->
+			<header class="main-header d-none d-md-block">
+				<nav class="navbar navbar-expand-lg navbar-main">
+					<div class="container-fluid p-0">
+						<h1 class="logo-box d-flex">
+							<a class="navbar-brand logopic d-block" href="./index.html">
+								<img src="./src/home/top-logo.png" alt="logo" />
+							</a>
+							<span>兒童成長網站</span>
+						</h1>
+						<div
+							class="collapse navbar-collapse top-navbar-body"
+							id="navbarSupportedContent"
+						>
+							<ul
+								class="navbar-nav top-navbar-menu mb-2 mb-lg-0 flex-wrap mx-auto"
+							>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="./services.html"
+										>服務介紹<br />
+										<span>Service</span>
+									</a>
+								</li>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="./member.html"
+										>會員專區<br />
+										<span>Member</span>
+									</a>
+								</li>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="./child-list.html"
+										>兒童清單<br />
+										<span>Kids</span>
+									</a>
+								</li>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="./data-analysis.html"
+										>數據分析<br />
+										<span>Charts</span>
+									</a>
+								</li>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="./contactUs.html"
+										>聯絡我們<br />
+										<span>Contact</span>
+									</a>
+								</li>
+								<li class="nav-item top-navbar-item">
+									<a class="nav-link top-navbar-txt" href="./daily.html"
+										>每日紀錄<br />
+										<span>Daily</span>
+									</a>
+								</li>
+							</ul>
+							<!-- user-login -->
+							<div class="login-items d-flex">
+								<!-- 已登入 -->
+								<a
+									href="#"
+									class="login-user-box d-flex flex-column align-items-center text-decoration-none d-none"
+								>
+									<div class="login-item-pic">
+										<img src="./src/home/login-pic.svg" alt="user-pic" />
+									</div>
+									<p class="user-name">使用者A</p>
+								</a>
+								<a
+									class="login-out-box d-flex flex-column align-items-center text-decoration-none d-none"
+									href="#"
+									><div class="login-item-pic">
+										<img src="./src/home/logout.svg" alt="login-out-pic" />
+									</div>
+									<p>登出</p>
+								</a>
+								<!-- 未登入 -->
+								<a
+									class="login-box d-flex flex-column align-items-center text-decoration-none d-none"
+									href="#"
+									><div class="login-item-pic">
+										<img src="./src/home/person.png" alt="login-out-pic" />
+									</div>
+									<p>點擊登入</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<!-- 上面是Header -->
+			<section class="section-banner">
+				<div class="owl-banner owl-carousel owl-theme">
+					<div class="item">
+						<img
+							class="img-fluid d-none d-md-block"
+							src="./src/home/banner_1.jpg"
+							alt="pic"
+						/>
+						<img
+							class="img-fluid d-block d-md-none"
+							src="./src/index/banner01_phone.png"
+							alt="pic"
+						/>
+						<div class="carousel-item-txt position-absolute d-flex flex-column">
+							<h3 class="order-1">育兒有道，從此不迷路</h3>
+							<p>管理師陪跑提供正確飲食管理<br />、線上乾貨課程</p>
+							<button class="carousel-button order-2">
+								<a href="./register.html"> 立即體驗 </a>
+							</button>
+						</div>
+					</div>
+					<div class="item">
+						<img
+							class="img-fluid d-none d-md-block"
+							src="./src/home/banner_2.jpg"
+							alt="pic"
+						/>
+						<img
+							class="img-fluid d-block d-md-none"
+							src="./src/index/banner02_phone.png"
+							alt="pic"
+						/>
+						<div class="carousel-item-txt position-absolute d-flex flex-column">
+							<h3 class="order-1">成長管理，一站搞定</h3>
+							<p>透過每天追蹤吃、動、睡，<br />讓孩子變得更健康</p>
+							<button class="carousel-button order-2">
+								<a href="./register.html"> 立即體驗 </a>
+							</button>
+						</div>
+					</div>
+					<div class="item">
+						<img
+							class="img-fluid d-none d-md-block"
+							src="./src/home/banner_3.jpg"
+							alt="pic"
+						/>
+						<img
+							class="img-fluid d-block d-md-none"
+							src="./src/index/banner03_phone.png"
+							alt="pic"
+						/>
+						<div class="carousel-item-txt position-absolute d-flex flex-column">
+							<h3 class="order-1">漢方茶包讓成長更健康</h3>
+							<p>針對個人體質調整，讓營養<br />更好吸收進身體裡</p>
+							<button class="carousel-button order-2">
+								<a href="./register.html"> 立即體驗 </a>
+							</button>
+						</div>
+					</div>
+					<div class="item">
+						<img
+							class="img-fluid d-none d-md-block"
+							src="./src/home/banner_2.jpg"
+							alt="pic"
+						/>
+						<img
+							class="img-fluid d-block d-md-none"
+							src="./src/index/banner02_phone.png"
+							alt=""
+						/>
+						<div class="carousel-item-txt position-absolute d-flex flex-column">
+							<h3 class="order-1">成長管理，一站搞定</h3>
+							<p>透過每天追蹤吃、動、睡，<br />讓孩子變得更健康</p>
+							<button class="carousel-button order-2">
+								<a href="./register.html"> 立即體驗 </a>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-about">
+				<div class="section-about-main">
+					<!-- pc -->
+					<div class="section-about-title-box d-none d-md-flex flex-wrap">
+						<div class="section-about-title-item">
+							<div class="section-title-pic w-100">
+								<img class="img-fluid" src="./src/home/left-line.png" />
+							</div>
+						</div>
+						<div
+							class="section-about-title-item-mid d-flex flex-column align-center"
+						>
+							<p class="mx-auto">Childhood Growth Management</p>
+							<div class="section-title-pic-mid mx-auto">
+								<img src="./src/index/title-pic.svg" />
+							</div>
+						</div>
+						<div class="section-about-title-item">
+							<div class="section-title-pic w-100">
+								<img class="img-fluid" src="./src/home/right-line.png" />
+							</div>
+						</div>
+					</div>
+					<!-- phone -->
+					<div
+						class="section-about-title-box d-flex justify-content-center d-md-none"
+					>
+						<div class="section-about-phone-title">
+							<div class="section-title-pic">
+								<img src="./src/index/Frame 160.png" />
+							</div>
+							<h3 class="text-center">
+								Childhood<br />Growth<br />\ Management /
+							</h3>
+							<div class="section-title-logo mt-4 mb-4">
+								<img class="img-fluid" src="./src/index/title-pic.svg" alt="" />
+							</div>
+						</div>
+					</div>
+					<!-- content -->
+					<article class="section-about-content">
+						<p>
+							我們的平台專注於協助您記錄幼兒的成長數據，包括身高、體重、作息和飲食狀況。
+							並提供專業的支援，讓您更好地照顧孩子的健康成長，助力美好未來。
+						</p>
+					</article>
+					<div class="health-info-box d-flex flex-wrap align-items-center">
+						<div class="health-info-item position-relative">
+							<div class="health-info-item-pic position-absolute">
+								<img
+									class="img-fluid"
+									src="./src/home/img-tree.png"
+									alt="icon"
+								/>
+							</div>
+							<p>Height</p>
+							<span>身高</span>
+						</div>
+						<div class="health-info-item position-relative">
+							<div class="health-info-item-pic position-absolute">
+								<img
+									class="img-fluid"
+									src="./src/home/img-hat.png"
+									alt="icon"
+								/>
+							</div>
+							<p>Weight</p>
+							<span>體重</span>
+						</div>
+						<div class="health-info-item position-relative">
+							<div class="health-info-item-pic position-absolute">
+								<img
+									class="img-fluid"
+									src="./src/home/img-moon.png"
+									alt="icon"
+								/>
+							</div>
+							<p>Sleep</p>
+							<span>作息</span>
+						</div>
+						<div class="health-info-item position-relative">
+							<div class="health-info-item-pic position-absolute">
+								<img
+									class="img-fluid"
+									src="./src/home/img-spoon.png"
+									alt="icon"
+								/>
+							</div>
+							<p>Diet</p>
+							<span>飲食</span>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-program-details">
+				<div
+					class="program-details-main d-flex justify-content-between flex-wrap"
+				>
+					<div class="program-details-title w-100">
+						<h3 class="text-center">方案內容</h3>
+						<span class="d-block text-center">Program Details</span>
+					</div>
+					<div class="program-details-item">
+						<div class="program-details-pic">
+							<img class="img-fluid" src="./src/home/img-heart.png" alt="pic" />
+						</div>
+						<h3>免費使用</h3>
+						<ul>
+							<li><p>記錄每日作息</p></li>
+							<li><p>檢視圖表數據</p></li>
+						</ul>
+					</div>
+					<div class="program-details-item">
+						<div class="program-details-pic">
+							<img class="img-fluid" src="./src/home/img-star.png" alt="pic" />
+						</div>
+						<h3>年繳方案</h3>
+						<ul>
+							<li><p>影音課程</p></li>
+							<li><p>筋膜修復指導</p></li>
+							<li><p>管理師陪跑</p></li>
+							<li><p>舌頭診斷</p></li>
+							<li><p>成長果凍+漢方茶包</p></li>
+							<li><a href="./plans.html">點擊看更多</a></li>
+						</ul>
+					</div>
+					<div class="program-details-item">
+						<div class="program-details-pic">
+							<img class="img-fluid" src="./src/home/img-crown.png" alt="pic" />
+						</div>
+						<h3>每月付方案</h3>
+						<ul>
+							<li><p>漢方茶包</p></li>
+							<li><p>成長果凍</p></li>
+							<li><p>管理師諮詢</p></li>
+							<li><a href="./services.html">點擊看更多</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="user-reviews">
+				<div class="user-review-title-box d-flex mx-auto">
+					<div class="user-review-title-pic d-none d-md-block">
+						<img
+							class="img-fluid"
+							src="./src/home/left-house01.png"
+							alt="house"
+						/>
+					</div>
+					<div class="user-review-title-txt d-flex flex-column">
+						<h3 class="d-none d-md-block mt-auto">
+							心得牆<span>User Reviews</span>
+						</h3>
+						<h3 class="d-block d-md-none mt-auto">
+							心得牆<br /><span>User Reviews</span>
+						</h3>
+					</div>
+					<div class="user-review-title-pic">
+						<img
+							class="img-fluid"
+							src="./src/home/right-house02.png"
+							alt="house"
+						/>
+					</div>
+				</div>
+				<div class="user-reviews-line mx-auto">
+					<img src="./src/home/Line 12.png" alt="" />
+				</div>
+				<!-- owl-reviews -->
+				<div class="owl-reviews owl-carousel owl-theme">
+					<div class="item d-flex position-relative">
+						<div class="reviews-icon position-absolute d-none d-md-block">
+							<img class="img-fluid" src="./src/home/img-hat.png" alt="" />
+						</div>
+						<div class="reviews-pic">
+							<img src="./src/home/Rectangle 54 (1).png" alt="" />
+						</div>
+						<div class="reviews-txt">
+							<h4>陳爸爸</h4>
+							<p>
+								這個育兒網站真是太方便了!我們可以輕鬆地記錄孩子的作息和飲食情況，而且每週還能追蹤身高體重的變化。這讓我們更了解寶寶的成長，真是貼心的服務。
+							</p>
+						</div>
+					</div>
+					<div class="item d-flex position-relative">
+						<div class="reviews-icon position-absolute d-none d-md-block">
+							<img class="img-fluid" src="./src/home/img-moon.png" />
+						</div>
+						<div class="reviews-pic">
+							<img src="./src/home/Rectangle 54 (2).png" />
+						</div>
+						<div class="reviews-txt">
+							<h4>李媽媽</h4>
+							<p>
+								這個育兒網站真是太棒了!不僅提供了每日作息和飲食紀錄，還能記錄寶寶的成長變化。對於忙碌的父母來說，這是一個極大的幫助，讓我們更關心孩子，不必擔心記錄。
+							</p>
+						</div>
+					</div>
+					<div class="item d-flex position-relative">
+						<div class="reviews-icon position-absolute d-none d-md-block">
+							<img class="img-fluid" src="./src/home/img-hat.png" />
+						</div>
+						<div class="reviews-pic">
+							<img src="./src/home/Rectangle 54 (1).png" />
+						</div>
+						<div class="reviews-txt">
+							<h4>陳爸爸</h4>
+							<p>
+								這個育兒網站真是太方便了!我們可以輕鬆地記錄孩子的作息和飲食情況，而且每週還能追蹤身高體重的變化。這讓我們更了解寶寶的成長，真是貼心的服務。
+							</p>
+						</div>
+					</div>
+					<div class="item d-flex position-relative">
+						<div class="reviews-icon position-absolute d-none d-md-block">
+							<img class="img-fluid" src="./src/home/img-tree.png" alt="" />
+						</div>
+						<div class="reviews-pic">
+							<img src="./src/home/Rectangle 54 (2).png" alt="" />
+						</div>
+						<div class="reviews-txt">
+							<h4>李媽媽</h4>
+							<p>
+								這個育兒網站真是太棒了!不僅提供了每日作息和飲食紀錄，還能記錄寶寶的成長變化。對於忙碌的父母來說，這是一個極大的幫助，讓我們更關心孩子，不必擔心記錄。
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="user-reviews-line mx-auto">
+					<img src="./src/home/Line 12.png" alt="" />
+				</div>
+			</section>
+			<!-- 下面是footer -->
+			<footer class="section-footer container-fluid position-relative">
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<div class="section-footer-item">
+							<h3>兒童成長管理</h3>
+							<div class="section-footer-box d-flex">
+								<div class="section-footer-pic">
+									<img src="./src/home/Facebook.png" alt="fb" />
+								</div>
+								<div class="section-footer-pic">
+									<img src="./src/home/twitter.png" alt="tw" />
+								</div>
+								<div class="section-footer-pic">
+									<img src="./src/home/Instagram.png" alt="ig" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 p-0">
+						<div class="section-item-right">
+							<ul class="d-flex flex-wrap justify-content-center p-0">
+								<li><a href="./services.html">服務介紹</a></li>
+								<li><a href="./member.html">會員專區</a></li>
+								<li><a href="./child-list.html">兒童清單</a></li>
+								<li><a href="./data-analysis.html">數據分析</a></li>
+								<li><a href="./contactUs.html">聯絡我們</a></li>
+								<li><a href="./daily.html">每日記錄</a></li>
+							</ul>
+							<div class="section-footer-join">
+								<button>
+									<p>Team Project —— Join Us</p>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-house position-absolute d-none d-md-block">
+					<img src="./src/home/left.house.png" alt="" />
+				</div>
+			</footer>
+			<section class="section-copyright">
+				<p>Copyright &copy; 2023 All rights reserved.</p>
+			</section>
+		</div>
 
-    <!-- Js套件 -->
-    <!-- jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- owlJS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!-- bs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
-    <!-- axios -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
-    <!-- echart -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
-    <!-- grid.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.0.6/gridjs.production.min.js"></script>
-    <!-- sweetalert2 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.1/sweetalert2.min.js"></script>
-    <!-- validate.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>  
-    <!-- JS套件 -->
-    <script src="js/json-sever/utils.js"></script>
-    <script src="js/json-sever/apiGET.js"></script>
-    <script src="js/json-sever/apiPOST.js"></script>
-    <script src="js/json-sever/apiPATCH.js"></script>
-    <script src="js/layouts.js"></script>
+		<!-- Js套件 -->
+		<!-- jquery -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<!-- owlJS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+		<!-- bs -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"></script>
+		<!-- axios -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"></script>
+		<!-- echart -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+		<!-- grid.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gridjs/6.0.6/gridjs.production.min.js"></script>
+		<!-- sweetalert2 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.1/sweetalert2.min.js"></script>
+		<!-- validate.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+		<!-- JS套件 -->
+		<script src="js/json-sever/utils.js"></script>
+		<script src="js/json-sever/apiGET.js"></script>
+		<script src="js/json-sever/apiPOST.js"></script>
+		<script src="js/json-sever/apiPATCH.js"></script>
+		<script src="js/layouts.js"></script>
 
-    <!-- menu/JS -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuButtonContainer = document.querySelector(
-          ".menu-button-container"
-        );
-        const phoneContainer = document.querySelector(".phone-container");
+		<!-- menu/JS -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const menuButtonContainer = document.querySelector(
+					".menu-button-container"
+				);
+				const phoneContainer = document.querySelector(".phone-container");
 
-        let isPhoneContainerVisible = false;
-        menuButtonContainer.addEventListener("click", function () {
-          if (isPhoneContainerVisible) {
-            phoneContainer.style.display = "none";
-          } else {
-            phoneContainer.style.display = "block";
-          }
-          isPhoneContainerVisible = !isPhoneContainerVisible;
-        });
-      });
-    </script>
-    <script>
-      $(".owl-banner").owlCarousel({
-        loop: true,
-        margin: 24,
-        nav: true,
-        canter: true,
-        navText: [
-          "<img src='./src/index/prev-arrow.svg'>",
-          "<img src='./src/index/next-arrow.svg'>",
-        ],
-        responsive: {
-          0: {
-            items: 1,
-          },
-          768: {
-            items: 1,
-            canter: true,
-            stagePadding: 100,
-          },
-          1200: {
-            items: 1,
-            canter: true,
-            stagePadding: 400,
-          },
-        },
-      });
-    </script>
-    <script>
-      $(".owl-reviews").owlCarousel({
-        loop: true,
-        margin: 24,
-        nav: false,
-        canter: true,
-        responsive: {
-          0: {
-            items: 1,
-          },
-          768: {
-            items: 2,
-            canter: true,
-            stagePadding: 30,
-          },
-          1200: {
-            items: 2,
-            canter: true,
-            stagePadding: 100,
-          },
-          1400: {
-            items: 3,
-            canter: true,
-            stagePadding: 100,
-          },
-        },
-      });
-    </script>
-    
-  </body>
+				let isPhoneContainerVisible = false;
+				menuButtonContainer.addEventListener("click", function () {
+					if (isPhoneContainerVisible) {
+						phoneContainer.style.display = "none";
+					} else {
+						phoneContainer.style.display = "block";
+					}
+					isPhoneContainerVisible = !isPhoneContainerVisible;
+				});
+			});
+		</script>
+		<script>
+			$(".owl-banner").owlCarousel({
+				loop: true,
+				margin: 24,
+				nav: true,
+				canter: true,
+				navText: [
+					"<img src='./src/index/prev-arrow.svg'>",
+					"<img src='./src/index/next-arrow.svg'>",
+				],
+				responsive: {
+					0: {
+						items: 1,
+					},
+					768: {
+						items: 1,
+						canter: true,
+						stagePadding: 100,
+					},
+					1200: {
+						items: 1,
+						canter: true,
+						stagePadding: 400,
+					},
+				},
+			});
+		</script>
+		<script>
+			$(".owl-reviews").owlCarousel({
+				loop: true,
+				margin: 24,
+				nav: false,
+				canter: true,
+				responsive: {
+					0: {
+						items: 1,
+					},
+					768: {
+						items: 2,
+						canter: true,
+						stagePadding: 30,
+					},
+					1200: {
+						items: 2,
+						canter: true,
+						stagePadding: 100,
+					},
+					1400: {
+						items: 3,
+						canter: true,
+						stagePadding: 100,
+					},
+				},
+			});
+		</script>
+	</body>
 </html>
