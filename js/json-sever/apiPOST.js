@@ -1,13 +1,4 @@
-function signup(
-  signupInfo = {
-    email: "dragonite@mail.com",
-    username: "快龍",
-    password: "wda@123",
-    gender: "female",
-    user_birth: "2023-09-13",
-    user_avatar: "userURL",
-  },
-) {
+function signup(signupInfo) {
   return new Promise((resolve, reject) => {
   signupInfo.created_at = getDatetime();
   signupInfo.modified_time = getDatetime();
@@ -37,7 +28,7 @@ function signup(
   });
 }
 
-function login(email = "Charizard@mail.com", password = "wda@123") {
+function login(email,password) {
   return new Promise((resolve, reject) => {
     if(onrenderActivated == "off"){
       alert("伺服器開啟中，關閉視窗後等候約5秒鐘。");
@@ -83,16 +74,7 @@ function logout(){
 }
 
 function addKid(token, userInfo,
-  kidInfo = {
-    kid_name: "迷你龍",
-    kid_birth: "2012-09-17",
-    ini_height: 123.1,
-    ini_weight: 36.1,
-    mom_height: 165.1,
-    dad_height: 176.1,
-    kid_avatar: "kidURL",
-  },
-) {
+  kidInfo) {
   return new Promise((resolve, reject) => {
     kidInfo.userId = kidInfo.userId ? kidInfo.userId : userInfo.id;
     kidInfo.created_at = getDatetime();
@@ -118,14 +100,7 @@ function addKid(token, userInfo,
   });
 }
 
-function addMonthlyRecord(
-  monthlyRecord = {
-    kidId: 99999,
-    height: 96,
-    weight: 9,
-  },
-  kidNum=0,
-) {
+function addMonthlyRecord(monthlyRecord,kidNum) {
   return new Promise((resolve, reject) => {
     monthlyRecord.kidId = userInfo.kids[kidNum].id || monthlyRecord.kidId;
     monthlyRecord.userId = userInfo.id || monthlyRecord.userId;
@@ -190,40 +165,7 @@ function addMonthlyRecord(
         "modified_time": "2023-09-17 14:15:30", 
     }
 */
-async function addDailyRecord(
-  daily_record = {
-    sleep_record: {
-      kidId: 99999999,
-      wakeup_time: "23:59",
-      sleep_time: "00:59",
-    },
-    breakfast_record: {
-      sleep_recordId: 99999999,
-      kidId: 99999999,
-      record_date: "2023-09-25",
-      content: "吐司、柳橙汁",
-      noBreadMilk: "N",
-      noDessert: "N",
-    },
-    lunch_record: {
-      sleep_recordId: 99999999,
-      kidId: 99999999,
-      record_date: "2023-09-25",
-      content: "沙威瑪",
-      noBreadMilk: "N",
-      noDessert: "N",
-    },
-    dinner_record: {
-      sleep_recordId: 99999999,
-      kidId: 99999999,
-      record_date: "2023-09-25",
-      content: "紅燒肉",
-      noBreadMilk: "N",
-      noDessert: "N",
-    },
-  },
-  kidNum = 0,
-) {
+async function addDailyRecord(daily_record,kidNum) {
   console.log('addDailyRecord');
   await addSleepRecord(daily_record.sleep_record, kidNum);
   // console.log('addSleepRecord執行完畢');
@@ -232,7 +174,7 @@ async function addDailyRecord(
   addLunchRecord(daily_record.lunch_record, kidNum);
   addDinnerRecord(daily_record.dinner_record, kidNum);
 }
-async function addSleepRecord(sleep_record, kidNum=0) {
+async function addSleepRecord(sleep_record,kidNum) {
   // console.log(sleep_record);
   // console.log(userInfo);
   sleep_record.kidId = userInfo.kids[kidNum].id || sleep_record.kidId;

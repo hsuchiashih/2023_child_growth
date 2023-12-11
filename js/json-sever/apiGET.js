@@ -12,7 +12,7 @@ function apiGET(route = "/kids/1") {
     });
 }
 
-function getUserInfo(userId ='1') {
+function getUserInfo(userId) {
   // login();
     return new Promise((resolve, reject) => {
       let id =userInfo.id || userId;
@@ -37,7 +37,7 @@ function getUserInfo(userId ='1') {
       });
   })
 }
-function getRecentSleepTime(token, userInfo, kidNum = 0) {
+function getRecentSleepTime(token,userInfo,kidNum) {
   // login();
   return new Promise((resolve, reject) => {
     axios
@@ -63,7 +63,7 @@ function getRecentSleepTime(token, userInfo, kidNum = 0) {
       });
   })
 }
-function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0) {
+function getSleepTimeByMonth(kidNum, year = 0, month = 0) {
   // login();
   console.log(userInfo)
   return new Promise((resolve, reject) => {
@@ -98,7 +98,7 @@ function getSleepTimeByMonth(kidNum = 0, year = 0, month = 0) {
       });
   })
 }
-function getFoodRecordsByMonth(kidNum = 0, year = 0, month = 0) {
+function getFoodRecordsByMonth(kidNum, year = 0, month = 0) {
     return new Promise((resolve, reject) => {
       axios.get(
         `${url}/600/sleep_records?kidId=${userInfo.kids[
@@ -130,7 +130,7 @@ function getFoodRecordsByMonth(kidNum = 0, year = 0, month = 0) {
       });
   })
 }
-function getMonthlyRecords(num = 1, kidNum = 0) {
+function getMonthlyRecords(kidNum,num = 1) {
     return new Promise((resolve, reject) => {
       axios
       .get(
@@ -155,7 +155,7 @@ function getMonthlyRecords(num = 1, kidNum = 0) {
       });
   })
 }
-function getMonthlyRecordByMonth(month, kidNum = 0) {
+function getMonthlyRecordByMonth(month, kidNum) {
     return new Promise((resolve, reject) => {
       axios
       .get(
@@ -180,7 +180,7 @@ function getMonthlyRecordByMonth(month, kidNum = 0) {
       });
   })
 }
-function getDailyRecords(date = getMonthDate(), kidNum = 0) {
+function getDailyRecords(kidNum,date = getMonthDate()) {
   return new Promise((resolve, reject) => {
     axios
     .get(
