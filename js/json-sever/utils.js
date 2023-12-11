@@ -382,10 +382,10 @@ function setFormListener(){
   }
   }
 
-function initialRender(func){
-  // login();
-  func().then(
-    response=>renderValue(response)
-  );
-}
+// function initialRender(func){
+//   // login();
+//   func().then(
+//     response=>renderValue(response)
+//   );
+// }
 

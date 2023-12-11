@@ -31,7 +31,7 @@ function signup(signupInfo) {
 function login(email,password) {
   return new Promise((resolve, reject) => {
     if(onrenderActivated == "off"){
-      alert("伺服器開啟中，關閉視窗後等候約5秒鐘。");
+      alert("伺服器開啟中，關閉視窗後等候約30秒。");
     }
     axios
       .post(`${url}/login`, {
@@ -100,7 +100,9 @@ function addKid(token, userInfo,
   });
 }
 
-function addMonthlyRecord(monthlyRecord,kidNum) {
+
+function addMonthlyRecord(kidNum,monthlyRecord) {
+
   return new Promise((resolve, reject) => {
     monthlyRecord.kidId = userInfo.kids[kidNum].id || monthlyRecord.kidId;
     monthlyRecord.userId = userInfo.id || monthlyRecord.userId;
@@ -165,7 +167,9 @@ function addMonthlyRecord(monthlyRecord,kidNum) {
         "modified_time": "2023-09-17 14:15:30", 
     }
 */
-async function addDailyRecord(daily_record,kidNum) {
+
+async function addDailyRecord(kidNum,daily_record) {
+
   console.log('addDailyRecord');
   await addSleepRecord(daily_record.sleep_record, kidNum);
   // console.log('addSleepRecord執行完畢');
