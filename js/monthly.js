@@ -17,7 +17,7 @@ function handleFormData(data) {
       return;
     }
 
-    addMonthlyRecord(monthlyRecord,kidNum).then(response=>{
+    addMonthlyRecord(kidNum,monthlyRecord).then(response=>{
       if(_response.status.toString().startsWith('2')){
         alert(`完成新增${data.monthpicker}每月紀錄`);
       }else{

@@ -100,7 +100,7 @@ function addKid(token, userInfo,
   });
 }
 
-function addMonthlyRecord(monthlyRecord,kidNum) {
+function addMonthlyRecord(kidNum,monthlyRecord) {
   return new Promise((resolve, reject) => {
     monthlyRecord.kidId = userInfo.kids[kidNum].id || monthlyRecord.kidId;
     monthlyRecord.userId = userInfo.id || monthlyRecord.userId;
