@@ -1,6 +1,6 @@
   //待處理非同步login()->getData()->render()
   //待處理PATCH代替POST
-
+console.log("要處理換人的addEventListener");
 
 setDateToday();
 enteringRender();
