@@ -155,7 +155,7 @@ function getMonthlyRecords(kidNum,num = 1) {
       });
   })
 }
-function getMonthlyRecordByMonth(month, kidNum) {
+function getMonthlyRecordByMonth(kidNum,month) {
     return new Promise((resolve, reject) => {
       axios
       .get(

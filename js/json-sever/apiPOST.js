@@ -31,7 +31,7 @@ function signup(signupInfo) {
 function login(email,password) {
   return new Promise((resolve, reject) => {
     if(onrenderActivated == "off"){
-      alert("伺服器開啟中，關閉視窗後等候約5秒鐘。");
+      alert("伺服器開啟中，關閉視窗後等候約30秒。");
     }
     axios
       .post(`${url}/login`, {
