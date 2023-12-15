@@ -281,7 +281,7 @@
             return item;
           })
         );
-        console.log('aaa',kidListWithSleepTimeChartData)
+        console.log("aaa", kidListWithSleepTimeChartData);
         return kidListWithSleepTimeChartData;
       }
       //渲染小孩資料
@@ -431,16 +431,15 @@
         // await login();
         // await getUserInfo();
         const kidListWithSleepTimeChartData =
-        await combineKidListWithSleepTimeChartData(token, userInfo);
+          await combineKidListWithSleepTimeChartData(token, userInfo);
         await renderKidData(kidListWithSleepTimeChartData);
         await kidListWithSleepTimeChartData.map((item) => {
           const chartId = `chartContainer_${item.id}`;
           let chartData = [];
-          console.log('ccc', item.sleepTimeData);
+          console.log("ccc", item.sleepTimeData);
           if (item.sleepTimeData.length !== 0) {
-            
-              chartData = item.sleepTimeData.data.map((data) => {
-                const result = [data.record_date, data.sleep_hours];
+            chartData = item.sleepTimeData.data.map((data) => {
+              const result = [data.record_date, data.sleep_hours];
 
               return result;
             });
