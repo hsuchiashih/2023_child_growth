@@ -931,7 +931,25 @@
       document.getElementById("sleepTimeDatePicker").value = nowDateString;
       document.getElementById("dailyRecordsPicker").value = nowDateString;
     </script>
-    <script></script>
+    <!-- menu/JS -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const menuButtonContainer = document.querySelector(
+					".menu-button-container"
+				);
+				const phoneContainer = document.querySelector(".phone-container");
+
+				let isPhoneContainerVisible = false;
+				menuButtonContainer.addEventListener("click", function () {
+					if (isPhoneContainerVisible) {
+						phoneContainer.style.display = "none";
+					} else {
+						phoneContainer.style.display = "block";
+					}
+					isPhoneContainerVisible = !isPhoneContainerVisible;
+				});
+			});
+		</script>
 
     <!-- 頁面JS -->
   </body>
