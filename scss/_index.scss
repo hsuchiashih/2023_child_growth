@@ -369,7 +369,11 @@
 .owl-theme .owl-dots .owl-dot:hover span {
 	background: #d49460;
 }
-
+@media (width < 1300px) {
+	.carousel-item-txt {
+		top: 30%;
+	}
+}
 @media (width < 1200px) {
 	.section-about-main .section-about-title-item-mid p {
 		font-size: 24px;
@@ -644,10 +648,5 @@
 		.health-info-item-pic {
 			width: 80px;
 		}
-	}
-}
-@media (width < 1300px) {
-	.carousel-item-txt {
-		top: 9vw;
 	}
 }
