@@ -248,6 +248,7 @@
                 id="datepicker"
                 name="datepicker"
               />
+              <a class="kidid-control-btn mb-3 is-record-exist"><span class="text-decoration-none text-white">當日尚無紀錄</span></a>
               <div class="wakeup mb-5">
                 <label for="wakeup">起床時間</label
                 ><input type="time" id="wakeup" value="08:00" step="300" />
@@ -318,36 +319,37 @@
                   23:00
                 </label>
               </div>
-              <div class="breakfast mb-5">
+              <div class="breakfast mb-5 d-flex">
                 <label for="breakfast">早餐</label
-                ><textarea id="breakfast" cols="20" rows="5"></textarea
+                ><textarea id="breakfast" cols="20" rows="5" class="align-self-end"></textarea
                 ><input
                   type="checkbox"
                   value="Y"
                   id="breakfastNM"
-                />無麥奶<input
+                /><span class="p-2">無麥奶</span>
+                <input
                   type="checkbox"
                   value="Y"
                   id="breakfastND"
-                />無甜食
+                /><span class="p-2">無甜食</span>
               </div>
-              <div class="lunch mb-5">
+              <div class="lunch mb-5 d-flex">
                 <label for="lunch">午餐</label
                 ><textarea id="lunch" cols="20" rows="5"></textarea
-                ><input type="checkbox" value="Y" id="lunchNM" />無麥奶<input
+                ><input type="checkbox" value="Y" id="lunchNM" /><span class="p-2">無麥奶</span><input
                   type="checkbox"
                   value="Y"
                   id="lunchND"
-                />無甜食
+                /><span class="p-2">無甜食</span>
               </div>
-              <div class="dinner mb-5">
+              <div class="dinner mb-5 d-flex">
                 <label for="dinner">晚餐</label
                 ><textarea id="dinner" cols="20" rows="5"></textarea
-                ><input type="checkbox" value="Y" id="dinnerNM" />無麥奶<input
+                ><input type="checkbox" value="Y" id="dinnerNM" /><span class="p-2">無麥奶</span><input
                   type="checkbox"
                   value="Y"
                   id="dinnerND"
-                />無甜食
+                /><span class="p-2">無甜食</span>
               </div>
               <button type="submit" class="kidid-control-btn mb-3">
                 <p>送出</p>

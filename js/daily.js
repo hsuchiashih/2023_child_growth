@@ -123,8 +123,12 @@ function renderValue(_response){
   document.querySelector(".kid-name").innerHTML = userInfo.kids[0].kid_name;
   if(!_response.data || _response.data == ""){
     emptyValue(); 
-    alert("當日尚無紀錄");
+    // alert("當日尚無紀錄");
+    $('#wakeup')[0].value = '08:00';
+    $('#sleep')[0].value = '21:00';
+    $('.is-record-exist')[0].classList.remove('d-none');
   }else{
+    $('.is-record-exist')[0].classList.add('d-none');
     $('#wakeup')[0].value = _response.data[0].wakeup_time;
     $('#sleep')[0].value = _response.data[0].sleep_time;
     $('#breakfast')[0].value = _response.data[0].breakfast_records[0].content;
