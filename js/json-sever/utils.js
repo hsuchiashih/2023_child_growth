@@ -4,15 +4,15 @@ const url = "https://cgwweb.onrender.com";
 let userInfo= JSON.parse(localStorage.getItem('userData')) || "";
 let _response = "";
 let token = localStorage.getItem('jwtToken') || "";
-let onrenderActivated = localStorage.getItem('onrenderActivated') || "";
+let onrenderActivated = localStorage.getItem('onrenderActivated') || "off";
 
 setFormListener();
 init();
 
 function init(){//進入網站優先激活onrender.com
-  if(onrenderActivated == ""){
-    localStorage.setItem('onrenderActivated', "off");
-  }
+  // if(onrenderActivated == ""){
+  //   localStorage.setItem('onrenderActivated', "off");
+  // }
   if(onrenderActivated == "off"){
     console.log("initiating");
     axios

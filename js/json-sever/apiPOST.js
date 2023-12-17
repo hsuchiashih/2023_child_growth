@@ -1,9 +1,12 @@
 function signup(signupInfo) {
   return new Promise((resolve, reject) => {
-  signupInfo.created_at = getDatetime();
-  signupInfo.modified_time = getDatetime();
-  signupInfo.isExist = "Y";
-  axios
+    if(onrenderActivated == "off"){
+      alert("伺服器開啟中，關閉視窗後等候約30秒。");
+    }
+    signupInfo.created_at = getDatetime();
+    signupInfo.modified_time = getDatetime();
+    signupInfo.isExist = "Y";
+    axios
     .post(`${url}/signup`, signupInfo)
       .then(response => {
         localStorage.setItem('jwtToken', response.data.accessToken);
