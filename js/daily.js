@@ -205,15 +205,23 @@ function renderKidsList(){
     content +=`
       <div class="item" data-kidNum=${i}>
         <div class="owl-change-kid-pic">
-          <img
-            class="img-fluid"
-            src="./src/home/Rectangle 54 (2).png"
-            alt=""
-          />
+          
         </div>
         <p class="kid-name">${element.kid_name}</p>
       </div>
     `
+    // content +=`
+    //   <div class="item" data-kidNum=${i}>
+    //     <div class="owl-change-kid-pic">
+    //       <img
+    //         class="img-fluid"
+    //         src="./src/home/Rectangle 54 (2).png"
+    //         alt=""
+    //       />
+    //     </div>
+    //     <p class="kid-name">${element.kid_name}</p>
+    //   </div>
+    // `
   });
   document.querySelector(".owl-change-kid").innerHTML = content;
 }

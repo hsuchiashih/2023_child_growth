@@ -289,29 +289,46 @@
         const cardContainer = document.getElementById("cardContainer");
         let str = "";
         data.forEach((item) => {
+          // str += `
+          // <div class="col-12 mb-5">
+          //   <div class="card_container">
+          //     <div class="row card_body">
+              
+          //       <div class="col-12 col-xl-3 mb-5 mb-xl-0">
+          //         <a href="daily.html">
+          //           <div class="img_container">
+          //               <img src="./src/home/banner_2.jpg" />
+          //           </div>
+          //           <div
+          //             class="mt-3 text-center d-flex justify-content-center"
+          //           >
+          //             <div class="icon_container">
+          //               <img src="./src/home/img-hat.png" />
+          //             </div>
+          //             <p class="ml-2 align-self-center hint_text">
+          //               點擊圖片進入每日紀錄
+          //             </p>
+          //           </div>
+          //         </a>  
+          //         </div>
+                
+          //       <div class="col-12 col-xl-3 child_data_block">
+          //         <p>${item.kid_name}</p>
+          //         <p>身高：<span>${item.ini_height}</span>cm</p>
+          //         <p>體重：<span>${item.ini_weight}</span>kg</p>
+          //       </div>
+          //       <div class="col-12 col-xl-6">
+          //         <div id="chartContainer_${item.id}" class="chart_container"></div>
+          //       </div>
+          //     </div>
+          //   </div>
+          // </div>    
+          // `;
           str += `
           <div class="col-12 mb-5">
             <div class="card_container">
               <div class="row card_body">
               
-                <div class="col-12 col-xl-3 mb-5 mb-xl-0">
-                  <a href="daily.html">
-                    <div class="img_container">
-                        <img src="./src/home/banner_2.jpg" />
-                    </div>
-                    <div
-                      class="mt-3 text-center d-flex justify-content-center"
-                    >
-                      <div class="icon_container">
-                        <img src="./src/home/img-hat.png" />
-                      </div>
-                      <p class="ml-2 align-self-center hint_text">
-                        點擊圖片進入每日紀錄
-                      </p>
-                    </div>
-                  </a>  
-                  </div>
-                
                 <div class="col-12 col-xl-3 child_data_block">
                   <p>${item.kid_name}</p>
                   <p>身高：<span>${item.ini_height}</span>cm</p>
