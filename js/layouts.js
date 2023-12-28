@@ -1,4 +1,7 @@
-renderLoginOrNot();
+$(".section-footer").load("footer.html");
+$(".section-header").load("header.html");
+// $(".wrap").prepend("header.html");
+// renderLoginOrNot();放在header.html
 
 function renderLoginOrNot(){
   if(token){
